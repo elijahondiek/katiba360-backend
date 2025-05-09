@@ -4,31 +4,53 @@
     "chapters": [
       {
         "number": "ONE",
-        "title": "SOVEREIGNTY OF THE PEOPLE AND SUPREMACY OF THIS CONSTITUTION\nS",
+        "title": "SOVEREIGNTY OF THE PEOPLE AND SUPREMACY OF THIS CONSTITUTION",
         "articles": [
           {
             "number": "1",
-            "title": "CHAPTER ONE\nSOVEREIGNTY OF THE PEOPLE AND SUPREMACY OF THIS CONSTITUTION\nSovereignty of the people",
+            "title": "Sovereignty of the people",
             "clauses": [
               {
                 "number": "1",
-                "text": "All sovereign power belongs to the people of Kenya and shall be exercised\nonly in accordance with this Constitution.",
+                "text": "(1) All sovereign power belongs to the people of Kenya and shall be exercised only in accordance with this Constitution.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "The people may exercise their sovereign power either directly or through their\ndemocratically elected representatives.",
+                "text": "(2) The people may exercise their sovereign power either directly or through their democratically elected representatives.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "Sovereign power under this Constitution is delegated to the following State\norgans, which shall perform their functions in accordance with this Constitution—",
-                "sub_clauses": []
+                "text": "(3) Sovereign power under this Constitution is delegated to the following State organs, which shall perform their functions in accordance with this Constitution-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "Parliament and the legislative assemblies in the county governments;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "the national executive and the executive structures in the county governments; and"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "the Judiciary and independent tribunals."
+                  }
+                ]
               },
               {
                 "number": "4",
-                "text": "The sovereign power of the people is exercised at—",
-                "sub_clauses": []
+                "text": "(4) The sovereign power of the people is exercised at-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "the national level; and"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "the county level."
+                  }
+                ]
               }
             ]
           },
@@ -38,32 +60,32 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "This Constitution is the supreme law of the Republic and binds all persons\nand all State organs at both levels of government.",
+                "text": "(1) This Constitution is the supreme law of the Republic and binds all persons and all State organs at both levels of government.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "No person may claim or exercise State authority except as authorised under\nthis Constitution.",
+                "text": "(2) No person may claim or exercise State authority except as authorised under this Constitution.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "The validity or legality of this Constitution is not subject to challenge by or\nbefore any court or other State organ.",
+                "text": "(3) The validity or legality of this Constitution is not subject to challenge by or before any court or other State organ.",
                 "sub_clauses": []
               },
               {
                 "number": "4",
-                "text": "Any law, including customary law, that is inconsistent with this Constitution\nis void to the extent of the inconsistency, and any act or omission in contravention\nof this Constitution is invalid.",
+                "text": "(4) Any law, including customary law, that is inconsistent with this Constitution is void to the extent of the inconsistency, and any act or omission in contravention of this Constitution is invalid.",
                 "sub_clauses": []
               },
               {
                 "number": "5",
-                "text": "The general rules of international law shall form part of the law of Kenya.",
+                "text": "(5) The general rules of international law shall form part of the law of Kenya.",
                 "sub_clauses": []
               },
               {
                 "number": "6",
-                "text": "Any treaty or convention ratiﬁed by Kenya shall form part of the law of Kenya\nunder this Constitution.",
+                "text": "(6) Any treaty or convention ratified by Kenya shall form part of the law of Kenya under this Constitution.",
                 "sub_clauses": []
               }
             ]
@@ -74,12 +96,12 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "Every person has an obligation to respect, uphold and defend this\nConstitution.",
+                "text": "(1) Every person has an obligation to respect, uphold and defend this Constitution.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "Any attempt to establish a government otherwise than in compliance with\nthis Constitution is unlawful.",
+                "text": "(2) Any attempt to establish a government otherwise than in compliance with this Constitution is unlawful.",
                 "sub_clauses": []
               }
             ]
@@ -88,20 +110,20 @@
       },
       {
         "number": "TWO",
-        "title": "THE REPUBLIC\nD",
+        "title": "THE REPUBLIC",
         "articles": [
           {
             "number": "4",
-            "title": "CHAPTER TWO\nTHE REPUBLIC\nDeclaration of the Republic",
+            "title": "Declaration of the Republic",
             "clauses": [
               {
                 "number": "1",
-                "text": "Kenya is a sovereign Republic.",
+                "text": "(1) Kenya is a sovereign Republic.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "The Republic of Kenya shall be a multi-party democratic State founded on\nthe national values and principles of governance referred to in Article 10.\n\n[Rev. 2022]\nConstitution of Kenya\n15",
+                "text": "(2) The Republic of Kenya shall be a multi-party democratic State founded on the national values and principles of governance referred to in Article 10.",
                 "sub_clauses": []
               }
             ]
@@ -112,7 +134,7 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "Kenya consists of the territory and territorial waters comprising Kenya on the\neffective date, and any additional territory and territorial waters as deﬁned by an\nAct of Parliament.",
+                "text": "(1) Kenya consists of the territory and territorial waters comprising Kenya on the effective date, and any additional territory and territorial waters as defined by an Act of Parliament.",
                 "sub_clauses": []
               }
             ]
@@ -123,39 +145,48 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "The territory of Kenya is divided into the counties speciﬁed in the First\nSchedule.",
+                "text": "(1) The territory of Kenya is divided into the counties specified in the First Schedule.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "The governments at the national and county levels are distinct and inter-\ndependent and shall conduct their mutual relations on the basis of consultation and\ncooperation.",
+                "text": "(2) The governments at the national and county levels are distinct and interdependent and shall conduct their mutual relations on the basis of consultation and cooperation.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "A national State organ shall ensure reasonable access to its services in all\nparts of the Republic, so far as it is appropriate to do so having regard to the nature\nof the service.\nNational, ofﬁ",
+                "text": "(3) A national State organ shall ensure reasonable access to its services in all parts of the Republic, so far as it is appropriate to do so having regard to the nature of the service. National, official",
                 "sub_clauses": []
               }
             ]
           },
           {
             "number": "7",
-            "title": "cial and other languages",
+            "title": "National, official and other languages",
             "clauses": [
               {
                 "number": "1",
-                "text": "The national language of the Republic is Kiswahili.",
+                "text": "(1) The national language of the Republic is Kiswahili.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "The ofﬁcial languages of the Republic are Kiswahili and English.",
+                "text": "(2) The official languages of the Republic are Kiswahili and English.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "The State shall—",
-                "sub_clauses": []
+                "text": "(3) The State shall-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "promote and protect the diversity of language of the people of Kenya; and"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "promote the development and use of indigenous languages, Kenyan Sign language, Braille and other communication formats and technologies accessible to persons with disabilities."
+                  }
+                ]
               }
             ]
           },
@@ -165,7 +196,7 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "There shall be no State religion.",
+                "text": "(1) There shall be no State religion.",
                 "sub_clauses": []
               }
             ]
@@ -176,27 +207,57 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "The national symbols of the Republic are—",
-                "sub_clauses": []
+                "text": "(1) The national symbols of the Republic are-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "the national flag;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "the national anthem;"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "the coat of arms; and"
+                  },
+                  {
+                    "letter": "d",
+                    "text": "the public seal."
+                  }
+                ]
               },
               {
                 "number": "2",
-                "text": "The national symbols are as set out in the Second Schedule.",
+                "text": "(2) The national symbols are as set out in the Second Schedule.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "The national days are—",
-                "sub_clauses": []
+                "text": "(3) The national days are-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "Madaraka Day, to be observed on 1st June;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "Mashujaa Day, to be observed on 20th October; and"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "Jamhuri Day, to be observed on 12th December."
+                  }
+                ]
               },
               {
                 "number": "4",
-                "text": "A national day shall be a public holiday.",
+                "text": "(4) A national day shall be a public holiday.",
                 "sub_clauses": []
               },
               {
                 "number": "5",
-                "text": "Parliament may enact legislation prescribing other public holidays, and\nproviding for observance of public holidays.\n\n16\nConstitution of Kenya\n[Rev. 2022]",
+                "text": "(5) Parliament may enact legislation prescribing other public holidays, and providing for observance of public holidays.",
                 "sub_clauses": []
               }
             ]
@@ -207,13 +268,43 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "The national values and principles of governance in this Article bind all\nState organs, State ofﬁcers, public ofﬁcers and all persons whenever any of them—",
-                "sub_clauses": []
+                "text": "(1) The national values and principles of governance in this Article bind all State organs, State officers, public officers and all persons whenever any of them-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "applies or interprets this Constitution;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "enacts, applies or interprets any law; or"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "makes or implements public policy decisions."
+                  }
+                ]
               },
               {
                 "number": "2",
-                "text": "The national values and principles of governance include—",
-                "sub_clauses": []
+                "text": "(2) The national values and principles of governance include-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "patriotism, national unity, sharing and devolution of power, the rule of law, democracy and participation of the people;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "human dignity, equity, social justice, inclusiveness, equality, human rights, non-discrimination and protection of the marginalised;"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "good governance, integrity, transparency and accountability; and"
+                  },
+                  {
+                    "letter": "d",
+                    "text": "sustainable development."
+                  }
+                ]
               }
             ]
           },
@@ -223,18 +314,40 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "This Constitution recognises culture as the foundation of the nation and\nas the cumulative civilization of the Kenyan people and nation.",
+                "text": "(1) This Constitution recognises culture as the foundation of the nation and as the cumulative civilization of the Kenyan people and nation.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "The State shall—",
-                "sub_clauses": []
+                "text": "(2) The State shall-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "promote all forms of national and cultural expression through literature, the arts, traditional celebrations, science, communication, information, mass media, publications, libraries and other cultural heritage;"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "recognise the role of science and indigenous technologies in the development of the nation; and"
+                  },
+                  {
+                    "letter": "c",
+                    "text": "promote the intellectual property rights of the people of Kenya."
+                  }
+                ]
               },
               {
                 "number": "3",
-                "text": "Parliament shall enact legislation to—",
-                "sub_clauses": []
+                "text": "(3) Parliament shall enact legislation to-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "ensure that communities receive compensation or royalties for the use of their cultures and cultural heritage; and"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "recognise and protect the ownership of indigenous seeds and plant varieties, their genetic and diverse characteristics and their use by the communities of Kenya."
+                  }
+                ]
               }
             ]
           }
@@ -242,21 +355,35 @@
       },
       {
         "number": "THREE",
-        "title": "CITIZENSHIP\nE",
+        "title": "CITIZENSHIP",
         "articles": [
           {
             "number": "12",
-            "title": "CHAPTER THREE\nCITIZENSHIP\nEntitlements of citizens",
+            "title": "Entitlements of citizens",
             "clauses": [
               {
                 "number": "1",
-                "text": "Every citizen is entitled to—",
-                "sub_clauses": []
+                "text": "(1) Every citizen is entitled to-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "the rights, privileges and benefits of citizenship, subject to the limits provided or permitted by this Constitution; and"
+                  },
+                  {
+                    "letter": "b",
+                    "text": "a Kenyan passport and any document of registration or identification issued by the State to citizens."
+                  }
+                ]
               },
               {
                 "number": "2",
-                "text": "A passport or other document referred to in clause",
-                "sub_clauses": []
+                "text": "(2) A passport or other document referred to in clause (1) may be denied, suspended or confiscated only in accordance with law.",
+                "sub_clauses": [
+                  {
+                    "letter": "b",
+                    "text": "may be denied, suspended or confiscated only in accordance with an Act of Parliament that satisfies the criteria referred to in Article 24."
+                  }
+                ]
               }
             ]
           },
@@ -266,17 +393,17 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "Every person who was a citizen immediately before the effective date\nretains the same citizenship status as of that date.",
+                "text": "(1) Every person who was a citizen immediately before the effective date retains the same citizenship status as of that date.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "Citizenship may be acquired by birth or registration.",
+                "text": "(2) Citizenship may be acquired by birth or registration.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "Citizenship is not lost through marriage or the dissolution of marriage.",
+                "text": "(3) Citizenship is not lost through marriage or the dissolution of marriage.",
                 "sub_clauses": []
               }
             ]
@@ -287,42 +414,27 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "A person is a citizen by birth if on the day of the person’s birth, whether or\nnot the person is born in Kenya, either the mother or father of the person is a citizen.",
+                "text": "(1) A person is a citizen by birth if on the day of the person's birth, whether or not the person is born in Kenya, either the mother or father of the person is a citizen.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "Clause",
-                "sub_clauses": []
-              },
-              {
-                "number": "1",
-                "text": "applies equally to a person born before the effective date, whether\nor not the person was born in Kenya, if either the mother or father of the person is\nor was a citizen.",
+                "text": "(2) Clause (1) applies equally to a person born before the effective date, whether or not the person was born in Kenya, if either the mother or father of the person is or was a citizen.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "Parliament may enact legislation limiting the effect of clauses",
-                "sub_clauses": []
-              },
-              {
-                "number": "1",
-                "text": "and",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "on\nthe descendents of Kenyan citizens who are born outside Kenya.",
+                "text": "(3) Parliament may enact legislation limiting the effect of clauses (1) and (2) on the descendents of Kenyan citizens who are born outside Kenya.",
                 "sub_clauses": []
               },
               {
                 "number": "4",
-                "text": "A child found in Kenya who is, or appears to be, less than eight years of age,\nand whose nationality and parents are not known, is presumed to be a citizen by\nbirth.",
+                "text": "(4) A child found in Kenya who is, or appears to be, less than eight years of age, and whose nationality and parents are not known, is presumed to be a citizen by birth.",
                 "sub_clauses": []
               },
               {
                 "number": "5",
-                "text": "A person who is a Kenyan citizen by birth and who has ceased to be a Kenyan\ncitizen because the person acquired citizenship of another country, is entitled on\napplication to regain Kenyan citizenship.",
+                "text": "(5) A person who is a Kenyan citizen by birth and who has ceased to be a Kenyan citizen because the person acquired citizenship of another country, is entitled on application to regain Kenyan citizenship.",
                 "sub_clauses": []
               }
             ]
@@ -333,27 +445,27 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "A person who has been married to a citizen for a period of at least seven\nyears is entitled on application to be registered as a citizen.",
+                "text": "(1) A person who has been married to a citizen for a period of at least seven years is entitled on application to be registered as a citizen.",
                 "sub_clauses": []
               },
               {
                 "number": "2",
-                "text": "A person who has been lawfully resident in Kenya for a continuous period\nof at least seven years, and who satisﬁes the conditions prescribed by an Act of\nParliament, may apply to be registered as a citizen.",
+                "text": "(2) A person who has been lawfully resident in Kenya for a continuous period of at least seven years, and who satisfies the conditions prescribed by an Act of Parliament, may apply to be registered as a citizen.",
                 "sub_clauses": []
               },
               {
                 "number": "3",
-                "text": "A child who is not a citizen, but is adopted by a citizen, is entitled on\napplication to be registered as a citizen.",
+                "text": "(3) A child who is not a citizen, but is adopted by a citizen, is entitled on application to be registered as a citizen.",
                 "sub_clauses": []
               },
               {
                 "number": "4",
-                "text": "Parliament shall enact legislation establishing conditions on which\ncitizenship may be granted to individuals who are citizens of other countries.",
+                "text": "(4) Parliament shall enact legislation establishing conditions on which citizenship may be granted to individuals who are citizens of other countries.",
                 "sub_clauses": []
               },
               {
                 "number": "5",
-                "text": "This Article applies to a person as from the effective date, but any\nrequirements that must be satisﬁed before the person is entitled to be registered as a\ncitizen shall be regarded as having been satisﬁed irrespective of whether the person\nsatisﬁed them before or after the effective date, or partially before, and partially\nafter, the effective date.",
+                "text": "(5) This Article applies to a person as from the effective date, but any requirements that must be satisfied before the person is entitled to be registered as a citizen shall be regarded as having been satisfied irrespective of whether the person satisfied them before or after the effective date, or partially before, and partially after, the effective date.",
                 "sub_clauses": []
               }
             ]
@@ -364,7 +476,12 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "A citizen by birth does not lose citizenship by acquiring the citizenship of\nanother country.",
+                "text": "(1) A citizen by birth does not lose citizenship by acquiring the citizenship of another country.",
+                "sub_clauses": []
+              },
+              {
+                "number": "2",
+                "text": "(2) A citizen may hold dual citizenship.",
                 "sub_clauses": []
               }
             ]
@@ -375,8 +492,13 @@
             "clauses": [
               {
                 "number": "1",
-                "text": "If a person acquired citizenship by registration, the citizenship may be\nrevoked if—",
-                "sub_clauses": []
+                "text": "(1) If a person acquired citizenship by registration, the citizenship may be revoked if-",
+                "sub_clauses": [
+                  {
+                    "letter": "a",
+                    "text": "the person acquired the citizenship by fraud, false representation or concealment of any material fact"
+                  }
+                ]
               }
             ]
           }
