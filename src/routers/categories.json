@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Gossip",
+    "description": "Juicy and scandalous stories from around campus."
+  },
+  {
+    "id": "2",
+    "name": "Expose",
+    "description": "Revealing the truth about people, places, or events."
+  },
+  {
+    "id": "5",
+    "name": "Confessions",
+    "description": "Anonymous sharing of personal secrets or experiences."
+  }
+]
