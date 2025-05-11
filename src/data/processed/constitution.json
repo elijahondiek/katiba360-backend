@@ -1,119 +1,65 @@
 {
   "constitution": {
     "title": "The Constitution of Kenya",
+    "preamble": "",
     "chapters": [
       {
         "number": "ONE",
-        "title": "SOVEREIGNTY OF THE PEOPLE AND SUPREMACY OF THIS CONSTITUTION",
+        "title": "Sovereignty Of The People And Supremacy Of This Constitution",
         "articles": [
           {
-            "number": "1",
+            "local_number": "1",
+            "global_number": "1",
             "title": "Sovereignty of the people",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) All sovereign power belongs to the people of Kenya and shall be exercised only in accordance with this Constitution.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) The people may exercise their sovereign power either directly or through their democratically elected representatives.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) Sovereign power under this Constitution is delegated to the following State organs, which shall perform their functions in accordance with this Constitution-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "Parliament and the legislative assemblies in the county governments;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "the national executive and the executive structures in the county governments; and"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "the Judiciary and independent tribunals."
-                  }
-                ]
-              },
-              {
-                "number": "4",
-                "text": "(4) The sovereign power of the people is exercised at-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "the national level; and"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "the county level."
-                  }
-                ]
               }
             ]
           },
           {
-            "number": "2",
+            "local_number": "2",
+            "global_number": "2",
             "title": "Supremacy of this Constitution",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) This Constitution is the supreme law of the Republic and binds all persons and all State organs at both levels of government.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) No person may claim or exercise State authority except as authorised under this Constitution.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) The validity or legality of this Constitution is not subject to challenge by or before any court or other State organ.",
-                "sub_clauses": []
-              },
-              {
-                "number": "4",
-                "text": "(4) Any law, including customary law, that is inconsistent with this Constitution is void to the extent of the inconsistency, and any act or omission in contravention of this Constitution is invalid.",
-                "sub_clauses": []
-              },
-              {
-                "number": "5",
-                "text": "(5) The general rules of international law shall form part of the law of Kenya.",
-                "sub_clauses": []
-              },
-              {
-                "number": "6",
-                "text": "(6) Any treaty or convention ratified by Kenya shall form part of the law of Kenya under this Constitution.",
-                "sub_clauses": []
               }
             ]
           },
           {
-            "number": "3",
-            "title": "Defence of this Constitution",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Every person has an obligation to respect, uphold and defend this Constitution.",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) Any attempt to establish a government otherwise than in compliance with this Constitution is unlawful.",
-                "sub_clauses": []
-              }
-            ]
+            "local_number": "3",
+            "global_number": "3",
+            "title": "No person may claim or exercise State authority except as authorised under this Constitution",
+            "clauses": []
+          },
+          {
+            "local_number": "4",
+            "global_number": "4",
+            "title": "Any law, including customary law, that is inconsistent with this Constitution is void to the extent of the inconsistency, and any act or omission in contravention of this Constitution is invalid",
+            "clauses": []
+          },
+          {
+            "local_number": "5",
+            "global_number": "5",
+            "title": "Any treaty or convention ratified by Kenya shall form part of the law of Kenya under this Constitution",
+            "clauses": []
           }
-        ]
+        ],
+        "parts": [],
+        "preamble": ""
       },
       {
         "number": "TWO",
-        "title": "THE REPUBLIC",
+        "title": "The Republic",
         "articles": [
           {
-            "number": "4",
+            "local_number": "1",
+            "global_number": "7",
             "title": "Declaration of the Republic",
             "clauses": [
               {
@@ -129,380 +75,539 @@
             ]
           },
           {
-            "number": "5",
+            "local_number": "2",
+            "global_number": "8",
             "title": "Territory of Kenya",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Kenya consists of the territory and territorial waters comprising Kenya on the effective date, and any additional territory and territorial waters as defined by an Act of Parliament.",
-                "sub_clauses": []
-              }
-            ]
+            "clauses": []
           },
           {
-            "number": "6",
+            "local_number": "3",
+            "global_number": "9",
+            "title": "Kenya consists of the territory and territorial waters comprising Kenya on the effective date, and any additional territory and territorial waters as defined by an Act of Parliament",
+            "clauses": []
+          },
+          {
+            "local_number": "4",
+            "global_number": "10",
             "title": "Devolution and access to services",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) The territory of Kenya is divided into the counties specified in the First Schedule.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) The governments at the national and county levels are distinct and interdependent and shall conduct their mutual relations on the basis of consultation and cooperation.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) A national State organ shall ensure reasonable access to its services in all parts of the Republic, so far as it is appropriate to do so having regard to the nature of the service. National, official",
-                "sub_clauses": []
               }
             ]
           },
           {
-            "number": "7",
+            "local_number": "5",
+            "global_number": "11",
             "title": "National, official and other languages",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) The national language of the Republic is Kiswahili.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) The official languages of the Republic are Kiswahili and English.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) The State shall-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "promote and protect the diversity of language of the people of Kenya; and"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "promote the development and use of indigenous languages, Kenyan Sign language, Braille and other communication formats and technologies accessible to persons with disabilities."
-                  }
-                ]
               }
             ]
           },
           {
-            "number": "8",
+            "local_number": "6",
+            "global_number": "12",
+            "title": "Promote the development and use of indigenous languages, Kenyan Sign language, Braille and other communication formats and technologies accessible to persons with disabilities",
+            "clauses": []
+          },
+          {
+            "local_number": "7",
+            "global_number": "13",
             "title": "State and religion",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) There shall be no State religion.",
-                "sub_clauses": []
-              }
-            ]
+            "clauses": []
           },
           {
-            "number": "9",
+            "local_number": "8",
+            "global_number": "14",
+            "title": "There shall be no State religion",
+            "clauses": []
+          },
+          {
+            "local_number": "9",
+            "global_number": "15",
             "title": "National symbols and national days",
             "clauses": [
               {
                 "number": "1",
-                "text": "(1) The national symbols of the Republic are-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "the national flag;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "the national anthem;"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "the coat of arms; and"
-                  },
-                  {
-                    "letter": "d",
-                    "text": "the public seal."
-                  }
-                ]
-              },
-              {
-                "number": "2",
-                "text": "(2) The national symbols are as set out in the Second Schedule.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) The national days are-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "Madaraka Day, to be observed on 1st June;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "Mashujaa Day, to be observed on 20th October; and"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "Jamhuri Day, to be observed on 12th December."
-                  }
-                ]
-              },
-              {
-                "number": "4",
-                "text": "(4) A national day shall be a public holiday.",
-                "sub_clauses": []
-              },
-              {
-                "number": "5",
-                "text": "(5) Parliament may enact legislation prescribing other public holidays, and providing for observance of public holidays.",
+                "text": "(1) The national symbols of the Republic are—",
                 "sub_clauses": []
               }
             ]
           },
           {
-            "number": "10",
+            "local_number": "10",
+            "global_number": "16",
+            "title": "Jamhuri Day, to be observed on 12th December",
+            "clauses": []
+          },
+          {
+            "local_number": "11",
+            "global_number": "17",
+            "title": "Parliament may enact legislation prescribing other public holidays, and providing for observance of public holidays",
+            "clauses": []
+          },
+          {
+            "local_number": "12",
+            "global_number": "18",
             "title": "National values and principles of governance",
             "clauses": [
               {
                 "number": "1",
-                "text": "(1) The national values and principles of governance in this Article bind all State organs, State officers, public officers and all persons whenever any of them-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "applies or interprets this Constitution;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "enacts, applies or interprets any law; or"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "makes or implements public policy decisions."
-                  }
-                ]
-              },
-              {
-                "number": "2",
-                "text": "(2) The national values and principles of governance include-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "patriotism, national unity, sharing and devolution of power, the rule of law, democracy and participation of the people;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "human dignity, equity, social justice, inclusiveness, equality, human rights, non-discrimination and protection of the marginalised;"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "good governance, integrity, transparency and accountability; and"
-                  },
-                  {
-                    "letter": "d",
-                    "text": "sustainable development."
-                  }
-                ]
+                "text": "(1) The national values and principles of governance in this Article bind all State organs, State officers, public officers and all persons whenever any of them—",
+                "sub_clauses": []
               }
             ]
           },
           {
-            "number": "11",
+            "local_number": "13",
+            "global_number": "19",
+            "title": "Makes or implements public policy decisions",
+            "clauses": []
+          },
+          {
+            "local_number": "14",
+            "global_number": "20",
+            "title": "Sustainable development",
+            "clauses": []
+          },
+          {
+            "local_number": "15",
+            "global_number": "21",
             "title": "Culture",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) This Constitution recognises culture as the foundation of the nation and as the cumulative civilization of the Kenyan people and nation.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) The State shall-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "promote all forms of national and cultural expression through literature, the arts, traditional celebrations, science, communication, information, mass media, publications, libraries and other cultural heritage;"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "recognise the role of science and indigenous technologies in the development of the nation; and"
-                  },
-                  {
-                    "letter": "c",
-                    "text": "promote the intellectual property rights of the people of Kenya."
-                  }
-                ]
-              },
-              {
-                "number": "3",
-                "text": "(3) Parliament shall enact legislation to-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "ensure that communities receive compensation or royalties for the use of their cultures and cultural heritage; and"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "recognise and protect the ownership of indigenous seeds and plant varieties, their genetic and diverse characteristics and their use by the communities of Kenya."
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "number": "THREE",
-        "title": "CITIZENSHIP",
-        "articles": [
-          {
-            "number": "12",
-            "title": "Entitlements of citizens",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Every citizen is entitled to-",
-                "sub_clauses": [
-                  {
-                    "letter": "a",
-                    "text": "the rights, privileges and benefits of citizenship, subject to the limits provided or permitted by this Constitution; and"
-                  },
-                  {
-                    "letter": "b",
-                    "text": "a Kenyan passport and any document of registration or identification issued by the State to citizens."
-                  }
-                ]
-              },
-              {
-                "number": "2",
-                "text": "(2) A passport or other document referred to in clause (1) may be denied, suspended or confiscated only in accordance with law.",
-                "sub_clauses": [
-                  {
-                    "letter": "b",
-                    "text": "may be denied, suspended or confiscated only in accordance with an Act of Parliament that satisfies the criteria referred to in Article 24."
-                  }
-                ]
               }
             ]
           },
           {
-            "number": "13",
+            "local_number": "16",
+            "global_number": "22",
+            "title": "Promote the intellectual property rights of the people of Kenya",
+            "clauses": []
+          }
+        ],
+        "parts": [],
+        "preamble": ""
+      },
+      {
+        "number": "THREE",
+        "title": "Citizenship",
+        "articles": [
+          {
+            "local_number": "1",
+            "global_number": "24",
+            "title": "Entitlements of citizens",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) Every citizen is entitled to—",
+                "sub_clauses": []
+              },
+              {
+                "number": "2",
+                "text": "(2) A passport or other document referred to in clause (1)(b) may be denied, suspended or confiscated only in accordance with an Act of Parliament that satisfies the criteria referred to in Article 24.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "2",
+            "global_number": "25",
             "title": "Retention and acquisition of citizenship",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) Every person who was a citizen immediately before the effective date retains the same citizenship status as of that date.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) Citizenship may be acquired by birth or registration.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) Citizenship is not lost through marriage or the dissolution of marriage.",
-                "sub_clauses": []
               }
             ]
           },
           {
-            "number": "14",
+            "local_number": "3",
+            "global_number": "26",
+            "title": "Citizenship may be acquired by birth or registration",
+            "clauses": []
+          },
+          {
+            "local_number": "4",
+            "global_number": "27",
+            "title": "Citizenship is not lost through marriage or the dissolution of marriage",
+            "clauses": []
+          },
+          {
+            "local_number": "5",
+            "global_number": "28",
             "title": "Citizenship by birth",
             "clauses": [
               {
                 "number": "1",
-                "text": "(1) A person is a citizen by birth if on the day of the person's birth, whether or not the person is born in Kenya, either the mother or father of the person is a citizen.",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) Clause (1) applies equally to a person born before the effective date, whether or not the person was born in Kenya, if either the mother or father of the person is or was a citizen.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) Parliament may enact legislation limiting the effect of clauses (1) and (2) on the descendents of Kenyan citizens who are born outside Kenya.",
-                "sub_clauses": []
-              },
-              {
-                "number": "4",
-                "text": "(4) A child found in Kenya who is, or appears to be, less than eight years of age, and whose nationality and parents are not known, is presumed to be a citizen by birth.",
-                "sub_clauses": []
-              },
-              {
-                "number": "5",
-                "text": "(5) A person who is a Kenyan citizen by birth and who has ceased to be a Kenyan citizen because the person acquired citizenship of another country, is entitled on application to regain Kenyan citizenship.",
+                "text": "(1) A person is a citizen by birth if on the day of the person’s birth, whether or not the person is born in Kenya, either the mother or father of the person is a citizen.",
                 "sub_clauses": []
               }
             ]
           },
           {
-            "number": "15",
+            "local_number": "6",
+            "global_number": "29",
+            "title": "Clause (1) applies equally to a person born before the effective date, whether or not the person was born in Kenya, if either the mother or father of the person is or was a citizen",
+            "clauses": []
+          },
+          {
+            "local_number": "7",
+            "global_number": "30",
+            "title": "Parliament may enact legislation limiting the effect of clauses (1) and (2) on the descendents of Kenyan citizens who are born outside Kenya",
+            "clauses": []
+          },
+          {
+            "local_number": "8",
+            "global_number": "31",
             "title": "Citizenship by registration",
             "clauses": [
               {
                 "number": "1",
                 "text": "(1) A person who has been married to a citizen for a period of at least seven years is entitled on application to be registered as a citizen.",
                 "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) A person who has been lawfully resident in Kenya for a continuous period of at least seven years, and who satisfies the conditions prescribed by an Act of Parliament, may apply to be registered as a citizen.",
-                "sub_clauses": []
-              },
-              {
-                "number": "3",
-                "text": "(3) A child who is not a citizen, but is adopted by a citizen, is entitled on application to be registered as a citizen.",
-                "sub_clauses": []
-              },
-              {
-                "number": "4",
-                "text": "(4) Parliament shall enact legislation establishing conditions on which citizenship may be granted to individuals who are citizens of other countries.",
-                "sub_clauses": []
-              },
-              {
-                "number": "5",
-                "text": "(5) This Article applies to a person as from the effective date, but any requirements that must be satisfied before the person is entitled to be registered as a citizen shall be regarded as having been satisfied irrespective of whether the person satisfied them before or after the effective date, or partially before, and partially after, the effective date.",
-                "sub_clauses": []
               }
             ]
           },
           {
-            "number": "16",
+            "local_number": "9",
+            "global_number": "32",
+            "title": "Parliament shall enact legislation establishing conditions on which citizenship may be granted to individuals who are citizens of other countries",
+            "clauses": []
+          },
+          {
+            "local_number": "10",
+            "global_number": "33",
+            "title": "This Article applies to a person as from the effective date, but any requirements that must be satisfied before the person is entitled to be registered as a citizen shall be regarded as having been satisfied irrespective of whether the person satisfied them before or after the effective date, or partially before, and partially after, the effective date",
+            "clauses": []
+          },
+          {
+            "local_number": "11",
+            "global_number": "34",
             "title": "Dual citizenship",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) A citizen by birth does not lose citizenship by acquiring the citizenship of another country.",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) A citizen may hold dual citizenship.",
-                "sub_clauses": []
-              }
-            ]
+            "clauses": []
           },
           {
-            "number": "17",
+            "local_number": "12",
+            "global_number": "35",
             "title": "Revocation of citizenship",
             "clauses": [
               {
                 "number": "1",
-                "text": "(1) If a person acquired citizenship by registration, the citizenship may be revoked if-",
-                "sub_clauses": [
+                "text": "(1) If a person acquired citizenship by registration, the citizenship may be revoked if—",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "13",
+            "global_number": "36",
+            "title": "Legislation on citizenship",
+            "clauses": []
+          }
+        ],
+        "parts": [],
+        "preamble": ""
+      },
+      {
+        "number": "FOUR",
+        "title": "Part 1 – General Provisions To The Bill Of Rights",
+        "articles": [
+          {
+            "local_number": "1",
+            "global_number": "38",
+            "title": "Rights and fundamental freedoms",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) The Bill of Rights is an integral part of Kenya’s democratic state and is the framework for social, economic and cultural policies.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "2",
+            "global_number": "39",
+            "title": "Are subject only to the limitations contemplated in this Constitution",
+            "clauses": []
+          },
+          {
+            "local_number": "3",
+            "global_number": "40",
+            "title": "Application of Bill of Rights",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) The Bill of Rights applies to all law and binds all State organs and all persons.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "4",
+            "global_number": "41",
+            "title": "Every person shall enjoy the rights and fundamental freedoms in the Bill of Rights to the greatest extent consistent with the nature of the right or fundamental freedom",
+            "clauses": []
+          },
+          {
+            "local_number": "5",
+            "global_number": "42",
+            "title": "Adopt the interpretation that most favours the enforcement of a right or fundamental freedom",
+            "clauses": []
+          },
+          {
+            "local_number": "6",
+            "global_number": "43",
+            "title": "Implementation of rights and fundamental freedoms",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) It is a fundamental duty of the State and every State organ to observe, respect, protect, promote and fulfil the rights and fundamental freedoms in the Bill of Rights.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "7",
+            "global_number": "44",
+            "title": "All State organs and all public officers have the duty to address the needs of vulnerable groups within society, including women, older members of society, persons with disabilities, children, youth, members of minority or marginalised communities, and members of particular ethnic, religious or cultural communities",
+            "clauses": []
+          },
+          {
+            "local_number": "8",
+            "global_number": "45",
+            "title": "Enforcement of Bill of Rights",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) Every person has the right to institute court proceedings claiming that a right or fundamental freedom in the Bill of Rights has been denied, violated or infringed, or is threatened.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "9",
+            "global_number": "46",
+            "title": "An association acting in the interest of one or more of its members",
+            "clauses": []
+          },
+          {
+            "local_number": "10",
+            "global_number": "47",
+            "title": "An organisation or individual with particular expertise may, with the leave of the court, appear as a friend of the court",
+            "clauses": []
+          },
+          {
+            "local_number": "11",
+            "global_number": "48",
+            "title": "Authority of courts to uphold and enforce the Bill of Rights",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) The High Court has jurisdiction, in accordance with Article 165, to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights.",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "12",
+            "global_number": "49",
+            "title": "Parliament shall enact legislation to give original jurisdiction in appropriate cases to subordinate courts to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights",
+            "clauses": []
+          },
+          {
+            "local_number": "13",
+            "global_number": "50",
+            "title": "An order of judicial review",
+            "clauses": []
+          },
+          {
+            "local_number": "14",
+            "global_number": "51",
+            "title": "Limitation of rights and fundamental freedoms",
+            "clauses": [
+              {
+                "number": "1",
+                "text": "(1) A right or fundamental freedom in the Bill of Rights shall not be limited except by law, and then only to the extent that the limitation is reasonable and justifiable in an open and democratic society based on human dignity, equality and freedom, taking into account all relevant factors, including—",
+                "sub_clauses": []
+              }
+            ]
+          },
+          {
+            "local_number": "15",
+            "global_number": "52",
+            "title": "Shall not limit the right or fundamental freedom so far as to derogate from its core or essential content",
+            "clauses": []
+          },
+          {
+            "local_number": "16",
+            "global_number": "53",
+            "title": "Article 49 — Rights of arrested persons",
+            "clauses": []
+          }
+        ],
+        "parts": [
+          {
+            "part": "2",
+            "title": "Part 2 – Specific Rights And Fundamental Freedoms",
+            "articles": [
+              {
+                "local_number": "1",
+                "global_number": "55",
+                "title": "Right to life",
+                "clauses": [
                   {
-                    "letter": "a",
-                    "text": "the person acquired the citizenship by fraud, false representation or concealment of any material fact"
+                    "number": "1",
+                    "text": "(1) Every person has the right to life.",
+                    "sub_clauses": []
                   }
                 ]
+              },
+              {
+                "local_number": "2",
+                "global_number": "56",
+                "title": "Abortion is not permitted unless, in the opinion of a trained health professional, there is need for emergency treatment, or the life or health of the mother is in danger, or if permitted by any other written law",
+                "clauses": []
+              },
+              {
+                "local_number": "3",
+                "global_number": "57",
+                "title": "Equality and freedom from discrimination",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person is equal before the law and has the right to equal protection and equal benefit of the law.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "4",
+                "global_number": "58",
+                "title": "Equality includes the full and equal enjoyment of all rights and fundamental freedoms",
+                "clauses": []
+              },
+              {
+                "local_number": "5",
+                "global_number": "59",
+                "title": "Women and men have the right to equal treatment, including the right to equal opportunities in political, economic, cultural and social spheres",
+                "clauses": []
+              },
+              {
+                "local_number": "6",
+                "global_number": "60",
+                "title": "To give full effect to the realisation of the rights guaranteed under this Article, the State shall take legislative and other measures, including affirmative action programmes and policies designed to redress any disadvantage suffered by individuals or groups because of past discrimination",
+                "clauses": []
+              },
+              {
+                "local_number": "7",
+                "global_number": "61",
+                "title": "Any measure taken under clause (6) shall adequately provide for any benefits to be on the basis of genuine need",
+                "clauses": []
+              },
+              {
+                "local_number": "8",
+                "global_number": "62",
+                "title": "In addition to the measures contemplated in clause (6), the State shall take legislative and other measures to implement the principle that not more than two- thirds of the members of elective or appointive bodies shall be of the same gender",
+                "clauses": []
+              },
+              {
+                "local_number": "9",
+                "global_number": "63",
+                "title": "Human dignity",
+                "clauses": []
+              },
+              {
+                "local_number": "10",
+                "global_number": "64",
+                "title": "Every person has inherent dignity and the right to have that dignity respected and protected",
+                "clauses": []
+              },
+              {
+                "local_number": "11",
+                "global_number": "65",
+                "title": "Freedom and security of the person",
+                "clauses": []
+              },
+              {
+                "local_number": "12",
+                "global_number": "66",
+                "title": "Treated or punished in a cruel, inhuman or degrading manner",
+                "clauses": []
+              },
+              {
+                "local_number": "13",
+                "global_number": "67",
+                "title": "Slavery, servitude and forced labour",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) A person shall not be held in slavery or servitude.",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "2",
+                    "text": "(2) A person shall not be required to perform forced labour.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "14",
+                "global_number": "68",
+                "title": "Privacy",
+                "clauses": []
+              },
+              {
+                "local_number": "15",
+                "global_number": "69",
+                "title": "Freedom of conscience, religion, belief and opinion",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person has the right to freedom of conscience, religion, thought, belief and opinion.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "16",
+                "global_number": "70",
+                "title": "Every person has the right, either individually or in community with others, in public or in private, to manifest any religion or belief through worship, practice, teaching or observance, including observance of a day of worship",
+                "clauses": []
+              },
+              {
+                "local_number": "17",
+                "global_number": "71",
+                "title": "Freedom of expression",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person has the right to freedom of expression, which includes—",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "18",
+                "global_number": "72",
+                "title": "Academic freedom and freedom of scientific research",
+                "clauses": []
               }
             ]
           }
-        ]
+        ],
+        "preamble": ""
       }
     ]
   }
