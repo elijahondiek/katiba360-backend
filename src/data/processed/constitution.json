@@ -5,315 +5,33 @@
     "chapters": [
       {
         "number": "ONE",
-        "title": "Sovereignty Of The People And Supremacy Of This Constitution",
-        "articles": [
-          {
-            "local_number": "1",
-            "global_number": "1",
-            "title": "Sovereignty of the people",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) All sovereign power belongs to the people of Kenya and shall be exercised only in accordance with this Constitution.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "2",
-            "global_number": "2",
-            "title": "Supremacy of this Constitution",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) This Constitution is the supreme law of the Republic and binds all persons and all State organs at both levels of government.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "3",
-            "global_number": "3",
-            "title": "No person may claim or exercise State authority except as authorised under this Constitution",
-            "clauses": []
-          },
-          {
-            "local_number": "4",
-            "global_number": "4",
-            "title": "Any law, including customary law, that is inconsistent with this Constitution is void to the extent of the inconsistency, and any act or omission in contravention of this Constitution is invalid",
-            "clauses": []
-          },
-          {
-            "local_number": "5",
-            "global_number": "5",
-            "title": "Any treaty or convention ratified by Kenya shall form part of the law of Kenya under this Constitution",
-            "clauses": []
-          }
-        ],
+        "title": "Sovereignty of the people.",
+        "articles": [],
         "parts": [],
         "preamble": ""
       },
       {
         "number": "TWO",
-        "title": "The Republic",
-        "articles": [
-          {
-            "local_number": "1",
-            "global_number": "7",
-            "title": "Declaration of the Republic",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Kenya is a sovereign Republic.",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) The Republic of Kenya shall be a multi-party democratic State founded on the national values and principles of governance referred to in Article 10.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "2",
-            "global_number": "8",
-            "title": "Territory of Kenya",
-            "clauses": []
-          },
-          {
-            "local_number": "3",
-            "global_number": "9",
-            "title": "Kenya consists of the territory and territorial waters comprising Kenya on the effective date, and any additional territory and territorial waters as defined by an Act of Parliament",
-            "clauses": []
-          },
-          {
-            "local_number": "4",
-            "global_number": "10",
-            "title": "Devolution and access to services",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The territory of Kenya is divided into the counties specified in the First Schedule.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "5",
-            "global_number": "11",
-            "title": "National, official and other languages",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The national language of the Republic is Kiswahili.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "6",
-            "global_number": "12",
-            "title": "Promote the development and use of indigenous languages, Kenyan Sign language, Braille and other communication formats and technologies accessible to persons with disabilities",
-            "clauses": []
-          },
-          {
-            "local_number": "7",
-            "global_number": "13",
-            "title": "State and religion",
-            "clauses": []
-          },
-          {
-            "local_number": "8",
-            "global_number": "14",
-            "title": "There shall be no State religion",
-            "clauses": []
-          },
-          {
-            "local_number": "9",
-            "global_number": "15",
-            "title": "National symbols and national days",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The national symbols of the Republic are—",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "10",
-            "global_number": "16",
-            "title": "Jamhuri Day, to be observed on 12th December",
-            "clauses": []
-          },
-          {
-            "local_number": "11",
-            "global_number": "17",
-            "title": "Parliament may enact legislation prescribing other public holidays, and providing for observance of public holidays",
-            "clauses": []
-          },
-          {
-            "local_number": "12",
-            "global_number": "18",
-            "title": "National values and principles of governance",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The national values and principles of governance in this Article bind all State organs, State officers, public officers and all persons whenever any of them—",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "13",
-            "global_number": "19",
-            "title": "Makes or implements public policy decisions",
-            "clauses": []
-          },
-          {
-            "local_number": "14",
-            "global_number": "20",
-            "title": "Sustainable development",
-            "clauses": []
-          },
-          {
-            "local_number": "15",
-            "global_number": "21",
-            "title": "Culture",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) This Constitution recognises culture as the foundation of the nation and as the cumulative civilization of the Kenyan people and nation.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "16",
-            "global_number": "22",
-            "title": "Promote the intellectual property rights of the people of Kenya",
-            "clauses": []
-          }
-        ],
+        "title": "Declaration of the Republic.",
+        "articles": [],
         "parts": [],
         "preamble": ""
       },
       {
         "number": "THREE",
-        "title": "Citizenship",
+        "title": "Entitlements of citizens.",
         "articles": [
           {
             "local_number": "1",
-            "global_number": "24",
-            "title": "Entitlements of citizens",
+            "global_number": "1",
+            "title": "Prescribing the Duties and Rights of Citizens; And",
             "clauses": [
               {
                 "number": "1",
-                "text": "(1) Every citizen is entitled to—",
-                "sub_clauses": []
-              },
-              {
-                "number": "2",
-                "text": "(2) A passport or other document referred to in clause (1)(b) may be denied, suspended or confiscated only in accordance with an Act of Parliament that satisfies the criteria referred to in Article 24.",
+                "text": "generally giving effect to the provisions of this Chapter.",
                 "sub_clauses": []
               }
             ]
-          },
-          {
-            "local_number": "2",
-            "global_number": "25",
-            "title": "Retention and acquisition of citizenship",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Every person who was a citizen immediately before the effective date retains the same citizenship status as of that date.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "3",
-            "global_number": "26",
-            "title": "Citizenship may be acquired by birth or registration",
-            "clauses": []
-          },
-          {
-            "local_number": "4",
-            "global_number": "27",
-            "title": "Citizenship is not lost through marriage or the dissolution of marriage",
-            "clauses": []
-          },
-          {
-            "local_number": "5",
-            "global_number": "28",
-            "title": "Citizenship by birth",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) A person is a citizen by birth if on the day of the person’s birth, whether or not the person is born in Kenya, either the mother or father of the person is a citizen.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "6",
-            "global_number": "29",
-            "title": "Clause (1) applies equally to a person born before the effective date, whether or not the person was born in Kenya, if either the mother or father of the person is or was a citizen",
-            "clauses": []
-          },
-          {
-            "local_number": "7",
-            "global_number": "30",
-            "title": "Parliament may enact legislation limiting the effect of clauses (1) and (2) on the descendents of Kenyan citizens who are born outside Kenya",
-            "clauses": []
-          },
-          {
-            "local_number": "8",
-            "global_number": "31",
-            "title": "Citizenship by registration",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) A person who has been married to a citizen for a period of at least seven years is entitled on application to be registered as a citizen.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "9",
-            "global_number": "32",
-            "title": "Parliament shall enact legislation establishing conditions on which citizenship may be granted to individuals who are citizens of other countries",
-            "clauses": []
-          },
-          {
-            "local_number": "10",
-            "global_number": "33",
-            "title": "This Article applies to a person as from the effective date, but any requirements that must be satisfied before the person is entitled to be registered as a citizen shall be regarded as having been satisfied irrespective of whether the person satisfied them before or after the effective date, or partially before, and partially after, the effective date",
-            "clauses": []
-          },
-          {
-            "local_number": "11",
-            "global_number": "34",
-            "title": "Dual citizenship",
-            "clauses": []
-          },
-          {
-            "local_number": "12",
-            "global_number": "35",
-            "title": "Revocation of citizenship",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) If a person acquired citizenship by registration, the citizenship may be revoked if—",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "13",
-            "global_number": "36",
-            "title": "Legislation on citizenship",
-            "clauses": []
           }
         ],
         "parts": [],
@@ -321,275 +39,291 @@
       },
       {
         "number": "FOUR",
-        "title": "Part 1 – General Provisions To The Bill Of Rights",
-        "articles": [
-          {
-            "local_number": "1",
-            "global_number": "38",
-            "title": "Rights and fundamental freedoms",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The Bill of Rights is an integral part of Kenya’s democratic state and is the framework for social, economic and cultural policies.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "2",
-            "global_number": "39",
-            "title": "Are subject only to the limitations contemplated in this Constitution",
-            "clauses": []
-          },
-          {
-            "local_number": "3",
-            "global_number": "40",
-            "title": "Application of Bill of Rights",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The Bill of Rights applies to all law and binds all State organs and all persons.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "4",
-            "global_number": "41",
-            "title": "Every person shall enjoy the rights and fundamental freedoms in the Bill of Rights to the greatest extent consistent with the nature of the right or fundamental freedom",
-            "clauses": []
-          },
-          {
-            "local_number": "5",
-            "global_number": "42",
-            "title": "Adopt the interpretation that most favours the enforcement of a right or fundamental freedom",
-            "clauses": []
-          },
-          {
-            "local_number": "6",
-            "global_number": "43",
-            "title": "Implementation of rights and fundamental freedoms",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) It is a fundamental duty of the State and every State organ to observe, respect, protect, promote and fulfil the rights and fundamental freedoms in the Bill of Rights.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "7",
-            "global_number": "44",
-            "title": "All State organs and all public officers have the duty to address the needs of vulnerable groups within society, including women, older members of society, persons with disabilities, children, youth, members of minority or marginalised communities, and members of particular ethnic, religious or cultural communities",
-            "clauses": []
-          },
-          {
-            "local_number": "8",
-            "global_number": "45",
-            "title": "Enforcement of Bill of Rights",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) Every person has the right to institute court proceedings claiming that a right or fundamental freedom in the Bill of Rights has been denied, violated or infringed, or is threatened.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "9",
-            "global_number": "46",
-            "title": "An association acting in the interest of one or more of its members",
-            "clauses": []
-          },
-          {
-            "local_number": "10",
-            "global_number": "47",
-            "title": "An organisation or individual with particular expertise may, with the leave of the court, appear as a friend of the court",
-            "clauses": []
-          },
-          {
-            "local_number": "11",
-            "global_number": "48",
-            "title": "Authority of courts to uphold and enforce the Bill of Rights",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) The High Court has jurisdiction, in accordance with Article 165, to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights.",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "12",
-            "global_number": "49",
-            "title": "Parliament shall enact legislation to give original jurisdiction in appropriate cases to subordinate courts to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights",
-            "clauses": []
-          },
-          {
-            "local_number": "13",
-            "global_number": "50",
-            "title": "An order of judicial review",
-            "clauses": []
-          },
-          {
-            "local_number": "14",
-            "global_number": "51",
-            "title": "Limitation of rights and fundamental freedoms",
-            "clauses": [
-              {
-                "number": "1",
-                "text": "(1) A right or fundamental freedom in the Bill of Rights shall not be limited except by law, and then only to the extent that the limitation is reasonable and justifiable in an open and democratic society based on human dignity, equality and freedom, taking into account all relevant factors, including—",
-                "sub_clauses": []
-              }
-            ]
-          },
-          {
-            "local_number": "15",
-            "global_number": "52",
-            "title": "Shall not limit the right or fundamental freedom so far as to derogate from its core or essential content",
-            "clauses": []
-          },
-          {
-            "local_number": "16",
-            "global_number": "53",
-            "title": "Article 49 — Rights of arrested persons",
-            "clauses": []
-          }
-        ],
+        "title": "Rights and fundamental freedoms.",
+        "articles": [],
         "parts": [
           {
-            "part": "2",
-            "title": "Part 2 – Specific Rights And Fundamental Freedoms",
+            "number": "1",
+            "title": "General Provisions to the Bill of Rights",
             "articles": [
               {
                 "local_number": "1",
-                "global_number": "55",
-                "title": "Right to life",
+                "global_number": "2",
+                "title": "Application of Bill of Rights.",
                 "clauses": [
                   {
                     "number": "1",
-                    "text": "(1) Every person has the right to life.",
+                    "text": "(1) The Bill of Rights applies to all law and binds all State organs and all persons. Every person shall enjoy the rights and fundamental freedoms in the Bill of Rights to the greatest extent consistent with the nature of the right or fundamental freedom. In applying a provision of the Bill of Rights, a court shall— develop the law to the extent that it does not give effect to a right or fundamental freedom; and adopt the interpretation that most favours the enforcement of a right or fundamental freedom. In interpreting the Bill of Rights, a court, tribunal or other authority shall promote— the values that underlie an open and democratic society based on human dignity, equality, equity and freedom; and the spirit, purport and objects of the Bill of Rights. In applying any right under Article 43, if the State claims that it does not have the resources to implement the right, a court, tribunal or other authority shall be guided by the following principles— it is the responsibility of the State to show that the resources are not available; in allocating resources, the State shall give priority to ensuring the widest possible enjoyment of the right or fundamental freedom having regard to prevailing circumstances, including the vulnerability of particular groups or individuals; and the court, tribunal or other authority may not interfere with a decision by a State organ concerning the allocation of available resources, solely on the basis that it would have reached a different conclusion.",
                     "sub_clauses": []
                   }
                 ]
               },
               {
                 "local_number": "2",
-                "global_number": "56",
-                "title": "Abortion is not permitted unless, in the opinion of a trained health professional, there is need for emergency treatment, or the life or health of the mother is in danger, or if permitted by any other written law",
-                "clauses": []
-              },
-              {
-                "local_number": "3",
-                "global_number": "57",
-                "title": "Equality and freedom from discrimination",
+                "global_number": "3",
+                "title": "Implementation of rights and fundamental freedoms.",
                 "clauses": [
                   {
                     "number": "1",
-                    "text": "(1) Every person is equal before the law and has the right to equal protection and equal benefit of the law.",
+                    "text": "(1) It is a fundamental duty of the State and every State organ to observe, respect, protect, promote and fulfil the rights and fundamental freedoms in the Bill of Rights. The State shall take legislative, policy and other measures, including the setting of standards, to achieve the progressive realisation of the rights guaranteed under Article 43. All State organs and all public officers have the duty to address the needs of vulnerable groups within society, including women, older members of society, persons with disabilities, children, youth, members of minority or marginalised communities, and members of particular ethnic, religious or cultural communities. The State shall enact and implement legislation to fulfil its international obligations in respect of human rights and fundamental freedoms.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "3",
+                "global_number": "4",
+                "title": "Enforcement of Bill of Rights.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person has the right to institute court proceedings claiming that a right or fundamental freedom in the Bill of Rights has been denied, violated or infringed, or is threatened. In addition to a person acting in their own interest, court proceedings under clause",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "2",
+                    "text": "(1) may be instituted by— a person acting on behalf of another person who cannot act in their own name; a person acting as a member of, or in the interest of, a group or class of persons; a person acting in the public interest; or an association acting in the interest of one or more of its members. The Chief Justice shall make rules providing for the court proceedings referred to in this Article, which shall satisfy the criteria that— the rights of standing provided for in clause",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "3",
+                    "text": "(2) are fully facilitated; formalities relating to the proceedings, including commencement of the proceedings, are kept to the minimum, and in particular that the court shall, if necessary, entertain proceedings on the basis of informal documentation; no fee may be charged for commencing the proceedings; the court, while observing the rules of natural justice, shall not be unreasonably restricted by procedural technicalities; and an organisation or individual with particular expertise may, with the leave of the court, appear as a friend of the court. The absence of rules contemplated in clause",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "4",
+                    "text": "(3) does not limit the right of any person to commence court proceedings under this Article, and to have the matter heard and determined by a court. Authority of courts to uphold and enforce the Bill of Rights.",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "5",
+                    "text": "(1) The High Court has jurisdiction, in accordance with Article 165, to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights. Parliament shall enact legislation to give original jurisdiction in appropriate cases to subordinate courts to hear and determine applications for redress of a denial, violation or infringement of, or threat to, a right or fundamental freedom in the Bill of Rights. In any proceedings brought under Article 22, a court may grant appropriate relief, including—",
                     "sub_clauses": []
                   }
                 ]
               },
               {
                 "local_number": "4",
-                "global_number": "58",
-                "title": "Equality includes the full and equal enjoyment of all rights and fundamental freedoms",
-                "clauses": []
-              },
-              {
-                "local_number": "5",
-                "global_number": "59",
-                "title": "Women and men have the right to equal treatment, including the right to equal opportunities in political, economic, cultural and social spheres",
-                "clauses": []
-              },
-              {
-                "local_number": "6",
-                "global_number": "60",
-                "title": "To give full effect to the realisation of the rights guaranteed under this Article, the State shall take legislative and other measures, including affirmative action programmes and policies designed to redress any disadvantage suffered by individuals or groups because of past discrimination",
-                "clauses": []
-              },
-              {
-                "local_number": "7",
-                "global_number": "61",
-                "title": "Any measure taken under clause (6) shall adequately provide for any benefits to be on the basis of genuine need",
-                "clauses": []
-              },
-              {
-                "local_number": "8",
-                "global_number": "62",
-                "title": "In addition to the measures contemplated in clause (6), the State shall take legislative and other measures to implement the principle that not more than two- thirds of the members of elective or appointive bodies shall be of the same gender",
-                "clauses": []
-              },
-              {
-                "local_number": "9",
-                "global_number": "63",
-                "title": "Human dignity",
-                "clauses": []
-              },
-              {
-                "local_number": "10",
-                "global_number": "64",
-                "title": "Every person has inherent dignity and the right to have that dignity respected and protected",
-                "clauses": []
-              },
-              {
-                "local_number": "11",
-                "global_number": "65",
-                "title": "Freedom and security of the person",
-                "clauses": []
-              },
-              {
-                "local_number": "12",
-                "global_number": "66",
-                "title": "Treated or punished in a cruel, inhuman or degrading manner",
-                "clauses": []
-              },
-              {
-                "local_number": "13",
-                "global_number": "67",
-                "title": "Slavery, servitude and forced labour",
+                "global_number": "5",
+                "title": "A Declaration of Rights;",
                 "clauses": [
                   {
                     "number": "1",
-                    "text": "(1) A person shall not be held in slavery or servitude.",
+                    "text": "an injunction; a conservatory order; a declaration of invalidity of any law that denies, violates, infringes, or threatens a right or fundamental freedom in the Bill of Rights and is not justified under Article 24; an order for compensation; and an order of judicial review.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "5",
+                "global_number": "6",
+                "title": "Limitation of rights and fundamental freedoms.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) A right or fundamental freedom in the Bill of Rights shall not be limited except by law, and then only to the extent that the limitation is reasonable and justifiable in an open and democratic society based on human dignity, equality and freedom, taking into account all relevant factors, including—",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "6",
+                "global_number": "7",
+                "title": "The Nature of the Right or Fundamental Freedom;",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "the importance of the purpose of the limitation; the nature and extent of the limitation; the need to ensure that the enjoyment of rights and fundamental freedoms by any individual does not prejudice the rights and fundamental freedoms of others; and the relation between the limitation and its purpose and whether there are less restrictive means to achieve the purpose. Despite clause (1), a provision in legislation limiting a right or fundamental freedom— in the case of a provision enacted or amended on or after the effective date, is not valid unless the legislation specifically expresses the intention to limit that right or fundamental freedom, and the nature and extent of the limitation; shall not be construed as limiting the right or fundamental freedom unless the provision is clear and specific about the right or freedom to be limited and the nature and extent of the limitation; and shall not limit the right or fundamental freedom so far as to derogate from its core or essential content. The State or a person seeking to justify a particular limitation shall demonstrate to the court, tribunal or other authority that the requirements of this Article have been satisfied. The provisions of this Chapter on equality shall be qualified to the extent strictly necessary for the application of Muslim law before the Kadhis’ courts, to persons who profess the Muslim religion, in matters relating to personal status, marriage, divorce and inheritance. Despite clause",
                     "sub_clauses": []
                   },
                   {
                     "number": "2",
-                    "text": "(2) A person shall not be required to perform forced labour.",
+                    "text": "(1) and (2), a provision in legislation may limit the application of the rights or fundamental freedoms in the following provisions to persons serving in the Kenya Defence Forces or the National Police Service—",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "7",
+                "global_number": "8",
+                "title": "Privacy;",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(31) Privacy;",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "8",
+                "global_number": "9",
+                "title": "Freedom of Association;",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(36) Freedom of association;",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "9",
+                "global_number": "10",
+                "title": "Assembly, demonstration, picketing...",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(37) Assembly, demonstration, picketing and petition;",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "10",
+                "global_number": "11",
+                "title": "Labour Relations;",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(41) Labour relations;",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "11",
+                "global_number": "12",
+                "title": "Economic and social...",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(43) Economic and social rights; and",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "12",
+                "global_number": "13",
+                "title": "Rights of arrested...",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(49) Rights of arrested persons.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "13",
+                "global_number": "14",
+                "title": "Fundamental Rights and freedoms that may not be limited.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "Despite any other provision in this Constitution, the following rights and fundamental freedoms shall not be limited— freedom from torture and cruel, inhuman or degrading treatment or punishment;",
                     "sub_clauses": []
                   }
                 ]
               },
               {
                 "local_number": "14",
-                "global_number": "68",
-                "title": "Privacy",
-                "clauses": []
-              },
-              {
-                "local_number": "15",
-                "global_number": "69",
-                "title": "Freedom of conscience, religion, belief and opinion",
+                "global_number": "15",
+                "title": "Freedom from Slavery or Servitude;",
                 "clauses": [
                   {
                     "number": "1",
-                    "text": "(1) Every person has the right to freedom of conscience, religion, thought, belief and opinion.",
+                    "text": "the right to a fair trial; and the right to an order of habeas corpus.",
+                    "sub_clauses": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "title": "Rights and Fundamental Freedoms",
+            "articles": [
+              {
+                "local_number": "15",
+                "global_number": "16",
+                "title": "Right to life.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person has the right to life. The life of a person begins at conception. A person shall not be deprived of life intentionally, except to the extent authorised by this Constitution or other written law. Abortion is not permitted unless, in the opinion of a trained health professional, there is need for emergency treatment, or the life or health of the mother is in danger, or if permitted by any other written law.",
                     "sub_clauses": []
                   }
                 ]
               },
               {
                 "local_number": "16",
-                "global_number": "70",
-                "title": "Every person has the right, either individually or in community with others, in public or in private, to manifest any religion or belief through worship, practice, teaching or observance, including observance of a day of worship",
-                "clauses": []
+                "global_number": "17",
+                "title": "Equality and freedom from discrimination.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person is equal before the law and has the right to equal protection and equal benefit of the law. Equality includes the full and equal enjoyment of all rights and fundamental freedoms. Women and men have the right to equal treatment, including the right to equal opportunities in political, economic, cultural and social spheres. The State shall not discriminate directly or indirectly against any person on any ground, including race, sex, pregnancy, marital status, health status, ethnic or social origin, colour, age, disability, religion, conscience, belief, culture, dress, language or birth. A person shall not discriminate directly or indirectly against another person on any of the grounds specified or contemplated in clause (4). To give full effect to the realisation of the rights guaranteed under this Article, the State shall take legislative and other measures, including affirmative action programmes and policies designed to redress any disadvantage suffered by individuals or groups because of past discrimination. Any measure taken under clause",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "2",
+                    "text": "(6) shall adequately provide for any benefits to be on the basis of genuine need. In addition to the measures contemplated in clause (6), the State shall take legislative and other measures to implement the principle that not more than two- thirds of the members of elective or appointive bodies shall be of the same gender. Human dignity. Every person has inherent dignity and the right to have that dignity respected and protected.",
+                    "sub_clauses": []
+                  }
+                ]
               },
               {
                 "local_number": "17",
-                "global_number": "71",
-                "title": "Freedom of expression",
+                "global_number": "18",
+                "title": "Freedom and security of the person.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "Every person has the right to freedom and security of the person, which includes the right not to be—",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "18",
+                "global_number": "19",
+                "title": "Deprived of Freedom Arbitrarily or Without Just Cause;",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "detained without trial, except during a state of emergency, in which case the detention is subject to Article 58; subjected to any form of violence from either public or private sources; subjected to torture in any manner, whether physical or psychological; subjected to corporal punishment; or treated or punished in a cruel, inhuman or degrading manner. Slavery, servitude and forced labour.",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "2",
+                    "text": "(1) A person shall not be held in slavery or servitude.",
+                    "sub_clauses": []
+                  },
+                  {
+                    "number": "3",
+                    "text": "(2) A person shall not be required to perform forced labour. Privacy. Every person has the right to privacy, which includes the right not to have— their person, home or property searched; their possessions seized; information relating to their family or private affairs unnecessarily required or revealed; or the privacy of their communications infringed.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "19",
+                "global_number": "20",
+                "title": "Freedom of conscience, religion, belief and opinion.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(1) Every person has the right to freedom of conscience, religion, thought, belief and opinion. Every person has the right, either individually or in community with others, in public or in private, to manifest any religion or belief through worship, practice, teaching or observance, including observance of a day of worship. A person may not be denied access to any institution, employment or facility, or the enjoyment of any right, because of the person’s belief or religion. A person shall not be compelled to act, or engage in any act, that is contrary to the person’s belief or religion.",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "20",
+                "global_number": "21",
+                "title": "Freedom of expression.",
                 "clauses": [
                   {
                     "number": "1",
@@ -599,10 +333,40 @@
                 ]
               },
               {
-                "local_number": "18",
-                "global_number": "72",
-                "title": "Academic freedom and freedom of scientific research",
-                "clauses": []
+                "local_number": "21",
+                "global_number": "22",
+                "title": "freedom to seek,...",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(7) freedom to seek, receive or impart information or ideas;",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "22",
+                "global_number": "23",
+                "title": "freedom of artistic...",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "(8) freedom of artistic creativity; and",
+                    "sub_clauses": []
+                  }
+                ]
+              },
+              {
+                "local_number": "23",
+                "global_number": "24",
+                "title": "academic freedom and freedom of scientific research.",
+                "clauses": [
+                  {
+                    "number": "1",
+                    "text": "The right to freedom of expression does not extend to— propaganda for war;",
+                    "sub_clauses": []
+                  }
+                ]
               }
             ]
           }
