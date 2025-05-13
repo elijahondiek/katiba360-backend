@@ -1,0 +1,1282 @@
+{
+  "schedules": [
+    {
+      "schedule_number": "FIRST SCHEDULE",
+      "title": "COUNTIES",
+      "article_references": [
+        {
+          "article_number": "6",
+          "clause_number": "1"
+        }
+      ],
+      "items": [
+        {
+          "item_number": "1",
+          "content": "Mombasa",
+          "sub_items": []
+        },
+        {
+          "item_number": "2",
+          "content": "Kwale",
+          "sub_items": []
+        },
+        {
+          "item_number": "3",
+          "content": "Kilifi",
+          "sub_items": []
+        },
+        {
+          "item_number": "4",
+          "content": "Tana River",
+          "sub_items": []
+        },
+        {
+          "item_number": "5",
+          "content": "Lamu",
+          "sub_items": []
+        },
+        {
+          "item_number": "6",
+          "content": "Taita/Taveta",
+          "sub_items": []
+        },
+        {
+          "item_number": "7",
+          "content": "Garissa",
+          "sub_items": []
+        },
+        {
+          "item_number": "8",
+          "content": "Wajir",
+          "sub_items": []
+        },
+        {
+          "item_number": "9",
+          "content": "Mandera",
+          "sub_items": []
+        },
+        {
+          "item_number": "10",
+          "content": "Marsabit",
+          "sub_items": []
+        },
+        {
+          "item_number": "11",
+          "content": "Isiolo",
+          "sub_items": []
+        },
+        {
+          "item_number": "12",
+          "content": "Meru",
+          "sub_items": []
+        },
+        {
+          "item_number": "13",
+          "content": "Tharaka-Nithi",
+          "sub_items": []
+        },
+        {
+          "item_number": "14",
+          "content": "Embu",
+          "sub_items": []
+        },
+        {
+          "item_number": "15",
+          "content": "Kitui",
+          "sub_items": []
+        },
+        {
+          "item_number": "16",
+          "content": "Machakos",
+          "sub_items": []
+        },
+        {
+          "item_number": "17",
+          "content": "Makueni",
+          "sub_items": []
+        },
+        {
+          "item_number": "18",
+          "content": "Nyandarua",
+          "sub_items": []
+        },
+        {
+          "item_number": "19",
+          "content": "Nyeri",
+          "sub_items": []
+        },
+        {
+          "item_number": "20",
+          "content": "Kirinyaga",
+          "sub_items": []
+        },
+        {
+          "item_number": "21",
+          "content": "Murang'a",
+          "sub_items": []
+        },
+        {
+          "item_number": "22",
+          "content": "Kiambu",
+          "sub_items": []
+        },
+        {
+          "item_number": "23",
+          "content": "Turkana",
+          "sub_items": []
+        },
+        {
+          "item_number": "24",
+          "content": "West Pokot",
+          "sub_items": []
+        },
+        {
+          "item_number": "25",
+          "content": "Samburu",
+          "sub_items": []
+        },
+        {
+          "item_number": "26",
+          "content": "Trans Nzoia",
+          "sub_items": []
+        },
+        {
+          "item_number": "27",
+          "content": "Uasin Gishu",
+          "sub_items": []
+        },
+        {
+          "item_number": "28",
+          "content": "Elgeyo/Marakwet",
+          "sub_items": []
+        },
+        {
+          "item_number": "29",
+          "content": "Nandi",
+          "sub_items": []
+        },
+        {
+          "item_number": "30",
+          "content": "Baringo",
+          "sub_items": []
+        },
+        {
+          "item_number": "31",
+          "content": "Laikipia",
+          "sub_items": []
+        },
+        {
+          "item_number": "32",
+          "content": "Nakuru",
+          "sub_items": []
+        },
+        {
+          "item_number": "33",
+          "content": "Narok",
+          "sub_items": []
+        },
+        {
+          "item_number": "34",
+          "content": "Kajiado",
+          "sub_items": []
+        },
+        {
+          "item_number": "35",
+          "content": "Kericho",
+          "sub_items": []
+        },
+        {
+          "item_number": "36",
+          "content": "Bomet",
+          "sub_items": []
+        },
+        {
+          "item_number": "37",
+          "content": "Kakamega",
+          "sub_items": []
+        },
+        {
+          "item_number": "38",
+          "content": "Vihiga",
+          "sub_items": []
+        },
+        {
+          "item_number": "39",
+          "content": "Bungoma",
+          "sub_items": []
+        },
+        {
+          "item_number": "40",
+          "content": "Busia",
+          "sub_items": []
+        },
+        {
+          "item_number": "41",
+          "content": "Siaya",
+          "sub_items": []
+        },
+        {
+          "item_number": "42",
+          "content": "Kisumu",
+          "sub_items": []
+        },
+        {
+          "item_number": "43",
+          "content": "Homa Bay",
+          "sub_items": []
+        },
+        {
+          "item_number": "44",
+          "content": "Migori",
+          "sub_items": []
+        },
+        {
+          "item_number": "45",
+          "content": "Kisii",
+          "sub_items": []
+        },
+        {
+          "item_number": "46",
+          "content": "Nyamira",
+          "sub_items": []
+        },
+        {
+          "item_number": "47",
+          "content": "Nairobi City\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    },
+    {
+      "schedule_number": "SECOND SCHEDULE",
+      "title": "NATIONAL SYMBOLS",
+      "article_references": [
+        {
+          "article_number": "9",
+          "clause_number": "2"
+        }
+      ],
+      "items": [
+        {
+          "item_number": "(a)",
+          "content": "The National Flag",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "The National Anthem",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "The Coat of Arms",
+          "sub_items": []
+        },
+        {
+          "item_number": "(d)",
+          "content": "The Public Seal",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    },
+    {
+      "schedule_number": "THIRD SCHEDULE",
+      "title": "NATIONAL OATHS AND AFFIRMATIONS",
+      "article_references": [
+        {
+          "article_number": "74",
+          "clause_number": null
+        },
+        {
+          "article_number": "141",
+          "clause_number": "3"
+        },
+        {
+          "article_number": "148",
+          "clause_number": "5"
+        },
+        {
+          "article_number": "152",
+          "clause_number": "4"
+        }
+      ],
+      "items": [
+        {
+          "item_number": "1",
+          "content": "OATH OR SOLEMN AFFIRMATION OF ALLEGIANCE OF THE PRESIDENT/ACTING PRESIDENT AND THE DEPUTY PRESIDENT",
+          "sub_items": []
+        },
+        {
+          "item_number": "2",
+          "content": "OATH OR SOLEMN AFFIRMATION OF DUE EXECUTION OF OFFICE FOR THE PRESIDENT/ACTING PRESIDENT",
+          "sub_items": []
+        },
+        {
+          "item_number": "3",
+          "content": "OATH OR SOLEMN AFFIRMATION OF DUE EXECUTION OF OFFICE FOR THE DEPUTY PRESIDENT",
+          "sub_items": []
+        },
+        {
+          "item_number": "4",
+          "content": "OATH OR SOLEMN AFFIRMATION OF DUE EXECUTION OF OFFICE FOR A CABINET SECRETARY",
+          "sub_items": []
+        },
+        {
+          "item_number": "5",
+          "content": "OATH OR SOLEMN AFFIRMATION OF DUE EXECUTION OF OFFICE FOR SECRETARY TO THE CABINET/ A PRINCIPAL SECRETARY",
+          "sub_items": []
+        },
+        {
+          "item_number": "6",
+          "content": "OATHS FOR THE CHIEF JUSTICE/PRESIDENT OF THE SUPREME COURT, JUDGES OF THE SUPREME COURT, JUDGES OF THE COURT OF APPEAL AND JUDGES OF THE HIGH COURT",
+          "sub_items": []
+        },
+        {
+          "item_number": "7",
+          "content": "OATH /AFFIRMATION OF MEMBER OF PARLIAMENT (SENATE/ NATIONAL ASSEMBLY)",
+          "sub_items": []
+        },
+        {
+          "item_number": "8",
+          "content": "*OATH FOR SPEAKER/DEPUTY SPEAKER OF THE SENATE/NATIONAL ASSEMBLY",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    },
+    {
+      "schedule_number": "FOURTH SCHEDULE",
+      "title": "DISTRIBUTION OF FUNCTIONS BETWEEN THE NATIONAL GOVERNMENT AND THE COUNTY GOVERNMENTS",
+      "article_references": [
+        {
+          "article_number": "185",
+          "clause_number": "2"
+        },
+        {
+          "article_number": "186",
+          "clause_number": "1"
+        },
+        {
+          "article_number": "187",
+          "clause_number": "2"
+        }
+      ],
+      "items": [
+        {
+          "item_number": "1",
+          "content": "Foreign affairs, foreign policy and international trade.",
+          "sub_items": []
+        },
+        {
+          "item_number": "2",
+          "content": "The use of international waters and water resources.",
+          "sub_items": []
+        },
+        {
+          "item_number": "3",
+          "content": "Immigration and citizenship.",
+          "sub_items": []
+        },
+        {
+          "item_number": "4",
+          "content": "The relationship between religion and state.",
+          "sub_items": []
+        },
+        {
+          "item_number": "5",
+          "content": "Language policy and the promotion of official and local languages.",
+          "sub_items": []
+        },
+        {
+          "item_number": "6",
+          "content": "National defence and the use of the national defence services.",
+          "sub_items": []
+        },
+        {
+          "item_number": "7",
+          "content": "the setting of standards of recruitment, training of police and use of police services;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "the setting of standards of recruitment, training of police and use of police services;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "criminal law; and"
+            },
+            {
+              "item_number": "(c)",
+              "content": "correctional services."
+            }
+          ]
+        },
+        {
+          "item_number": "8",
+          "content": "Courts.",
+          "sub_items": []
+        },
+        {
+          "item_number": "9",
+          "content": "National economic policy and planning.",
+          "sub_items": []
+        },
+        {
+          "item_number": "10",
+          "content": "Monetary policy, currency, banking (including central banking), the incorporation and regulation of banking, insurance and financial corporations.",
+          "sub_items": []
+        },
+        {
+          "item_number": "11",
+          "content": "National statistics and data on population, the economy and society generally.",
+          "sub_items": []
+        },
+        {
+          "item_number": "12",
+          "content": "Intellectual property rights.",
+          "sub_items": []
+        },
+        {
+          "item_number": "13",
+          "content": "Labour standards.",
+          "sub_items": []
+        },
+        {
+          "item_number": "14",
+          "content": "Consumer protection, including standards for social security and professional pension plans.",
+          "sub_items": []
+        },
+        {
+          "item_number": "15",
+          "content": "Education policy, standards, curricula, examinations and the granting of university charters.",
+          "sub_items": []
+        },
+        {
+          "item_number": "16",
+          "content": "Universities, tertiary educational institutions and other institutions of research and higher learning and primary schools, special education, secondary schools and special education institutions.",
+          "sub_items": []
+        },
+        {
+          "item_number": "17",
+          "content": "Promotion of sports and sports education.",
+          "sub_items": []
+        },
+        {
+          "item_number": "18",
+          "content": "road traffic;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "road traffic;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "the construction and operation of national trunk roads;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "standards for the construction and maintenance of other roads by counties;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "railways;"
+            },
+            {
+              "item_number": "(e)",
+              "content": "pipelines;"
+            },
+            {
+              "item_number": "(f)",
+              "content": "marine navigation;"
+            },
+            {
+              "item_number": "(g)",
+              "content": "civil aviation;"
+            },
+            {
+              "item_number": "(h)",
+              "content": "space travel;"
+            },
+            {
+              "item_number": "(i)",
+              "content": "postal services;"
+            },
+            {
+              "item_number": "(j)",
+              "content": "telecommunications; and"
+            },
+            {
+              "item_number": "(k)",
+              "content": "radio and television broadcasting."
+            }
+          ]
+        },
+        {
+          "item_number": "19",
+          "content": "National public works.",
+          "sub_items": []
+        },
+        {
+          "item_number": "20",
+          "content": "Housing policy.",
+          "sub_items": []
+        },
+        {
+          "item_number": "21",
+          "content": "General principles of land planning and the co-ordination of planning by the counties.",
+          "sub_items": []
+        },
+        {
+          "item_number": "22",
+          "content": "fishing, hunting and gathering;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "fishing, hunting and gathering;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "protection of animals and wildlife;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "water protection, securing sufficient residual water, hydraulic engineering and the safety of dams; and"
+            },
+            {
+              "item_number": "(d)",
+              "content": "energy policy."
+            }
+          ]
+        },
+        {
+          "item_number": "23",
+          "content": "National referral health facilities.",
+          "sub_items": []
+        },
+        {
+          "item_number": "24",
+          "content": "Disaster management.",
+          "sub_items": []
+        },
+        {
+          "item_number": "25",
+          "content": "Ancient and historical monuments of national importance.",
+          "sub_items": []
+        },
+        {
+          "item_number": "26",
+          "content": "National elections.",
+          "sub_items": []
+        },
+        {
+          "item_number": "27",
+          "content": "Health policy.",
+          "sub_items": []
+        },
+        {
+          "item_number": "28",
+          "content": "Agricultural policy.",
+          "sub_items": []
+        },
+        {
+          "item_number": "29",
+          "content": "Veterinary policy.",
+          "sub_items": []
+        },
+        {
+          "item_number": "30",
+          "content": "Energy policy including electricity and gas reticulation and energy regulation.",
+          "sub_items": []
+        },
+        {
+          "item_number": "31",
+          "content": "Capacity building and technical assistance to the counties.",
+          "sub_items": []
+        },
+        {
+          "item_number": "32",
+          "content": "Public investment.",
+          "sub_items": []
+        },
+        {
+          "item_number": "33",
+          "content": "National betting, casinos and other forms of gambling.",
+          "sub_items": []
+        },
+        {
+          "item_number": "34",
+          "content": "Tourism policy and development.",
+          "sub_items": []
+        },
+        {
+          "item_number": "1",
+          "content": "crop and animal husbandry;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "crop and animal husbandry;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "livestock sale yards;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "county abattoirs;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "plant and animal disease control; and"
+            },
+            {
+              "item_number": "(e)",
+              "content": "fisheries."
+            }
+          ]
+        },
+        {
+          "item_number": "2",
+          "content": "county health facilities and pharmacies;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "county health facilities and pharmacies;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "ambulance services;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "promotion of primary health care;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "licensing and control of undertakings that sell food to the public;"
+            },
+            {
+              "item_number": "(e)",
+              "content": "veterinary services (excluding regulation of the profession);"
+            },
+            {
+              "item_number": "(f)",
+              "content": "cemeteries, funeral parlours and crematoria; and"
+            },
+            {
+              "item_number": "(g)",
+              "content": "refuse removal, refuse dumps and solid waste disposal."
+            }
+          ]
+        },
+        {
+          "item_number": "3",
+          "content": "Control of air pollution, noise pollution, other public nuisances and outdoor advertising.",
+          "sub_items": []
+        },
+        {
+          "item_number": "4",
+          "content": "betting, casinos and other forms of gambling;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "betting, casinos and other forms of gambling;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "racing;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "liquor licensing;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "cinemas;"
+            },
+            {
+              "item_number": "(e)",
+              "content": "video shows and hiring;"
+            },
+            {
+              "item_number": "(f)",
+              "content": "libraries;"
+            },
+            {
+              "item_number": "(g)",
+              "content": "museums;"
+            },
+            {
+              "item_number": "(h)",
+              "content": "sports and cultural activities and facilities; and"
+            },
+            {
+              "item_number": "(i)",
+              "content": "county parks, beaches and recreation facilities."
+            }
+          ]
+        },
+        {
+          "item_number": "5",
+          "content": "county roads;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "county roads;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "street lighting;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "traffic and parking;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "public road transport; and"
+            },
+            {
+              "item_number": "(e)",
+              "content": "ferries and harbours, excluding the regulation of international and national shipping and matters related thereto."
+            }
+          ]
+        },
+        {
+          "item_number": "6",
+          "content": "licensing of dogs; and",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "licensing of dogs; and"
+            },
+            {
+              "item_number": "(b)",
+              "content": "facilities for the accommodation, care and burial of animals."
+            }
+          ]
+        },
+        {
+          "item_number": "7",
+          "content": "markets;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "markets;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "trade licences(excluding regulation of professions);"
+            },
+            {
+              "item_number": "(c)",
+              "content": "fair trading practices;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "local tourism; and"
+            },
+            {
+              "item_number": "(e)",
+              "content": "cooperative societies."
+            }
+          ]
+        },
+        {
+          "item_number": "8",
+          "content": "statistics;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "statistics;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "land survey and mapping;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "boundaries and fencing;"
+            },
+            {
+              "item_number": "(d)",
+              "content": "housing; and"
+            },
+            {
+              "item_number": "(e)",
+              "content": "electricity and gas reticulation and energy regulation."
+            }
+          ]
+        },
+        {
+          "item_number": "9",
+          "content": "Pre-primary education, village polytechnics, homecraft centres and childcare facilities.",
+          "sub_items": []
+        },
+        {
+          "item_number": "10",
+          "content": "soil and water conservation; and",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "soil and water conservation; and"
+            },
+            {
+              "item_number": "(b)",
+              "content": "forestry."
+            }
+          ]
+        },
+        {
+          "item_number": "11",
+          "content": "storm water management systems in built-up areas; and",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "storm water management systems in built-up areas; and"
+            },
+            {
+              "item_number": "(b)",
+              "content": "water and sanitation services."
+            }
+          ]
+        },
+        {
+          "item_number": "12",
+          "content": "Fire fighting services and disaster management.",
+          "sub_items": []
+        },
+        {
+          "item_number": "13",
+          "content": "Control of drugs and pornography.",
+          "sub_items": []
+        },
+        {
+          "item_number": "14",
+          "content": "Ensuring and coordinating the participation of communities and locations in governance at the local level and assisting communities and locations to develop the administrative capacity for the effective exercise of the functions and powers and participation in governance at the local level.\n\n\n\n\n\n\n\n\n\n\n\n\n",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    },
+    {
+      "schedule_number": "FIFTH SCHEDULE",
+      "title": "LEGISLATION TO BE ENACTED BY PARLIAMENT",
+      "article_references": [
+        {
+          "article_number": "261",
+          "clause_number": "1"
+        }
+      ],
+      "items": [
+        {
+          "item_number": "1",
+          "content": "CHAPTER AND ARTICLE | TIME SPECIFICATION\nCHAPTER AND ARTICLE | TIME SPECIFICATION\nLegislation in respect of culture (Article 11(3)) | Five years\nCHAPTER THREE—CITIZENSHIP\nLegislation on citizenship (Article 18) | One year\nCHAPTER FOUR- THE BILL OF RIGHTS\nFreedom of the media (Article 34) | Three years\nFamily (Article 45) | Five years\nConsumer protection (Article 46) | Four years\nFair administrative action (Article 47) | Four years\nFair hearing (Article 50) | Four years\nRights of persons detained, held in custody or detained (Article 51) | Four years\nKenya National Human Rights and Equality Commission (Article 59) | One year\nCHAPTER FIVE—LAND AND ENVIRONMENT\nCommunity land (Article 63) | Five years\nRegulation of land use and property (Article 66) | Five years\nLegislation on land (Article 68) | 18 months\nAgreements relating to natural resources (Article 71) | Five years\nLegislation regarding environment (Article 72) | Four years\nCHAPTER SIX—LEADERSHIP AND INTEGRITY\nEthics and anti-corruption commission\n(Article 79) | One year\nLegislation on leadership (Article 80) | Two years\nCHAPTER SEVEN- REPRESENTATION OF THE PEOPLE\nLegislation on elections (Article 82) | One year\nElectoral disputes (Article 87) | One year\nIndependent Electoral and Boundaries Commission (Article 88) | One year\nLegislation on political parties (Article 92) | One year\nCHAPTER EIGHT—THE LEGISLATURE\nPromotion of representation of marginalised groups (Article 100) | Five years\nVacation of office of member of Parliament (Article 103) | One year\nRight of recall (Article 104) | Two years\nDetermination of questions of membership of Parliament (Article 105) | Two years\nRight to petition Parliament (Article 119) | Two years\nCHAPTER NINE—EXECUTIVE\nPower of mercy (Article 133) | One year\nAssumption of office of president (Article 141) | Two years\nCHAPTER TEN—JUDICIARY\nSystem of courts (Article 162) | One year\nRemoval from office (Article 168) | One year\nJudiciary Fund (Article 173) | Two years\nVetting of judges and magistrates (Sixth schedule, Section 23) | One year\nCHAPTER ELEVEN—DEVOLVED GOVERNMENT\nSpeaker of a county assembly (Article 178) | One year\nUrban areas and cities (Article 184) | One year\nSupport for county governments (Article 190) | Three years\nRemoval of a county governor (Article 181) | 18 months\nVacation of office of member of county assembly (Article 194) | 18 months\nPublic participation and county assembly powers, privileges and immunities (Article 196) | Three years\nCounty assembly gender balance and diversity (Article 197) | Three years\nLegislation to effect Chapter eleven (Article 200 and Sixth Schedule, section 15) and | 18 months\nCHAPTER TWELVE—PUBLIC FINANCE\nRevenue Funds for county governments (Article 207) | 18 months\nContingencies Fund (Article 208) | One year\nLoan guarantees by national government (Article 213) | One year\nFinancial control (Article 225) | Two years\nAccounts and audit of public entities (Article 226) | Four years\nProcurement of public goods and services (Article 227) | Four years\nCHAPTER THIRTEEN—PUBLIC SERVICE\nValues and principles of public service (Article 232) | Four years\nCHAPTER FOURTEEN—NATIONAL SECURITY\nNational security organs (Article 239) | Two years\nCommand of the National Police Service (Article 245) | Two years\nGENERAL\nAny other legislation required by this Constitution | Five years",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    },
+    {
+      "schedule_number": "SIXTH SCHEDULE",
+      "title": "TRANSITIONAL AND CONSEQUENTIAL PROVISIONS",
+      "article_references": [
+        {
+          "article_number": "262",
+          "clause_number": null
+        }
+      ],
+      "items": [
+        {
+          "item_number": "1",
+          "content": "\"Boundaries Commission\" means Interim Independent Boundaries Commission;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "\"Boundaries Commission\" means Interim Independent Boundaries Commission;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "\"Electoral Commission\" means Interim Independent Electoral Commission;"
+            },
+            {
+              "item_number": "(c)",
+              "content": "\"former Constitution\" means the Constitution in force before this Constitution came into force."
+            }
+          ]
+        },
+        {
+          "item_number": "2",
+          "content": "Suspension of provisions of this Constitution",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "Chapter Seven, except that the provisions of the Chapter shall apply to the first general elections under this Constitution;",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "Chapter Eight, except that the provisions of the Chapter relating to the election of the National Assembly and the Senate shall apply to the first general elections under this Constitution; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "Articles 129 to 155 of Chapter Nine, except that the provisions of the Chapter relating to the election of the President shall apply to the first general elections under this Constitution.",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "elections for county assemblies and governors shall be held in accordance with Articles 177 and 180 of this Constitution; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "the laws relating to devolved government, required by this Schedule and Chapters Eleven and Twelve of this Constitution, shall be enacted within the period stipulated in the Fifth Schedule.",
+          "sub_items": []
+        },
+        {
+          "item_number": "3",
+          "content": "Extension of application of provisions of the former constitution",
+          "sub_items": []
+        },
+        {
+          "item_number": "4",
+          "content": "the preparation of the legislation required by this Constitution and any challenges in that regard;",
+          "sub_items": [
+            {
+              "item_number": "(a)",
+              "content": "the preparation of the legislation required by this Constitution and any challenges in that regard;"
+            },
+            {
+              "item_number": "(i)",
+              "content": "the preparation of the legislation required by this Constitution and any challenges in that regard;"
+            },
+            {
+              "item_number": "(ii)",
+              "content": "the process of establishing the new commissions;"
+            },
+            {
+              "item_number": "(iii)",
+              "content": "the process of establishing the infrastructure necessary for the proper operation of each county including progress on locating offices and assemblies and establishment and transfers of staff;"
+            },
+            {
+              "item_number": "(iv)",
+              "content": "the devolution of powers and functions to the counties under the legislation contemplated in section 15\n                                                                                                of this Schedule; and"
+            },
+            {
+              "item_number": "(v)",
+              "content": "any impediments to the process of implementing this Constitution;"
+            },
+            {
+              "item_number": "(b)",
+              "content": "coordinate with the Attorney-General, the Commission on the Implementation of the Constitution and relevant parliamentary committees to ensure the timely introduction and passage of the legislation required by this Constitution; and"
+            },
+            {
+              "item_number": "(c)",
+              "content": "take appropriate action on the reports including addressing any problems in the implementation of this Constitution."
+            }
+          ]
+        },
+        {
+          "item_number": "5",
+          "content": "Commission for the Implementation of the Constitution",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "a chairperson; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "eight other members.",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "include persons with experience in public administration, human rights and government; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "not include any person who served as a member of the Committee of Experts appointed under the Constitution of Kenya Review Act, 2008.",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "monitor, facilitate and oversee the development of legislation and administrative procedures required to implement this Constitution;",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "co-ordinate with the Attorney-General and the Kenya Law Reform Commission in preparing, for tabling in Parliament, the legislation required to implement this Constitution;",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "progress in the implementation of this Constitution; and",
+          "sub_items": [
+            {
+              "item_number": "(i)",
+              "content": "progress in the implementation of this Constitution; and"
+            },
+            {
+              "item_number": "(ii)",
+              "content": "any impediments to its implementation; and"
+            }
+          ]
+        },
+        {
+          "item_number": "(d)",
+          "content": "work with each constitutional commission to ensure that the letter and spirit of this Constitution is respected.",
+          "sub_items": []
+        },
+        {
+          "item_number": "6",
+          "content": "Rights, duties and obligations of the State\nExcept to the extent that this Constitution expressly provides to the contrary, all rights and obligations, however arising, of the Government or the Republic and subsisting immediately before the effective date shall continue as rights and obligations of the national government or the Republic under this Constitution.",
+          "sub_items": []
+        },
+        {
+          "item_number": "7",
+          "content": "Existing laws",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "a law that was in effect immediately before the effective date assigns responsibility for that matter to a particular State organ or public officer; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "a provision of this Constitution that is in effect assigns responsibility for that matter to a different State organ or public officer,",
+          "sub_items": []
+        },
+        {
+          "item_number": "8",
+          "content": "Existing land holdings and agreements relating to natural resources",
+          "sub_items": []
+        },
+        {
+          "item_number": "9",
+          "content": "Elections and by-elections",
+          "sub_items": []
+        },
+        {
+          "item_number": "10",
+          "content": "National Assembly\nThe National Assembly existing immediately before the effective date shall continue as the National Assembly for the purposes of this Constitution for its unexpired term.",
+          "sub_items": []
+        },
+        {
+          "item_number": "11",
+          "content": "The Senate",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "the functions of the Senate shall be exercised by the National Assembly; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "any function or power that is required to be performed or exercised by both Houses, acting jointly or one after the other, shall be performed or exercised by the National Assembly.",
+          "sub_items": []
+        },
+        {
+          "item_number": "12",
+          "content": "The Executive",
+          "sub_items": []
+        },
+        {
+          "item_number": "13",
+          "content": "Oath of allegiance to this Constitution\nOn the effective date, the President and any State officer or other person who had, before the effective date, taken and subscribed an oath or affirmation of office under the former Constitution, or who is required to take and subscribe an oath or affirmation of office under this Constitution, shall take and subscribe the appropriate oath or affirmation under this Constitution.",
+          "sub_items": []
+        },
+        {
+          "item_number": "14",
+          "content": "Operation of provisions relating to devolved government",
+          "sub_items": []
+        },
+        {
+          "item_number": "15",
+          "content": "Provision for devolution of functions to be made by Act of Parliament",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "facilitate the devolution of power;",
+          "sub_items": [
+            {
+              "item_number": "(i)",
+              "content": "facilitate the devolution of power;"
+            },
+            {
+              "item_number": "(ii)",
+              "content": "assist county governments in building their capacity to govern effectively and provide the services for which they are responsible; and"
+            },
+            {
+              "item_number": "(iii)",
+              "content": "support county governments;"
+            }
+          ]
+        },
+        {
+          "item_number": "(b)",
+          "content": "establish criteria that must be met before particular functions are devolved to county governments to ensure that those governments are not given functions which they cannot perform;",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "permit the asymmetrical devolution of powers to ensure that functions are devolved promptly to counties that have the capacity to perform them but that no county is given functions it cannot perform; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(d)",
+          "content": "provide mechanisms that ensure that the Commission on the Implementation of the Constitution can perform its role in monitoring the implementation of the system of devolved government effectively.",
+          "sub_items": []
+        },
+        {
+          "item_number": "16",
+          "content": "Division of revenue\nDespite Article 217(1), the first and second determinations of the basis of the division of revenue among the counties shall be made at three year intervals, rather than every five years as provided in that Article.",
+          "sub_items": []
+        },
+        {
+          "item_number": "17",
+          "content": "Provincial Administration\nWithin five years after the effective date, the national government shall restructure the system of administration commonly known as the provincial administration to accord with and respect the system of devolved government established under this Constitution.",
+          "sub_items": []
+        },
+        {
+          "item_number": "18",
+          "content": "Local authorities\nAll local authorities established under the Local Government Act (Cap. 265) existing immediately before the effective date shall continue to exist subject to any law that might be enacted.",
+          "sub_items": []
+        },
+        {
+          "item_number": "19",
+          "content": "Rules for the enforcement of the Bill of Rights\nUntil the Chief Justice makes the rules contemplated by Article 22, the Rules for the enforcement of the fundamental rights and freedoms under section 84(6) of the former Constitution shall continue in force with the alterations, adaptations, qualifications and exceptions as may be necessary to bring them into conformity with Article 22.",
+          "sub_items": []
+        },
+        {
+          "item_number": "20",
+          "content": "The Judicial Service Commission",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "the Court of Appeal judge appointed under Article 171(2)(c);",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "the High Court judge appointed under Article 171(2)(d);",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "one of the advocates appointed under Article 171(2)(f), to be identified by the statutory body responsible for the professional regulation of advocates; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(d)",
+          "content": "one of the members appointed by the President under Article 171(2)(h), to be identified by the President.",
+          "sub_items": []
+        },
+        {
+          "item_number": "21",
+          "content": "Establishment of the Supreme Court",
+          "sub_items": []
+        },
+        {
+          "item_number": "22",
+          "content": "Judicial proceedings and pending matters\nAll judicial proceedings pending before any court shall continue to be heard and shall be determined by the same court or a corresponding court established under this Constitution or as directed by the Chief Justice or the Registrar of the High Court.",
+          "sub_items": []
+        },
+        {
+          "item_number": "23",
+          "content": "Judges",
+          "sub_items": []
+        },
+        {
+          "item_number": "24",
+          "content": "Chief Justice",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "to retire from the judiciary; or",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "subject to the process of vetting under section 23\n                                                                                            , to continue to serve on the Court of Appeal.",
+          "sub_items": []
+        },
+        {
+          "item_number": "25",
+          "content": "Constitutional Commissions",
+          "sub_items": []
+        },
+        {
+          "item_number": "26",
+          "content": "The Kenya National Human Rights and Equality Commission",
+          "sub_items": []
+        },
+        {
+          "item_number": "27",
+          "content": "The Interim Independent Boundaries Commission",
+          "sub_items": []
+        },
+        {
+          "item_number": "(a)",
+          "content": "it shall not determine the boundaries of the counties established under this Constitution;",
+          "sub_items": []
+        },
+        {
+          "item_number": "(b)",
+          "content": "it shall determine the boundaries of constituencies and wards using the criteria mentioned in this Constitution; and",
+          "sub_items": []
+        },
+        {
+          "item_number": "(c)",
+          "content": "members of the Commission shall be subject to Chapter Seven of this Constitution.",
+          "sub_items": []
+        },
+        {
+          "item_number": "28",
+          "content": "The Interim Independent Electoral Commission and Independent Electoral and Boundaries Commission\n(1) The Interim Independent Electoral Commission established under section 41 of the former Constitution shall continue in office in terms of the former Constitution for its unexpired term or until the Independent Electoral and Boundaries Commission established under this Constitution is established, whichever is later.\n(2) When members of the Independent Electoral and Boundaries Commission are selected, regard shall be had to the need for continuity and the retention of expertise and experience.",
+          "sub_items": []
+        },
+        {
+          "item_number": "29",
+          "content": "New appointments\n(1) The process of appointment of persons to fill vacancies arising in consequence of the coming into force of this Constitution shall begin on the effective date and be finalised within one year.\n(2) Unless this Schedule prescribes otherwise, when this Constitution requires an appointment to be made by the President with the approval of the National Assembly, until after the first elections under this Constitution, the President shall, subject to the National Accord and Reconciliation Act, appoint a person after consultation with the Prime Minister and with the approval of the National Assembly.",
+          "sub_items": []
+        },
+        {
+          "item_number": "30",
+          "content": "Citizenship by birth\nA Kenyan citizen is a citizen by birth if that citizen—",
+          "sub_items": []
+        },
+        {
+          "item_number": "31",
+          "content": "Existing offices",
+          "sub_items": []
+        },
+        {
+          "item_number": "32",
+          "content": "Pensions, gratuities and other benefits\nThe law applicable to pensions in respect of holders of constitutional offices under the former Constitution shall be either the law that was in force at the date on which those benefits were granted or any law in force at a later date that is not less favourable to the person.",
+          "sub_items": []
+        },
+        {
+          "item_number": "33",
+          "content": "Succession of institutions, offices, assets and liabilities\nAn office or institution established under this Constitution is the legal successor of the corresponding office or institution, established under the former Constitution or by an Act of Parliament in force immediately before the effective date, whether known by the same or a new name.",
+          "sub_items": []
+        },
+        {
+          "item_number": "34",
+          "content": "Currency\nNothing in Article 231(4) affects the validity of coins and notes issued before the effective date.",
+          "sub_items": []
+        }
+      ],
+      "content": ""
+    }
+  ]
+}
