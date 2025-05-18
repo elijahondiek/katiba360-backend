@@ -3,6 +3,7 @@ from datetime import datetime, date
 from pydantic import BaseModel, EmailStr, Field, validator, root_validator
 import uuid
 from enum import Enum
+from src.utils.content_id import is_valid_content_id, get_content_type
 
 
 class AuthProvider(str, Enum):
@@ -619,10 +620,31 @@ class ReadingHistoryCreate(BaseModel):
     content_id: str
     content_type: str
     time_spent_seconds: int
-    position: int
-    total_length: int
+    position: float
+    total_length: float
     device_type: Optional[DeviceType] = None
     reading_mode: Optional[ReadingMode] = None
+    
+    @validator('content_id')
+    def validate_content_id(cls, v):
+        if not is_valid_content_id(v):
+            raise ValueError('Invalid content ID format. Must be a standardized content ID.')
+        return v
+        
+    @validator('content_type')
+    def validate_content_type(cls, v, values):
+        if 'content_id' in values:
+            content_id = values['content_id']
+            expected_type = get_content_type(content_id)
+            if expected_type and expected_type != v:
+                raise ValueError(f'Content type mismatch. Expected {expected_type} based on content ID.')
+        return v
+        
+    @validator('position', 'total_length')
+    def validate_position_range(cls, v):
+        if v < 0 or v > 1:
+            raise ValueError('Position and total_length must be between 0 and 1 (representing percentage)')
+        return v
 
 
 class ReadingHistoryResponse(BaseModel):
@@ -632,8 +654,8 @@ class ReadingHistoryResponse(BaseModel):
     content_id: str
     content_type: str
     time_spent_seconds: int
-    position: int
-    total_length: int
+    position: float
+    total_length: float
     progress_percentage: float
     device_type: Optional[str] = None
     reading_mode: Optional[str] = None
@@ -647,7 +669,7 @@ class ReadingProgressResponse(BaseModel):
     """Schema for reading progress response"""
     content_id: str
     progress_percentage: float
-    last_position: int
+    last_position: float
     last_read_at: Optional[datetime] = None
 
 

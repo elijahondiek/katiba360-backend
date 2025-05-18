@@ -2,13 +2,14 @@ from typing import Optional, List, Dict, Any, Union
 import uuid
 from datetime import datetime, date, timedelta
 from fastapi import HTTPException, status, Depends
-from sqlalchemy import select, func, update, delete, and_, or_
+from sqlalchemy import select, func, update, delete, and_, or_, String
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 from src.database import get_db
 from src.models.user_models import User, ReadingHistory
 from src.schemas.user_schemas import ReadingHistoryCreate, ReadingHistoryUpdate
 from src.utils.logging.activity_logger import ActivityLogger
+from src.utils.content_id import is_valid_content_id, parse_content_id, get_content_type
 
 
 class ReadingService:
@@ -21,21 +22,28 @@ class ReadingService:
         self.db = db
         self.activity_logger = ActivityLogger()
     
-    async def get_reading_history(self, user_id: uuid.UUID) -> List[ReadingHistory]:
+    async def get_reading_history(self, user_id: uuid.UUID, content_id: Optional[str] = None) -> List[ReadingHistory]:
         """
         Get reading history for a user
         
         Args:
             user_id: User ID
+            content_id: Optional standardized content ID to filter by
             
         Returns:
             List of reading history entries
         """
-        query = (
-            select(ReadingHistory)
-            .where(ReadingHistory.user_id == user_id)
-            .order_by(ReadingHistory.started_at.desc())
-        )
+        query = select(ReadingHistory).where(ReadingHistory.user_id == user_id)
+        
+        # Apply content_id filter if provided
+        if content_id:
+            if is_valid_content_id(content_id):
+                query = query.where(ReadingHistory.content_id == content_id)
+            else:
+                # If content_id is not valid, return empty list
+                return []
+                
+        query = query.order_by(ReadingHistory.started_at.desc())
         result = await self.db.execute(query)
         return result.scalars().all()
     
@@ -63,19 +71,25 @@ class ReadingService:
         return result.scalars().first()
     
     async def get_reading_history_by_content(
-        self, content_id: uuid.UUID, content_type: str, user_id: uuid.UUID
+        self, content_id: str, user_id: uuid.UUID
     ) -> Optional[ReadingHistory]:
         """
-        Get reading history entry by content ID and type
+        Get reading history entry by standardized content ID
         
         Args:
-            content_id: Content ID
-            content_type: Content type
+            content_id: Standardized content ID
             user_id: User ID for verification
             
         Returns:
             Reading history entry if found, None otherwise
         """
+        if not is_valid_content_id(content_id):
+            return None
+            
+        content_type = get_content_type(content_id)
+        if not content_type:
+            return None
+            
         query = (
             select(ReadingHistory)
             .where(
@@ -101,10 +115,30 @@ class ReadingService:
         Returns:
             Created reading history entry
         """
+        # Validate content ID
+        if not is_valid_content_id(history_data.content_id):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid content ID format"
+            )
+            
+        # Calculate progress percentage
+        progress_percentage = 0.0
+        if history_data.total_length > 0:
+            progress_percentage = (history_data.position / history_data.total_length) * 100.0
+            
         # Create reading history entry
         reading_history = ReadingHistory(
             user_id=user_id,
-            **history_data.dict()
+            content_id=history_data.content_id,
+            content_type=history_data.content_type,
+            time_spent_seconds=history_data.time_spent_seconds,
+            position=history_data.position,
+            total_length=history_data.total_length,
+            progress_percentage=progress_percentage,
+            device_type=history_data.device_type,
+            reading_mode=history_data.reading_mode,
+            read_at=datetime.now()
         )
         
         self.db.add(reading_history)
@@ -118,11 +152,17 @@ class ReadingService:
             activity_type="reading_started",
             metadata={
                 "reading_history_id": str(reading_history.id),
-                "content_id": str(history_data.content_id),
+                "content_id": history_data.content_id,
                 "content_type": history_data.content_type,
-                "device_type": history_data.device_type,
-                "reading_mode": history_data.reading_mode
+                "device_type": str(history_data.device_type) if history_data.device_type else None,
+                "reading_mode": str(history_data.reading_mode) if history_data.reading_mode else None
             }
+        )
+        
+        # Update user reading stats
+        await self._update_user_reading_stats(
+            user_id, 
+            reading_time_seconds=history_data.time_spent_seconds
         )
         
         return reading_history
@@ -194,7 +234,7 @@ class ReadingService:
         
         Args:
             user_id: User ID
-            reading_time_seconds: Reading time in seconds
+            reading_time_seconds: Reading time in seconds (renamed from time_spent_seconds for backward compatibility)
         """
         # Get user
         query = select(User).where(User.id == user_id)
@@ -346,6 +386,43 @@ class ReadingService:
             "reading_mode_breakdown": reading_mode_counts
         }
     
+    async def get_reading_progress(
+        self, user_id: uuid.UUID, content_id: str
+    ) -> Dict[str, Any]:
+        """
+        Get reading progress for a specific content
+        
+        Args:
+            user_id: User ID
+            content_id: Standardized content ID
+            
+        Returns:
+            Dictionary with progress data including percentage, position, and last read time
+        """
+        # Validate content ID
+        if not is_valid_content_id(content_id):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid content ID format"
+            )
+            
+        # Get the latest reading history entry for this content
+        latest_entry = await self.get_reading_history_by_content(content_id, user_id)
+        
+        if not latest_entry:
+            # No reading history found, return default values
+            return {
+                "progress_percentage": 0.0,
+                "last_position": 0.0,
+                "last_read_at": None
+            }
+            
+        return {
+            "progress_percentage": float(latest_entry.progress_percentage),
+            "last_position": float(latest_entry.position),
+            "last_read_at": latest_entry.read_at
+        }
+        
     async def get_reading_streak_calendar(
         self, user_id: uuid.UUID, year: int, month: int
     ) -> Dict[str, Any]:

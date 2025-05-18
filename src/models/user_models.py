@@ -266,15 +266,17 @@ class ReadingHistory(Base):
     
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey(USERS_ID_FK, ondelete="CASCADE"))
-    content_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    content_id: Mapped[str] = mapped_column(String(255), nullable=False)
     content_type: Mapped[str] = mapped_column(String(50), nullable=False)
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
     completed_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
-    reading_time_seconds: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
-    progress_percentage: Mapped[int] = mapped_column(Integer, default=0)
-    last_position: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    time_spent_seconds: Mapped[int] = mapped_column(Integer, default=0)
+    position: Mapped[float] = mapped_column(Float, default=0.0)
+    total_length: Mapped[float] = mapped_column(Float, default=1.0)
+    progress_percentage: Mapped[float] = mapped_column(Float, default=0.0)
     device_type: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     reading_mode: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    read_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
     
     # Relationship
     user = relationship("User", back_populates="reading_histories")

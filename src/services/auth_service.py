@@ -2,6 +2,7 @@ from typing import Optional, Dict, Any, Tuple
 import uuid
 from datetime import datetime, timedelta
 import jwt
+from jwt.exceptions import PyJWTError, ExpiredSignatureError
 from fastapi import HTTPException, status, Depends
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -231,7 +232,7 @@ class AuthService:
                 
             return user
             
-        except jwt.JWTError:
+        except (PyJWTError, ExpiredSignatureError):
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid token",
