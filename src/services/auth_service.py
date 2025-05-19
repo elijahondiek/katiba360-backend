@@ -349,9 +349,8 @@ class AuthService:
                 # Create onboarding progress
                 onboarding = OnboardingProgress(
                     user_id=user.id,
-                    step="welcome",
-                    completed_steps=[],
-                    is_completed=False,
+                    current_step=1,
+                    progress_percentage=0,
                     created_at=datetime.now(),
                     updated_at=datetime.now()
                 )
