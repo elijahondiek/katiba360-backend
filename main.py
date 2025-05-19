@@ -114,12 +114,10 @@ origins = settings.cors_origins
 # Add middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Explicitly allow frontend origin
+    allow_origins=settings.cors_origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
-    allow_headers=["Content-Type", "Authorization", "X-Requested-With", "Accept"],
-    expose_headers=["Content-Type", "Authorization"],
-    max_age=86400  # Cache preflight requests for 24 hours
+    allow_methods=settings.cors_methods,
+    allow_headers=settings.cors_headers,
 )
 
 # Define paths to exclude from rate limiting
