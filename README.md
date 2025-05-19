@@ -12,11 +12,6 @@ Katiba360 is a platform that makes the Kenyan Constitution accessible to all cit
 - **Multilingual Support**: User interface in multiple languages (English, Swahili, Kikuyu)
 - **Accessibility Settings**: Font size, contrast, screen reader compatibility
 
-### Content Management
-- **Saved Content**: Bookmark and organize constitution articles
-- **Content Folders**: Create and manage folders for saved content
-- **Offline Access**: Download content for offline reading
-
 ### Reading Experience
 - **Reading History**: Track reading progress and history
 - **Reading Streaks**: Gamification with daily reading streaks
@@ -96,6 +91,23 @@ Once the application is running, you can access the API documentation at:
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
+## Constitution Data
+
+The core constitutional content is stored in the file:
+
+```
+src/data/processed/constitution_final.json
+```
+
+- This file contains the structure and articles of the Constitution of Kenya, 2010.
+- **Note:** The data was extracted programmatically from the official source, and some content may be missing or incomplete.
+- If you notice missing or incomplete sections, you can help improve the dataset!
+
+### How to Contribute to the Constitution Data
+- Compare the current data with the official version at: [Kenya Law - Constitution of Kenya, 2010](https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03)
+- Add missing articles, clauses, or correct any errors in `constitution_final.json`.
+- Submit a pull request with your changes and reference the official source for verification.
+
 ## Project Structure
 
 ```
@@ -130,6 +142,25 @@ katiba360-backend/
 2. **Token Refresh**:
    - When access token expires, use refresh token to get a new one
    - Middleware automatically refreshes Google tokens when needed
+
+## Contributing
+
+We welcome contributions to improve Katiba360 Backend!
+
+### Code Contributions
+1. **Fork the repository** and create your branch from `main`.
+2. **Follow code style guidelines** (use type hints, docstrings, and consistent formatting; PEP8 recommended).
+3. **Write clear commit messages** and document your changes.
+4. **Test your changes** before submitting a pull request.
+5. **Open a pull request** and describe your changes in detail.
+
+### Data Contributions
+- See the [Constitution Data](#constitution-data) section above for how to help complete or correct the constitution dataset.
+
+### Code of Conduct
+- Be respectful and inclusive.
+- Provide constructive feedback.
+- Help us make the Constitution accessible to all.
 
 ## License
 
