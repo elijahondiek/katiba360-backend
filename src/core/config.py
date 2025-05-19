@@ -26,10 +26,10 @@ REFRESH_TOKEN_EXPIRE_DAYS = config("REFRESH_TOKEN_EXPIRE_DAYS", default=7, cast=
 # Google OAuth Settings
 GOOGLE_CLIENT_ID = config("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = config("GOOGLE_CLIENT_SECRET")
-GOOGLE_REDIRECT_URI = config("GOOGLE_REDIRECT_URI", default="http://localhost:3000/auth/google/callback")
+GOOGLE_REDIRECT_URI = config("GOOGLE_REDIRECT_URI", default="https://katiba360.com/auth/google/callback")
 
 # CORS Settings
-CORS_ORIGINS = config("CORS_ORIGINS", default="http://localhost:3000").split(",")
+CORS_ORIGINS = [origin.strip() for origin in config("CORS_ORIGINS", default="https://katiba360.com").split(",")]
 CORS_METHODS = config("CORS_METHODS", default="GET,POST,PUT,DELETE,OPTIONS").split(",")
 CORS_HEADERS = config("CORS_HEADERS", default="Content-Type,Authorization,X-Requested-With,Accept").split(",")
 
