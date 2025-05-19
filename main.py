@@ -109,6 +109,9 @@ app = FastAPI(
 )
 
 # CORS Configuration
+logger.info(f"Effective CORS Origins: {settings.cors_origins}")
+logger.info(f"Effective CORS Methods: {settings.cors_methods}")
+logger.info(f"Effective CORS Headers: {settings.cors_headers}")
 origins = settings.cors_origins
 
 # Add middleware
