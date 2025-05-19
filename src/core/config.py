@@ -29,9 +29,9 @@ GOOGLE_CLIENT_SECRET = config("GOOGLE_CLIENT_SECRET")
 GOOGLE_REDIRECT_URI = config("GOOGLE_REDIRECT_URI", default="http://localhost:3000/auth/google/callback")
 
 # CORS Settings
-CORS_ORIGINS = config("CORS_ORIGINS", default="*").split(",")
-CORS_METHODS = config("CORS_METHODS", default="*").split(",")
-CORS_HEADERS = config("CORS_HEADERS", default="*").split(",")
+CORS_ORIGINS = config("CORS_ORIGINS", default="http://localhost:3000").split(",")
+CORS_METHODS = config("CORS_METHODS", default="GET,POST,PUT,DELETE,OPTIONS").split(",")
+CORS_HEADERS = config("CORS_HEADERS", default="Content-Type,Authorization,X-Requested-With,Accept").split(",")
 
 # Logging Settings
 LOG_LEVEL = config("LOG_LEVEL", default="INFO")
