@@ -2,6 +2,8 @@
 
 **Backend system powering Kenya's most accessible constitutional platform**
 
+> 🌐 **Related Repository:** [Katiba360° Frontend App](https://github.com/elijahondiek/katiba360) - The Next.js frontend application
+
 ## 🚀 Calling All Backend Developers!
 
 We need your expertise to build a robust backend that serves constitutional knowledge to millions of Kenyans! Whether you're experienced with **Python**, **FastAPI**, **PostgreSQL**, or **API design** – your skills can make a real impact.
@@ -287,7 +289,7 @@ When adding new endpoints:
 
 - **GitHub Issues:** [Report bugs or request features](https://github.com/elijahondiek/katiba360-backend/issues)
 - **API Testing:** Use Swagger UI at http://localhost:8000/docs
-- **Frontend Repository:** [katiba360-app](https://github.com/elijahondiek/katiba360)
+- **Frontend Repository:** [Katiba360° Frontend App](https://github.com/elijahondiek/katiba360)
 - **Project Lead:** [@WebShrewd](https://x.com/WebShrewd)
 - **Support Development:** [Buy me a coffee](https://buymeacoffee.com/Teksad)
 
