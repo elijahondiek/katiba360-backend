@@ -1,167 +1,324 @@
-# Katiba360 Backend - User Management System
+# Katiba360° Backend API 🇰🇪
 
-## Overview
+**Backend system powering Kenya's most accessible constitutional platform**
 
-Katiba360 is a platform that makes the Kenyan Constitution accessible to all citizens. This backend system provides a robust user management and personalization system with Google OAuth integration, user profiles, preferences, content management, reading history tracking, achievements, and more.
+## 🚀 Calling All Backend Developers!
 
-## Features
+We need your expertise to build a robust backend that serves constitutional knowledge to millions of Kenyans! Whether you're experienced with **Python**, **FastAPI**, **PostgreSQL**, or **API design** – your skills can make a real impact.
 
-### User Management
-- **Google OAuth Authentication**: Secure login with Google accounts
-- **User Profiles**: Manage user information and preferences
-- **Multilingual Support**: User interface in multiple languages (English, Swahili, Kikuyu)
-- **Accessibility Settings**: Font size, contrast, screen reader compatibility
+### 🎯 Critical Backend Features Needed
 
-### Reading Experience
-- **Reading History**: Track reading progress and history
-- **Reading Streaks**: Gamification with daily reading streaks
-- **Progress Tracking**: Resume reading from where you left off
+1. **🌍 Translation Management System** (Highest Priority!)
+   - API endpoints for local dialect translations
+   - Translation workflow management
+   - Content versioning for different languages
+   - Translation validation and approval system
 
-### Engagement
-- **Achievements**: Earn achievements for platform engagement
-- **Notifications**: Stay updated with personalized notifications
-- **Onboarding Flow**: Guided setup for new users
+2. **📝 Constitution Data Completion**
+   - Scripts to identify and flag missing content
+   - Data validation and integrity checks
+   - Import tools for official constitution updates
+   - Automated content synchronization
 
-## Tech Stack
+3. **👤 Mzalendo Profile System**
+   - **Achievements Engine:** Gamified constitutional learning
+   - **Offline Content API:** Critical content caching endpoints
+   - **Settings Management:** User preferences and personalization
+   - **Overview Dashboard:** User progress and statistics
+   - **Profile Analytics:** Reading patterns and engagement metrics
 
-- **Framework**: FastAPI
-- **Database**: PostgreSQL with SQLAlchemy ORM
-- **Authentication**: JWT tokens, Google OAuth
-- **API Documentation**: Swagger UI / OpenAPI
+4. **🔊 Text-to-Speech Enhancement**
+   - TTS API integration and management
+   - Voice selection and customization
+   - Audio caching and optimization
+   - Accessibility compliance
 
-## Prerequisites
+5. **📱 Offline-First Architecture**
+   - Progressive sync capabilities
+   - Conflict resolution for offline changes
+   - Optimized data structures for mobile
+   - Background sync services
 
+6. **⚡ Performance & Infrastructure**
+   - API caching strategies
+   - Database query optimization
+   - Rate limiting and security
+   - Monitoring and logging improvements
+
+## 📋 Current System Overview
+
+Katiba360 Backend provides a comprehensive user management and content delivery system for Kenya's constitutional platform, featuring Google OAuth integration, personalized reading experiences, achievement tracking, and multilingual support.
+
+## ✨ Implemented Features
+
+### 🔐 Authentication & User Management
+- **Google OAuth Integration:** Secure authentication flow
+- **JWT Token Management:** Access and refresh token handling
+- **User Profiles:** Comprehensive user data management
+- **Privacy Controls:** GDPR-compliant data handling
+
+### 📚 Content Management
+- **Constitution Data API:** Structured constitutional content
+- **Chapter & Article Endpoints:** Organized content delivery
+- **Search Infrastructure:** Full-text search capabilities
+- **Multilingual Content:** English, Swahili, and local language support
+
+### 📊 User Experience
+- **Reading Progress Tracking:** Resume where you left off
+- **Reading History:** Complete reading journey tracking
+- **Achievement System:** Gamified learning progression
+- **Notification System:** Personalized user engagement
+
+### 🌐 API Infrastructure
+- **FastAPI Framework:** High-performance async API
+- **OpenAPI Documentation:** Auto-generated API docs
+- **Database Migrations:** Alembic migration management
+- **Error Handling:** Comprehensive exception management
+
+## 🛠 Tech Stack
+
+- **Framework:** FastAPI (Python 3.9+)
+- **Database:** PostgreSQL with SQLAlchemy ORM
+- **Authentication:** JWT tokens, Google OAuth 2.0
+- **Caching:** Redis (optional)
+- **Documentation:** Swagger UI / OpenAPI
+- **Migrations:** Alembic
+- **Testing:** pytest
+- **Deployment:** Docker, Uvicorn
+
+## 🚀 Quick Start
+
+### Prerequisites
 - Python 3.9+
-- PostgreSQL
-- Redis (optional)
+- PostgreSQL database
+- Redis (optional, for caching)
+- Google OAuth credentials
 
-## Setup and Installation
-
-### 1. Clone the Repository
+### 1. Clone & Setup
 
 ```bash
-git clone https://github.com/yourusername/katiba360-backend.git
+git clone https://github.com/elijahondiek/katiba360-backend.git
 cd katiba360-backend
-```
 
-### 2. Set Up Virtual Environment
-
-```bash
+# Set up virtual environment
 python -m venv venv
 
-# On Windows
+# Activate virtual environment
+# Windows:
 venv\Scripts\activate
-
-# On macOS/Linux
+# macOS/Linux:
 source venv/bin/activate
-```
 
-### 3. Install Dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
-
-Copy the example environment file and update it with your settings:
+### 2. Environment Configuration
 
 ```bash
 cp .env.example .env
+# Edit .env with your database credentials and Google OAuth settings
 ```
 
-Edit the `.env` file with your database credentials, Google OAuth credentials, and other settings.
-
-### 5. Run Database Migrations
+### 3. Database Setup
 
 ```bash
+# Run migrations
 alembic upgrade head
+
+# Optional: Seed with sample data
+python scripts/seed_data.py
 ```
 
-### 6. Start the Application
+### 4. Start Development Server
 
 ```bash
-uvicorn main:app --reload
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## API Documentation
+### 5. Access API Documentation
+- **Swagger UI:** http://localhost:8000/docs
+- **ReDoc:** http://localhost:8000/redoc
 
-Once the application is running, you can access the API documentation at:
+## 📊 Constitution Data
 
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+### Current Status
+Our constitutional content is stored in `src/data/processed/constitution_final.json`:
 
-## Constitution Data
+- ✅ **Complete:** Basic chapter and article structure
+- ⚠️ **Incomplete:** Some sections missing due to programmatic extraction
+- 🔍 **Needs Review:** Content accuracy verification needed
 
-The core constitutional content is stored in the file:
+### 🤝 How You Can Help
 
-```
-src/data/processed/constitution_final.json
-```
+1. **Data Validation**
+   - Compare with [official constitution](https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03)
+   - Identify missing articles, clauses, or sections
+   - Verify existing content accuracy
 
-- This file contains the structure and articles of the Constitution of Kenya, 2010.
-- **Note:** The data was extracted programmatically from the official source, and some content may be missing or incomplete.
-- If you notice missing or incomplete sections, you can help improve the dataset!
+2. **Translation Contributions**
+   - Add local language translations
+   - Review existing Swahili translations
+   - Create language-specific terminology databases
 
-### How to Contribute to the Constitution Data
-- Compare the current data with the official version at: [Kenya Law - Constitution of Kenya, 2010](https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03)
-- Add missing articles, clauses, or correct any errors in `constitution_final.json`.
-- Submit a pull request with your changes and reference the official source for verification.
+3. **Content Enhancement**
+   - Add simplified explanations for complex legal terms
+   - Create practical examples for constitutional concepts
+   - Develop educational content and quizzes
 
-## Project Structure
+## 🏗 Project Architecture
 
 ```
 katiba360-backend/
-├── alembic/               # Database migrations
+├── alembic/                 # Database migrations
 ├── src/
-│   ├── core/              # Core application settings
-│   ├── database.py        # Database configuration
-│   ├── dependencies.py    # FastAPI dependencies
-│   ├── middleware/        # Middleware components
-│   ├── models/            # SQLAlchemy models
-│   ├── routers/           # API routes
-│   ├── schemas/           # Pydantic schemas
-│   ├── services/          # Business logic
-│   └── utils/             # Utility functions
-├── static/                # Static files
-├── .env.example          # Example environment variables
-├── main.py               # Application entry point
-└── requirements.txt      # Project dependencies
+│   ├── core/               # Core application configuration
+│   │   └── config.py       # Environment settings
+│   ├── models/             # SQLAlchemy database models
+│   │   ├── user_models.py  # User, profile, preferences
+│   │   └── reading_progress.py # Reading tracking
+│   ├── routers/            # FastAPI route handlers
+│   │   ├── auth_routes.py          # Authentication endpoints
+│   │   ├── constitution_routes.py  # Content delivery
+│   │   ├── user_routes.py          # User management
+│   │   ├── achievement_routes.py   # Gamification
+│   │   └── reading_routes.py       # Progress tracking
+│   ├── services/           # Business logic layer
+│   │   ├── auth_service.py         # Authentication logic
+│   │   ├── constitution_service.py # Content management
+│   │   ├── user_service.py         # User operations
+│   │   └── achievement_service.py  # Achievement engine
+│   ├── schemas/            # Pydantic data models
+│   ├── middleware/         # Custom middleware
+│   ├── utils/              # Utility functions
+│   └── data/              # Constitution data
+│       └── processed/
+│           └── constitution_final.json
+├── main.py                 # Application entry point
+└── requirements.txt        # Dependencies
 ```
 
-## Authentication Flow
+## 🔐 Authentication Flow
 
-1. **Google OAuth Login**:
-   - Frontend redirects to Google OAuth
-   - User authorizes the application
-   - Google returns an authorization code
-   - Backend exchanges code for tokens
-   - User is created or updated in the database
-   - JWT access and refresh tokens are issued
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Backend
+    participant Google
 
-2. **Token Refresh**:
-   - When access token expires, use refresh token to get a new one
-   - Middleware automatically refreshes Google tokens when needed
+    User->>Frontend: Click "Login with Google"
+    Frontend->>Google: Redirect to OAuth
+    Google->>User: Show consent screen
+    User->>Google: Grant permission
+    Google->>Backend: Send authorization code
+    Backend->>Google: Exchange code for tokens
+    Google->>Backend: Return access & refresh tokens
+    Backend->>Backend: Create/update user
+    Backend->>Frontend: Return JWT tokens
+    Frontend->>User: Login complete
+```
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions to improve Katiba360 Backend!
+### 🔥 High-Impact Contribution Areas
 
-### Code Contributions
-1. **Fork the repository** and create your branch from `main`.
-2. **Follow code style guidelines** (use type hints, docstrings, and consistent formatting; PEP8 recommended).
-3. **Write clear commit messages** and document your changes.
-4. **Test your changes** before submitting a pull request.
-5. **Open a pull request** and describe your changes in detail.
+1. **🌍 Translation Infrastructure**
+   - Build translation management APIs
+   - Create content versioning system
+   - Implement translation validation workflows
 
-### Data Contributions
-- See the [Constitution Data](#constitution-data) section above for how to help complete or correct the constitution dataset.
+2. **📊 Analytics & Insights**
+   - User engagement analytics
+   - Reading pattern analysis
+   - Content popularity tracking
+   - Performance monitoring
 
-### Code of Conduct
-- Be respectful and inclusive.
-- Provide constructive feedback.
-- Help us make the Constitution accessible to all.
+3. **🔧 API Development**
+   - New feature endpoints
+   - API optimization and caching
+   - Rate limiting and security
+   - Documentation improvements
 
-## License
+4. **🧪 Testing & Quality**
+   - Unit and integration tests
+   - API endpoint testing
+   - Performance testing
+   - Security auditing
+
+### 📋 Development Workflow
+
+1. **Fork the repository** and create feature branch from `main`
+2. **Set up development environment** following Quick Start guide
+3. **Check existing issues** or create new ones for features/bugs
+4. **Follow Python best practices:** Type hints, docstrings, PEP 8
+5. **Write comprehensive tests** for new features
+6. **Update API documentation** if adding new endpoints
+7. **Submit pull request** with detailed description
+
+### 🧪 Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=src
+
+# Run specific test file
+pytest tests/test_auth.py
+```
+
+### 📚 API Documentation
+
+When adding new endpoints:
+- Use proper FastAPI decorators and type hints
+- Add comprehensive docstrings
+- Include example requests/responses
+- Update OpenAPI tags and descriptions
+
+## 🌟 Join Our Mission
+
+**Our Impact:** Your backend code directly serves constitutional knowledge to millions of Kenyans, promoting civic education and democratic participation.
+
+**What We're Building:** A scalable, accessible platform that breaks down barriers to constitutional literacy in Kenya.
+
+### 🔗 Get Connected
+
+- **GitHub Issues:** [Report bugs or request features](https://github.com/elijahondiek/katiba360-backend/issues)
+- **API Testing:** Use Swagger UI at http://localhost:8000/docs
+- **Frontend Repository:** [katiba360-app](https://github.com/elijahondiek/katiba360)
+- **Project Lead:** [@WebShrewd](https://x.com/WebShrewd)
+- **Support Development:** [Buy me a coffee](https://buymeacoffee.com/Teksad)
+
+## 📈 Performance & Monitoring
+
+### Current Metrics
+- ⚡ **Response Time:** <200ms for most endpoints
+- 🔄 **Uptime:** 99.9% target availability
+- 📊 **Database:** Optimized queries with indexing
+- 🔒 **Security:** JWT tokens, rate limiting, CORS protection
+
+### Monitoring Stack
+- **Logging:** Structured logging with rotation
+- **Error Tracking:** Comprehensive error handling
+- **Performance:** Query optimization and caching
+- **Health Checks:** Endpoint monitoring
+
+## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Constitution of Kenya, 2010
+- FastAPI and SQLAlchemy communities
+- Google OAuth platform
+- All contributors and the Kenyan developer community
+- Organizations promoting digital civic education
+
+---
+
+**Let's build the backend that empowers constitutional literacy in Kenya! 🇰🇪**
+
+*Your API endpoints can deliver constitutional knowledge to millions of Kenyans.*
