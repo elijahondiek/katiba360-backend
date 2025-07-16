@@ -200,7 +200,9 @@ katiba360-backend/
 └── requirements.txt        # Dependencies
 ```
 
-## 🔐 Authentication Flow
+## 🏗 Complete Backend Architecture Flow
+
+### 🔐 Authentication Flow
 
 ```mermaid
 sequenceDiagram
@@ -217,8 +219,252 @@ sequenceDiagram
     Backend->>Google: Exchange code for tokens
     Google->>Backend: Return access & refresh tokens
     Backend->>Backend: Create/update user
+    Backend->>Backend: Generate JWT tokens
     Backend->>Frontend: Return JWT tokens
     Frontend->>User: Login complete
+```
+
+### 🔄 Request Processing Flow
+
+```mermaid
+flowchart TD
+    A[Client Request] --> B[FastAPI Application]
+    B --> C[CORS Middleware]
+    C --> D[Rate Limiting Middleware]
+    D --> E[Logging Middleware]
+    E --> F[Auth Middleware]
+    F --> G[Google OAuth Middleware]
+    G --> H[Route Handler]
+    H --> I[Service Layer]
+    I --> J{Cache Check}
+    J -->|Hit| K[Return Cached Data]
+    J -->|Miss| L[Database Query]
+    L --> M[Update Cache]
+    M --> N[Return Response]
+    K --> N
+    N --> O[Response Middleware]
+    O --> P[Client Response]
+    
+    style A fill:#e1f5fe
+    style P fill:#e8f5e8
+    style J fill:#fff3e0
+    style L fill:#fce4ec
+```
+
+### 🎯 Constitution Content Flow
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Router
+    participant Service
+    participant Cache
+    participant Database
+    participant FileSystem
+
+    Client->>Router: GET /constitution/chapters/4
+    Router->>Service: constitution_service.get_chapter()
+    Service->>Cache: check_cache("chapter_4")
+    
+    alt Cache Hit
+        Cache->>Service: Return cached chapter
+        Service->>Router: Chapter data
+    else Cache Miss
+        Service->>Database: Query user progress
+        Database->>Service: Progress data
+        Service->>FileSystem: Load constitution_final.json
+        FileSystem->>Service: Chapter content
+        Service->>Service: Process & enrich content
+        Service->>Cache: cache_chapter("chapter_4", data)
+        Service->>Router: Enriched chapter data
+    end
+    
+    Router->>Client: JSON response with chapter
+```
+
+### 📖 Reading Progress Tracking
+
+```mermaid
+flowchart TD
+    A[User Reads Content] --> B[Frontend Tracks Time]
+    B --> C[POST /reading/progress]
+    C --> D[Reading Service]
+    D --> E[Validate Progress Data]
+    E --> F[Update Database]
+    F --> G[Invalidate Cache]
+    G --> H[Calculate Statistics]
+    H --> I[Update Achievements]
+    I --> J[Send Notifications]
+    J --> K[Background Tasks]
+    K --> L[Sync Offline Data]
+    L --> M[Return Success]
+    
+    style A fill:#e3f2fd
+    style M fill:#e8f5e8
+    style I fill:#fff8e1
+    style K fill:#f3e5f5
+```
+
+### 🎮 User Achievement System
+
+```mermaid
+stateDiagram-v2
+    [*] --> UserAction
+    UserAction --> ReadingProgress: Read chapter
+    UserAction --> BookmarkContent: Save article
+    UserAction --> CompleteOnboarding: First login
+    
+    ReadingProgress --> CheckAchievements
+    BookmarkContent --> CheckAchievements
+    CompleteOnboarding --> CheckAchievements
+    
+    CheckAchievements --> EarnAchievement: Criteria met
+    CheckAchievements --> NoAchievement: Not yet
+    
+    EarnAchievement --> UpdateDatabase
+    UpdateDatabase --> SendNotification
+    SendNotification --> UpdateCache
+    UpdateCache --> [*]
+    
+    NoAchievement --> [*]
+```
+
+### 💾 Data Storage Architecture
+
+```mermaid
+erDiagram
+    User {
+        uuid id PK
+        string email
+        string name
+        jsonb profile_data
+        timestamp created_at
+    }
+    
+    UserPreference {
+        uuid id PK
+        uuid user_id FK
+        string language
+        string theme
+        int reading_level
+    }
+    
+    ReadingHistory {
+        uuid id PK
+        uuid user_id FK
+        string content_type
+        string content_id
+        int time_spent
+        timestamp read_at
+    }
+    
+    UserAchievement {
+        uuid id PK
+        uuid user_id FK
+        string achievement_type
+        jsonb achievement_data
+        timestamp earned_at
+    }
+    
+    SavedContent {
+        uuid id PK
+        uuid user_id FK
+        string content_type
+        string content_id
+        jsonb metadata
+        timestamp saved_at
+    }
+    
+    User ||--o{ UserPreference : has
+    User ||--o{ ReadingHistory : tracks
+    User ||--o{ UserAchievement : earns
+    User ||--o{ SavedContent : saves
+```
+
+### 🔧 Service Layer Architecture
+
+```mermaid
+flowchart LR
+    subgraph "API Layer"
+        A[Auth Routes]
+        B[Constitution Routes]
+        C[User Routes]
+        D[Reading Routes]
+    end
+    
+    subgraph "Service Layer"
+        E[Auth Service]
+        F[Constitution Service]
+        G[User Service]
+        H[Reading Service]
+        I[Achievement Service]
+        J[Notification Service]
+    end
+    
+    subgraph "Data Layer"
+        K[PostgreSQL]
+        L[Redis Cache]
+        M[File System]
+        N[Google OAuth]
+    end
+    
+    A --> E
+    B --> F
+    C --> G
+    D --> H
+    
+    E --> K
+    E --> L
+    E --> N
+    
+    F --> K
+    F --> L
+    F --> M
+    
+    G --> K
+    G --> L
+    
+    H --> K
+    H --> L
+    H --> I
+    
+    I --> J
+    J --> K
+    
+    style E fill:#ffebee
+    style F fill:#e8f5e8
+    style G fill:#e3f2fd
+    style H fill:#fff3e0
+```
+
+### 🛡️ Security & Rate Limiting
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant RateLimit
+    participant Auth
+    participant API
+    participant Database
+
+    Client->>RateLimit: Request with IP/User
+    RateLimit->>RateLimit: Check Redis counter
+    
+    alt Rate Limit Exceeded
+        RateLimit->>Client: 429 Too Many Requests
+    else Within Limits
+        RateLimit->>Auth: Forward request
+        Auth->>Auth: Validate JWT token
+        
+        alt Invalid Token
+            Auth->>Client: 401 Unauthorized
+        else Valid Token
+            Auth->>API: Authenticated request
+            API->>Database: Process request
+            Database->>API: Return data
+            API->>Client: Success response
+        end
+    end
 ```
 
 ## 🤝 Contributing
