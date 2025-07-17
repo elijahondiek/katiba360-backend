@@ -66,16 +66,24 @@ Katiba360 Backend provides a comprehensive user management and content delivery 
 - **Multilingual Content:** English, Swahili, and local language support
 
 ### 📊 User Experience
-- **Reading Progress Tracking:** Resume where you left off
-- **Reading History:** Complete reading journey tracking
+- **Smart Reading Progress:** Content-aware completion tracking with dynamic thresholds
+- **Reading History:** Complete reading journey tracking with detailed analytics
 - **Achievement System:** Gamified learning progression
 - **Notification System:** Personalized user engagement
+- **Content-Based Completion:** Intelligent chapter completion based on word count and reading time
 
 ### 🌐 API Infrastructure
 - **FastAPI Framework:** High-performance async API
 - **OpenAPI Documentation:** Auto-generated API docs
 - **Database Migrations:** Alembic migration management
 - **Error Handling:** Comprehensive exception management
+
+### 🆕 Recent Improvements
+- **Content-Aware Completion Logic:** Dynamic completion thresholds based on chapter word count
+- **Reading Time Calculation:** Intelligent reading time estimation (200 WPM baseline)
+- **Optimized Progress Tracking:** Enhanced reading progress service with better caching
+- **Completion Threshold Formula:** `(word_count / 200_wpm) * 0.3 = completion_threshold`
+- **Minimum Threshold Protection:** Maintains 2-minute minimum for backward compatibility
 
 ## 🛠 Tech Stack
 
