@@ -169,10 +169,11 @@ class AuthService:
             return TokenResponse(
                 access_token=access_token,
                 refresh_token=new_refresh_token,
-                token_type="bearer"
+                token_type="bearer",
+                expires_in=settings.access_token_expire_minutes * 60
             )
             
-        except jwt.JWTError:
+        except PyJWTError:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid refresh token",

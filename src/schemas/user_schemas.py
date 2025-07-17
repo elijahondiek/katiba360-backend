@@ -54,6 +54,15 @@ class ReadingMode(str, Enum):
     OFFLINE = "offline"
 
 
+class ShareMethod(str, Enum):
+    """Share method options"""
+    FACEBOOK = "facebook"
+    TWITTER = "twitter"
+    WHATSAPP = "whatsapp"
+    NATIVE = "native"
+    COPY_LINK = "copy-link"
+
+
 class DownloadStatus(str, Enum):
     """Download status options"""
     PENDING = "pending"
@@ -83,6 +92,7 @@ class UserBase(BaseModel):
     email: EmailStr
     phone: Optional[str] = None
     display_name: Optional[str] = None
+    bio: Optional[str] = None
     avatar_url: Optional[str] = None
 
 
@@ -123,6 +133,7 @@ class UserResponse(UserBase):
 class UserUpdateRequest(BaseModel):
     """Schema for updating user profile"""
     display_name: Optional[str] = None
+    bio: Optional[str] = None
     avatar_url: Optional[str] = None
     phone: Optional[str] = None
     
@@ -156,6 +167,11 @@ class TokenResponse(BaseModel):
     token_type: str = "bearer"
     expires_in: int
     refresh_token: Optional[str] = None
+
+
+class RefreshTokenRequest(BaseModel):
+    """Schema for refresh token request"""
+    refresh_token: str
 
 
 # User Preferences Schemas
@@ -692,6 +708,30 @@ class CompleteUserProfileResponse(UserResponse):
     achievements_count: int = 0
     saved_content_count: int = 0
     folders_count: int = 0
+    
+    class Config:
+        from_attributes = True
+
+
+# Sharing Event Schemas
+class SharingEventBase(BaseModel):
+    """Base schema for sharing event"""
+    content_type: str
+    content_id: str
+    share_method: ShareMethod
+    content_url: str
+
+
+class SharingEventCreate(SharingEventBase):
+    """Schema for creating sharing event"""
+    pass
+
+
+class SharingEventResponse(SharingEventBase):
+    """Schema for sharing event response"""
+    id: uuid.UUID
+    user_id: uuid.UUID
+    shared_at: datetime
     
     class Config:
         from_attributes = True

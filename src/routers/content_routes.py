@@ -213,7 +213,7 @@ async def get_saved_content(
     """
     try:
         user = request.state.user
-        saved_content = await content_service.get_saved_content(user.id, folder_id)
+        saved_content = await content_service.get_user_saved_content(user.id, folder_id)
         
         return generate_response(
             status_code=status.HTTP_200_OK,

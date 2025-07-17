@@ -494,6 +494,162 @@ class ReadingService:
             "last_read_date": user.last_read_date.isoformat() if user.last_read_date else None
         }
 
+    async def get_reading_analytics(self, user_id: uuid.UUID, period: str) -> Dict[str, Any]:
+        """
+        Get reading analytics for a specific period
+        
+        Args:
+            user_id: User ID
+            period: Time period ('week', 'month', 'year')
+            
+        Returns:
+            Dictionary containing analytics data
+        """
+        now = datetime.now()
+        
+        if period == "week":
+            start_date = now - timedelta(days=7)
+            chart_data = await self._get_daily_reading_data(user_id, start_date, now)
+        elif period == "month":
+            start_date = now - timedelta(days=30)
+            chart_data = await self._get_daily_reading_data(user_id, start_date, now)
+        else:  # year
+            start_date = now - timedelta(days=365)
+            chart_data = await self._get_monthly_reading_data(user_id, start_date, now)
+        
+        # Get user for streak info
+        user = await self.db.get(User, user_id)
+        
+        return {
+            "period": period,
+            "chart_data": chart_data,
+            "current_streak": user.streak_days if user else 0,
+            "start_date": start_date.isoformat(),
+            "end_date": now.isoformat()
+        }
+
+    async def _get_daily_reading_data(self, user_id: uuid.UUID, start_date: datetime, end_date: datetime) -> List[Dict[str, Any]]:
+        """Get daily reading data for charts"""
+        query = select(
+            func.date(ReadingHistory.read_at).label('date'),
+            func.sum(ReadingHistory.time_spent_seconds).label('total_seconds')
+        ).where(
+            ReadingHistory.user_id == user_id,
+            ReadingHistory.read_at >= start_date,
+            ReadingHistory.read_at <= end_date
+        ).group_by(
+            func.date(ReadingHistory.read_at)
+        ).order_by(
+            func.date(ReadingHistory.read_at)
+        )
+        
+        result = await self.db.execute(query)
+        reading_data = result.all()
+        
+        # Create a complete dataset with all days
+        current_date = start_date.date()
+        end_date_date = end_date.date()
+        chart_data = []
+        
+        reading_dict = {row.date: row.total_seconds or 0 for row in reading_data}
+        
+        while current_date <= end_date_date:
+            seconds = reading_dict.get(current_date, 0)
+            minutes = round(seconds / 60, 1)
+            
+            chart_data.append({
+                "date": current_date.isoformat(),
+                "day": current_date.strftime("%a"),
+                "reading_time_minutes": minutes,
+                "percentage": min(100, (minutes / 60) * 100)  # Normalize to 0-100% based on 1 hour max
+            })
+            
+            current_date += timedelta(days=1)
+        
+        return chart_data
+
+    async def _get_monthly_reading_data(self, user_id: uuid.UUID, start_date: datetime, end_date: datetime) -> List[Dict[str, Any]]:
+        """Get monthly reading data for yearly charts"""
+        # Use extract functions instead of date_trunc to avoid PostgreSQL-specific issues
+        query = select(
+            func.extract('year', ReadingHistory.read_at).label('year'),
+            func.extract('month', ReadingHistory.read_at).label('month'),
+            func.sum(ReadingHistory.time_spent_seconds).label('total_seconds')
+        ).where(
+            ReadingHistory.user_id == user_id,
+            ReadingHistory.read_at >= start_date,
+            ReadingHistory.read_at <= end_date
+        ).group_by(
+            func.extract('year', ReadingHistory.read_at),
+            func.extract('month', ReadingHistory.read_at)
+        ).order_by(
+            func.extract('year', ReadingHistory.read_at),
+            func.extract('month', ReadingHistory.read_at)
+        )
+        
+        result = await self.db.execute(query)
+        reading_data = result.all()
+        
+        chart_data = []
+        for row in reading_data:
+            year = int(row.year)
+            month = int(row.month)
+            seconds = row.total_seconds or 0
+            hours = round(seconds / 3600, 1)
+            
+            # Create datetime object for formatting
+            try:
+                month_date = date(year, month, 1)
+                chart_data.append({
+                    "month": month_date.strftime("%Y-%m"),
+                    "month_name": month_date.strftime("%b"),
+                    "reading_time_hours": hours,
+                    "percentage": min(100, (hours / 10) * 100)  # Normalize to 0-100% based on 10 hours max
+                })
+            except ValueError:
+                # Skip invalid dates
+                continue
+        
+        return chart_data
+
+    async def get_reading_streak(self, user_id: uuid.UUID) -> Dict[str, Any]:
+        """
+        Get reading streak information for a user
+        
+        Args:
+            user_id: User ID
+            
+        Returns:
+            Dictionary containing streak information
+        """
+        # Get user
+        user = await self.db.get(User, user_id)
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="User not found"
+            )
+        
+        # Calculate if streak is maintained (read today or yesterday)
+        today = date.today()
+        yesterday = today - timedelta(days=1)
+        
+        streak_maintained = False
+        if user.last_read_date:
+            streak_maintained = user.last_read_date >= yesterday
+        
+        # For now, longest streak is same as current streak
+        # In future, you might want to track this separately
+        longest_streak = user.streak_days
+        
+        return {
+            "current_streak": user.streak_days,
+            "longest_streak": longest_streak,
+            "last_read_date": user.last_read_date.isoformat() if user.last_read_date else None,
+            "streak_maintained": streak_maintained
+        }
+
 
 # Dependency to get ReadingService
 async def get_reading_service(db: AsyncSession = Depends(get_db)) -> ReadingService:

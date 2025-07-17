@@ -3,7 +3,7 @@ import uuid
 from datetime import datetime
 
 # SQLAlchemy imports
-from sqlalchemy import String, Integer, ForeignKey, DateTime, Text, JSON
+from sqlalchemy import String, Integer, Float, ForeignKey, DateTime, Text, JSON
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 
@@ -29,7 +29,7 @@ class UserReadingProgress(Base):
     reference: Mapped[str] = mapped_column(String(20), nullable=False)  # e.g., "1" for chapter 1, "1.2" for article 2 in chapter 1
     
     # Reading metrics
-    read_time_minutes: Mapped[int] = mapped_column(Integer, default=0)
+    read_time_minutes: Mapped[float] = mapped_column(Float, default=0.0)
     total_views: Mapped[int] = mapped_column(Integer, default=1)
     
     # Status

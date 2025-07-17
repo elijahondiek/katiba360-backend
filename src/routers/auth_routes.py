@@ -6,7 +6,7 @@ from typing import Dict, Any, Optional
 from src.database import get_db
 from src.services.auth_service import AuthService, get_auth_service
 from src.services.user_service import UserService, get_user_service
-from src.schemas.user_schemas import GoogleAuthRequest, TokenResponse, UserResponse, CompleteUserProfileResponse
+from src.schemas.user_schemas import GoogleAuthRequest, TokenResponse, UserResponse, CompleteUserProfileResponse, RefreshTokenRequest
 from src.utils.custom_utils import generate_response
 from src.core.config import settings
 
@@ -94,7 +94,7 @@ async def google_oauth_login(
 
 @router.post("/refresh-token", response_model=Dict[str, Any])
 async def refresh_token(
-    refresh_token: str,
+    request: RefreshTokenRequest,
     auth_service: AuthService = Depends(get_auth_service)
 ):
     """
@@ -103,7 +103,7 @@ async def refresh_token(
     This endpoint refreshes an expired access token using a valid refresh token.
     """
     try:
-        token_response = await auth_service.refresh_token(refresh_token)
+        token_response = await auth_service.refresh_token(request.refresh_token)
         
         return generate_response(
             status_code=status.HTTP_200_OK,

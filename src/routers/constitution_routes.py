@@ -47,7 +47,8 @@ class BookmarkRequest(BaseModel):
 class ReadingProgressRequest(BaseModel):
     item_type: str = Field(..., description="Type of item (chapter, article)")
     reference: str = Field(..., description="Reference (e.g., '1' for chapter 1, '1.2' for article 2 in chapter 1)")
-    read_time_minutes: int = Field(1, description="Time spent reading in minutes")
+    read_time_minutes: float = Field(1.0, description="Time spent reading in minutes (supports decimals)")
+    is_incremental: Optional[bool] = Field(True, description="Whether this is incremental reading time")
 
 
 @router.get("")

@@ -168,3 +168,41 @@ async def get_reading_streak(
             customer_message="An unexpected error occurred",
             body=None
         )
+
+
+@router.get("/analytics/{period}", response_model=Dict[str, Any])
+async def get_reading_analytics(
+    period: str,
+    request: Request,
+    reading_service: ReadingService = Depends(get_reading_service)
+):
+    """
+    Get reading analytics for a specific period (week, month, year)
+    
+    This endpoint returns reading analytics for the specified time period.
+    """
+    try:
+        if period not in ["week", "month", "year"]:
+            return generate_response(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                response_message="Invalid period. Must be 'week', 'month', or 'year'",
+                customer_message="Invalid time period specified",
+                body=None
+            )
+        
+        user = request.state.user
+        analytics = await reading_service.get_reading_analytics(user.id, period)
+        
+        return generate_response(
+            status_code=status.HTTP_200_OK,
+            response_message=f"Reading analytics for {period} retrieved successfully",
+            customer_message=f"Your {period} reading analytics have been retrieved",
+            body=analytics
+        )
+    except Exception as e:
+        return generate_response(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            response_message=str(e),
+            customer_message="Failed to retrieve reading analytics",
+            body=None
+        )

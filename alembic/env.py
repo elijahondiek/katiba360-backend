@@ -49,7 +49,8 @@ try:
         from src.models.user_models import User, UserPreference, UserLanguage, InterestCategory, UserInterest
         from src.models.user_models import UserAccessibility, ContentFolder, SavedContent, OfflineContent
         from src.models.user_models import UserAchievement, ReadingHistory, OnboardingProgress, UserNotification
-        from src.models.user_models import OAuthSession, AccountLink
+        from src.models.user_models import OAuthSession, AccountLink, SharingEvent
+        from src.models.reading_progress import UserReadingProgress
         print("Successfully imported user models")
     except ImportError as e:
         print(f"Error importing user models: {e}")

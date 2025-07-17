@@ -15,7 +15,7 @@ from redis.asyncio import Redis
 import secrets
 
 # Import application routes and custom error handlers
-from src.routers import auth_routes, user_routes, content_routes, reading_routes, achievement_routes, notification_routes, onboarding_routes, constitution_routes
+from src.routers import auth_routes, user_routes, content_routes, reading_routes, achievement_routes, notification_routes, onboarding_routes, constitution_routes, sharing_events_routes
 from src.utils.exception_handlers import (
     http_exception_handler,
     pydantic_validation_error_handler,
@@ -402,4 +402,11 @@ app.include_router(
     constitution_routes.router,
     prefix=api_prefix,
     tags=["Constitution"]
+)
+
+# Sharing events routes
+app.include_router(
+    sharing_events_routes.router,
+    prefix=api_prefix,
+    tags=["Sharing"]
 )

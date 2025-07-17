@@ -122,6 +122,9 @@ class UserService:
         if user_data.display_name is not None:
             user.display_name = user_data.display_name
         
+        if user_data.bio is not None:
+            user.bio = user_data.bio
+        
         if user_data.avatar_url is not None:
             user.avatar_url = user_data.avatar_url
         

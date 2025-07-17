@@ -56,6 +56,7 @@ PUBLIC_PATHS = [
     f"{API_PREFIX}/auth/login",
     f"{API_PREFIX}/auth/google",
     f"{API_PREFIX}/auth/google/callback",
+    f"{API_PREFIX}/auth/refresh-token",
     f"{API_PREFIX}/health"  # API-prefixed health check endpoint
 ]
 

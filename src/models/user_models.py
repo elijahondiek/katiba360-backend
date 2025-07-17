@@ -42,6 +42,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
     phone: Mapped[Optional[str]] = mapped_column(String(20), unique=True, nullable=True)
     display_name: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    bio: Mapped[Optional[str]] = mapped_column(String(500), nullable=True)
     avatar_url: Mapped[Optional[str]] = mapped_column(String(500), nullable=True)
     google_id: Mapped[Optional[str]] = mapped_column(String(255), unique=True, nullable=True)
     auth_provider: Mapped[str] = mapped_column(String(50), default="google")
@@ -73,6 +74,7 @@ class User(Base):
     notifications = relationship("UserNotification", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
     oauth_sessions = relationship("OAuthSession", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
     account_links = relationship("AccountLink", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
+    sharing_events = relationship("SharingEvent", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
 
 
 class UserPreference(Base):
@@ -366,6 +368,24 @@ class AccountLink(Base):
     user = relationship("User", back_populates="account_links")
     
     # Table constraints are defined in the migration script
+
+
+class SharingEvent(Base):
+    """
+    SQLAlchemy model representing sharing events for tracking user sharing behavior.
+    """
+    __tablename__ = "tbl_sharing_events"
+    
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey(USERS_ID_FK, ondelete="CASCADE"))
+    content_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    content_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    share_method: Mapped[str] = mapped_column(String(20), nullable=False)
+    content_url: Mapped[str] = mapped_column(String(1000), nullable=False)
+    shared_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
+    
+    # Relationship
+    user = relationship("User", back_populates="sharing_events")
 
 
 # Password reset functionality removed as we're using Google OAuth exclusively

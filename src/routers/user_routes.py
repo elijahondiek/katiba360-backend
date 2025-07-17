@@ -69,7 +69,7 @@ async def update_user_profile(
     """
     try:
         user = request.state.user
-        updated_user = await user_service.update_user(user.id, profile_data)
+        updated_user = await user_service.update_user_profile(user.id, profile_data)
         
         return generate_response(
             status_code=status.HTTP_200_OK,
