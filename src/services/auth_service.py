@@ -331,9 +331,7 @@ class AuthService:
                     auth_provider="google",
                     is_active=True,
                     email_verified=True,  # Google accounts are pre-verified
-                    created_at=datetime.now(),
-                    updated_at=datetime.now(),
-                    last_login_at=datetime.now()
+                    last_login_at=datetime.now()  # This field doesn't have a default, so we need to set it
                 )
                 self.db.add(user)
                 await self.db.flush()
@@ -357,7 +355,6 @@ class AuthService:
                 user.google_id = google_id
                 user.auth_provider = "google"
                 user.email_verified = True
-                user.updated_at = datetime.now()
                 user.last_login_at = datetime.now()
                 
                 if display_name and not user.display_name:
@@ -368,7 +365,6 @@ class AuthService:
         else:
             # Update login timestamp
             user.last_login_at = datetime.now()
-            user.updated_at = datetime.now()
             
             # Update user info if needed
             if display_name and not user.display_name:
