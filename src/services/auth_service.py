@@ -341,9 +341,7 @@ class AuthService:
                 # Create default user preferences
                 preferences = UserPreference(
                     user_id=user.id,
-                    theme_preference="light",
-                    created_at=datetime.now(),
-                    updated_at=datetime.now()
+                    theme_preference="light"
                 )
                 self.db.add(preferences)
                 
@@ -351,9 +349,7 @@ class AuthService:
                 onboarding = OnboardingProgress(
                     user_id=user.id,
                     current_step=1,
-                    progress_percentage=0,
-                    created_at=datetime.now(),
-                    updated_at=datetime.now()
+                    progress_percentage=0
                 )
                 self.db.add(onboarding)
             else:
