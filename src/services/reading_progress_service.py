@@ -13,6 +13,7 @@ from src.models.user_models import User
 from src.utils.logging.activity_logger import ActivityLogger
 from src.utils.cache import CacheManager, HOUR, DAY
 from src.core.config import settings
+from src.services.constitution_service import ConstitutionService
 
 import logging
 logger = logging.getLogger(__name__)
@@ -29,6 +30,174 @@ class ReadingProgressService:
         self.db = db
         self.cache = cache
         self.activity_logger = ActivityLogger()
+        self.constitution_service = ConstitutionService(cache)
+    
+    def _count_content_words(self, content: str) -> int:
+        """
+        Count words in a given content string.
+        
+        Args:
+            content: The content string to count words in
+            
+        Returns:
+            int: Number of words in the content
+        """
+        if not content:
+            return 0
+        
+        # Simple word counting - split by whitespace and filter empty strings
+        words = [word for word in content.split() if word.strip()]
+        return len(words)
+    
+    async def _calculate_chapter_word_count(self, chapter_number: int) -> int:
+        """
+        Calculate the total word count for a chapter including all its articles.
+        
+        Args:
+            chapter_number: The chapter number
+            
+        Returns:
+            int: Total word count for the chapter
+        """
+        try:
+            # Get chapter data from constitution service
+            chapter_data = await self.constitution_service.get_chapter_by_number(chapter_number)
+            
+            if not chapter_data:
+                logger.warning(f"No data found for chapter {chapter_number}")
+                return 0
+            
+            total_words = 0
+            
+            # Count words in chapter title
+            if chapter_data.get('chapter_title'):
+                total_words += self._count_content_words(chapter_data['chapter_title'])
+            
+            # Count words in all articles
+            articles = chapter_data.get('articles', [])
+            for article in articles:
+                # Count words in article title
+                if article.get('article_title'):
+                    total_words += self._count_content_words(article['article_title'])
+                
+                # Count words in all clauses
+                clauses = article.get('clauses', [])
+                for clause in clauses:
+                    # Count words in clause content
+                    if clause.get('content'):
+                        total_words += self._count_content_words(clause['content'])
+                    
+                    # Count words in sub-clauses
+                    sub_clauses = clause.get('sub_clauses', [])
+                    for sub_clause in sub_clauses:
+                        if sub_clause.get('content'):
+                            total_words += self._count_content_words(sub_clause['content'])
+            
+            logger.info(f"Chapter {chapter_number} has {total_words} words")
+            return total_words
+            
+        except Exception as e:
+            logger.error(f"Error calculating word count for chapter {chapter_number}: {e}")
+            return 0
+    
+    async def _calculate_article_word_count(self, chapter_number: int, article_number: int) -> int:
+        """
+        Calculate the total word count for a specific article.
+        
+        Args:
+            chapter_number: The chapter number
+            article_number: The article number
+            
+        Returns:
+            int: Total word count for the article
+        """
+        try:
+            # Get article data from constitution service
+            article_data = await self.constitution_service.get_article_by_number(chapter_number, article_number)
+            
+            if not article_data:
+                logger.warning(f"No data found for article {chapter_number}.{article_number}")
+                return 0
+            
+            total_words = 0
+            
+            # Count words in article title
+            if article_data.get('article_title'):
+                total_words += self._count_content_words(article_data['article_title'])
+            
+            # Count words in all clauses
+            clauses = article_data.get('clauses', [])
+            for clause in clauses:
+                # Count words in clause content
+                if clause.get('content'):
+                    total_words += self._count_content_words(clause['content'])
+                
+                # Count words in sub-clauses
+                sub_clauses = clause.get('sub_clauses', [])
+                for sub_clause in sub_clauses:
+                    if sub_clause.get('content'):
+                        total_words += self._count_content_words(sub_clause['content'])
+            
+            logger.info(f"Article {chapter_number}.{article_number} has {total_words} words")
+            return total_words
+            
+        except Exception as e:
+            logger.error(f"Error calculating word count for article {chapter_number}.{article_number}: {e}")
+            return 0
+    
+    async def _calculate_completion_threshold(self, item_type: str, reference: str) -> float:
+        """
+        Calculate the completion threshold in minutes based on content length.
+        
+        Args:
+            item_type: The type of item ('chapter' or 'article')
+            reference: The reference string (e.g., '1' for chapter 1, '1.2' for article 2)
+            
+        Returns:
+            float: Completion threshold in minutes
+        """
+        try:
+            # Default reading speed: 200 words per minute
+            reading_speed_wpm = 200
+            
+            # Completion threshold: 30% of estimated reading time
+            completion_percentage = 0.3
+            
+            # Minimum threshold: 2 minutes (current system minimum)
+            min_threshold = 2.0
+            
+            word_count = 0
+            
+            if item_type == "chapter":
+                chapter_number = int(reference)
+                word_count = await self._calculate_chapter_word_count(chapter_number)
+            elif item_type == "article":
+                # Parse reference like "1.2" to get chapter and article numbers
+                parts = reference.split('.')
+                if len(parts) == 2:
+                    chapter_number = int(parts[0])
+                    article_number = int(parts[1])
+                    word_count = await self._calculate_article_word_count(chapter_number, article_number)
+            
+            if word_count == 0:
+                logger.warning(f"No words found for {item_type} {reference}, using minimum threshold")
+                return min_threshold
+            
+            # Calculate estimated reading time in minutes
+            estimated_reading_time = word_count / reading_speed_wpm
+            
+            # Calculate completion threshold (30% of estimated time)
+            threshold = estimated_reading_time * completion_percentage
+            
+            # Ensure minimum threshold
+            threshold = max(threshold, min_threshold)
+            
+            logger.info(f"{item_type} {reference}: {word_count} words, estimated {estimated_reading_time:.1f} min, threshold {threshold:.1f} min")
+            return threshold
+            
+        except Exception as e:
+            logger.error(f"Error calculating completion threshold for {item_type} {reference}: {e}")
+            return min_threshold
     
     async def get_user_reading_progress(self, user_id: str, background_tasks: Optional[BackgroundTasks] = None) -> Dict:
         """
@@ -128,7 +297,7 @@ class ReadingProgressService:
             }
     
     async def update_user_reading_progress(self, user_id: str, item_type: str, reference: str, 
-                                          read_time_minutes: int = 1, 
+                                          read_time_minutes: float = 1.0, 
                                           background_tasks: Optional[BackgroundTasks] = None) -> Dict:
         """
         Update reading progress for a specific user.
@@ -137,7 +306,7 @@ class ReadingProgressService:
             user_id: The user ID
             item_type: The type of item (chapter, article)
             reference: The reference (e.g., "1" for chapter 1, "1.2" for article 2 in chapter 1)
-            read_time_minutes: The time spent reading in minutes
+            read_time_minutes: The time spent reading in minutes (supports decimals)
             background_tasks: Optional background tasks for async caching
             
         Returns:
@@ -161,26 +330,38 @@ class ReadingProgressService:
                 existing_entry.total_views += 1
                 existing_entry.last_read_at = datetime.now(timezone.utc)
                 
-                # Mark as completed if it's a significant reading time
-                if existing_entry.read_time_minutes >= 2:  # Consider completed if read for 2+ minutes
+                # Calculate dynamic completion threshold based on content length
+                completion_threshold = await self._calculate_completion_threshold(item_type, reference)
+                
+                # Mark as completed if it meets the content-aware threshold
+                if existing_entry.read_time_minutes >= completion_threshold:
                     existing_entry.is_completed = True
+                    logger.info(f"Marked {item_type} {reference} as completed (threshold: {completion_threshold:.1f} min, read: {existing_entry.read_time_minutes:.1f} min)")
                 
                 await self.db.commit()
                 logger.info(f"Updated reading progress for user {user_id}, {item_type} {reference}")
             else:
+                # Calculate dynamic completion threshold based on content length
+                completion_threshold = await self._calculate_completion_threshold(item_type, reference)
+                
                 # Create new entry
+                is_completed = read_time_minutes >= completion_threshold
                 new_entry = UserReadingProgress(
                     user_id=uuid.UUID(user_id),
                     item_type=item_type,
                     reference=reference,
                     read_time_minutes=read_time_minutes,
-                    is_completed=(read_time_minutes >= 2),  # Consider completed if read for 2+ minutes
+                    is_completed=is_completed,
                     first_read_at=datetime.now(timezone.utc),
                     last_read_at=datetime.now(timezone.utc)
                 )
                 self.db.add(new_entry)
                 await self.db.commit()
-                logger.info(f"Created new reading progress for user {user_id}, {item_type} {reference}")
+                
+                if is_completed:
+                    logger.info(f"Created and marked {item_type} {reference} as completed (threshold: {completion_threshold:.1f} min, read: {read_time_minutes:.1f} min)")
+                else:
+                    logger.info(f"Created new reading progress for user {user_id}, {item_type} {reference}")
             
             # Invalidate cache
             cache_key = f"{CACHE_KEY_USER_PROGRESS_PREFIX}{user_id}:progress"
