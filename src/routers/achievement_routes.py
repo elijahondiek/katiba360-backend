@@ -1,10 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, status, Request
+from fastapi import APIRouter, Depends, HTTPException, status, Request, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Dict, Any, List, Optional
 import uuid
 
 from src.database import get_db
 from src.services.achievement_service import AchievementService, get_achievement_service
+from src.services.cached_achievement_service import CachedAchievementService
+from src.utils.cache import CacheManager
 from src.schemas.user_schemas import (
     UserAchievementCreate,
     UserAchievementResponse
@@ -13,25 +15,58 @@ from src.utils.custom_utils import generate_response
 
 router = APIRouter(prefix="/achievements", tags=["Achievements"])
 
+# Cache manager dependency
+async def get_cache_manager():
+    from redis.asyncio import Redis
+    from src.core.config import settings
+    
+    redis_client = Redis.from_url(settings.redis_url)
+    cache_manager = CacheManager(redis_client, prefix="katiba360")
+    
+    try:
+        yield cache_manager
+    finally:
+        await redis_client.close()
+
+# Cached achievement service dependency
+async def get_cached_achievement_service(
+    db: AsyncSession = Depends(get_db),
+    cache_manager: CacheManager = Depends(get_cache_manager)
+) -> CachedAchievementService:
+    return CachedAchievementService(db, cache_manager)
+
 @router.get("", response_model=Dict[str, Any])
 async def get_user_achievements(
     request: Request,
-    achievement_service: AchievementService = Depends(get_achievement_service)
+    background_tasks: BackgroundTasks,
+    achievement_service: CachedAchievementService = Depends(get_cached_achievement_service)
 ):
     """
-    Get the current user's achievements
+    Get the current user's achievements with caching
     
     This endpoint returns all achievements of the currently authenticated user.
+    Results are cached for 30 minutes.
     """
     try:
         user = request.state.user
-        achievements = await achievement_service.get_user_achievements(user.id)
+        achievements = await achievement_service.get_user_achievements_cached(user.id, background_tasks)
         
         return generate_response(
             status_code=status.HTTP_200_OK,
             response_message="User achievements retrieved successfully",
             customer_message="Your achievements have been retrieved",
-            body=[UserAchievementResponse.from_orm(achievement).dict() for achievement in achievements]
+            body=[
+                {
+                    "id": str(achievement.id),
+                    "badge_type": achievement.badge_type,
+                    "badge_name": achievement.badge_name,
+                    "badge_description": achievement.badge_description,
+                    "badge_icon": achievement.badge_icon,
+                    "earned_at": achievement.earned_at.isoformat() if achievement.earned_at else None,
+                    "achievement_data": achievement.achievement_data,
+                }
+                for achievement in achievements
+            ]
         )
     except HTTPException as e:
         return generate_response(

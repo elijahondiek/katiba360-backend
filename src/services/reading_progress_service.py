@@ -9,11 +9,11 @@ from redis.asyncio import Redis
 
 from src.database import get_db
 from src.models.reading_progress import UserReadingProgress
-from src.models.user_models import User
+from src.models.user_models import User, ReadingHistory
 from src.utils.logging.activity_logger import ActivityLogger
 from src.utils.cache import CacheManager, HOUR, DAY
 from src.core.config import settings
-from src.services.constitution_service import ConstitutionService
+from src.services.constitution import ConstitutionOrchestrator
 
 import logging
 logger = logging.getLogger(__name__)
@@ -30,7 +30,10 @@ class ReadingProgressService:
         self.db = db
         self.cache = cache
         self.activity_logger = ActivityLogger()
-        self.constitution_service = ConstitutionService(cache)
+        # Initialize constitution orchestrator with redis client
+        from redis.asyncio import Redis
+        redis_client = cache.redis  # Get redis client from cache manager
+        self.constitution_service = ConstitutionOrchestrator(redis_client, db)
     
     def _count_content_words(self, content: str) -> int:
         """
@@ -338,6 +341,21 @@ class ReadingProgressService:
                     existing_entry.is_completed = True
                     logger.info(f"Marked {item_type} {reference} as completed (threshold: {completion_threshold:.1f} min, read: {existing_entry.read_time_minutes:.1f} min)")
                 
+                # Create ReadingHistory entry
+                reading_history = ReadingHistory(
+                    user_id=uuid.UUID(user_id),
+                    content_id=reference,
+                    content_type=item_type,
+                    reading_time_minutes=read_time_minutes,
+                    time_spent_seconds=int(read_time_minutes * 60),
+                    read_at=datetime.now(timezone.utc),
+                    started_at=datetime.now(timezone.utc),
+                    position=0.0,
+                    total_length=1.0,
+                    progress_percentage=0.0
+                )
+                self.db.add(reading_history)
+                
                 await self.db.commit()
                 logger.info(f"Updated reading progress for user {user_id}, {item_type} {reference}")
             else:
@@ -356,6 +374,22 @@ class ReadingProgressService:
                     last_read_at=datetime.now(timezone.utc)
                 )
                 self.db.add(new_entry)
+                
+                # Create ReadingHistory entry
+                reading_history = ReadingHistory(
+                    user_id=uuid.UUID(user_id),
+                    content_id=reference,
+                    content_type=item_type,
+                    reading_time_minutes=read_time_minutes,
+                    time_spent_seconds=int(read_time_minutes * 60),
+                    read_at=datetime.now(timezone.utc),
+                    started_at=datetime.now(timezone.utc),
+                    position=0.0,
+                    total_length=1.0,
+                    progress_percentage=0.0
+                )
+                self.db.add(reading_history)
+                
                 await self.db.commit()
                 
                 if is_completed:

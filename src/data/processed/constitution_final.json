@@ -188,8 +188,15 @@
         {
           "article_number": 8,
           "article_title": "State and religion",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "There shall be no State religion.",
+              "sub_clauses": []
+            }
+          ]
+        }
+        ,
         {
           "article_number": 9,
           "article_title": "National symbols and national days",
@@ -458,8 +465,15 @@
         {
           "article_number": 16,
           "article_title": "Dual citizenship",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "A citizen by birth does not lose citizenship by acquiring the citizenship of another country.",
+              "sub_clauses": []
+            }
+          ]
+        }
+        ,
         {
           "article_number": 17,
           "article_title": "Revocation of citizenship",
@@ -509,8 +523,44 @@
         {
           "article_number": 18,
           "article_title": "Legislation on citizenship",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "prescribing procedures by which a person may become a citizen;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "governing entry into and residence in Kenya;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "providing for the status of permanent residents;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "providing for voluntary renunciation of citizenship;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "prescribing procedures for revocation of citizenship;"
+                },
+                {
+                  "sub_clause_id": "f",
+                  "content": "prescribing the duties and rights of citizens;"
+                },
+                {
+                  "sub_clause_id": "g",
+                  "content": "generally giving effect to the provisions of this Chapter."
+                }
+              ]
+            }
+          ]
         }
+        
       ],
       "parts": []
     },
@@ -843,8 +893,32 @@
         {
           "article_number": 25,
           "article_title": "Fundamental Rights and freedoms that may not be limited",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Despite any other provision in this Constitution, the following rights and fundamental freedoms shall not be limited—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "freedom from torture and cruel, inhuman or degrading treatment or punishment;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "freedom from slavery or servitude;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "the right to a fair trial;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "the right to an order of habeas corpus."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 26,
           "article_title": "Right to life",
@@ -920,13 +994,51 @@
         {
           "article_number": 28,
           "article_title": "Human dignity",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Every person has inherent dignity and the right to have that dignity respected and protected.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 29,
           "article_title": "Freedom and security of the person",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Every person has the right to freedom and security of the person, which includes the right not to be—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "deprived of freedom arbitrarily or without just cause;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "detained without trial, except during a state of emergency, in which case the detention is subject to Article 58;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "subjected to any form of violence from either public or private sources;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "subjected to torture in any manner, whether physical or psychological;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "subjected to corporal punishment;"
+                },
+                {
+                  "sub_clause_id": "f",
+                  "content": "treated or punished in a cruel, inhuman or degrading manner."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 30,
           "article_title": "Slavery, servitude and forced labour",
@@ -946,8 +1058,32 @@
         {
           "article_number": 31,
           "article_title": "Privacy",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Every person has the right to privacy, which includes the right not to have—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "their person, home or property searched;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "their possessions seized;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "information relating to their family or private affairs unnecessarily required or revealed; or"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "the privacy of their communications infringed."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 32,
           "article_title": "Freedom of conscience, religion, belief and opinion",
@@ -1163,8 +1299,15 @@
         {
           "article_number": 37,
           "article_title": "Assembly, demonstration, picketing and petition",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Every person has the right, peaceably and unarmed, to assemble, to demonstrate, to picket, and to present petitions to public authorities.",
+              "sub_clauses": []
+            }
+          ]
+        }
+        ,
         {
           "article_number": 38,
           "article_title": "Political rights",
@@ -1378,8 +1521,24 @@
         {
           "article_number": 42,
           "article_title": "Environment",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Every person has the right to a clean and healthy environment, which includes the right—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "to have the environment protected for the benefit of present and future generations through legislative and other measures, particularly those contemplated in Article 69; and"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "to have obligations relating to the environment fulfilled under Article 70."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 43,
           "article_title": "Economic and social rights",
@@ -1562,8 +1721,15 @@
         {
           "article_number": 48,
           "article_title": "Access to justice",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The State shall ensure access to justice for all persons and, if any fee is required, it shall be reasonable and shall not impede access to justice.",
+              "sub_clauses": []
+            }
+          ]
+        }
+        ,
         {
           "article_number": 49,
           "article_title": "Rights of arrested persons",
@@ -1878,18 +2044,93 @@
         {
           "article_number": 55,
           "article_title": "Youth",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The State shall take measures, including affirmative action programmes, to ensure that the youth—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "access relevant education and training;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "have opportunities to associate, be represented and participate in political, social, economic and other spheres of life;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "access employment;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "are protected from harmful cultural practices and exploitation."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 56,
           "article_title": "Minorities and marginalised groups",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The State shall put in place affirmative action programmes designed to ensure that minorities and marginalised groups—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "participate and are represented in governance and other spheres of life;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "are provided special opportunities in educational and economic fields;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "are provided special opportunities for access to employment;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "develop their cultural values, languages and practices;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "have reasonable access to water, health services and infrastructure."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 57,
           "article_title": "Older members of society",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The State shall take measures to ensure the rights of older persons—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "to fully participate in the affairs of society;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "to pursue their personal development;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "to live in dignity and respect and be free from abuse; and"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "to receive reasonable care and assistance from their family and the State."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 58,
           "article_title": "State of emergency",
@@ -2421,8 +2662,36 @@
         {
           "article_number": 244,
           "article_title": "Objects and functions of the National Police Service",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The National Police Service shall—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "strive for the highest standards of professionalism and discipline among its members;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "prevent corruption and promote and practice transparency and accountability;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "comply with constitutional standards of human rights and fundamental freedoms;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "train staff to the highest possible standards of competence and integrity and to respect human rights and fundamental freedoms and dignity; and"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "foster and promote relationships with the broader society."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 245,
           "article_title": "Command of the National Police Service",
@@ -2784,8 +3053,28 @@
         {
           "article_number": 64,
           "article_title": "Private land",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Private land consists of—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "registered land held by any person under any freehold tenure;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "land held by any person under leasehold tenure;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "any other land declared private land under an Act of Parliament."
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 65,
           "article_title": "Landholding by non-citizens",
@@ -2894,8 +3183,58 @@
         {
           "article_number": 68,
           "article_title": "Legislation on land",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "revise, consolidate and rationalise existing land laws;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "revise sectoral land use laws in accordance with the principles set out in Article 60(1);"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "enact legislation—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "to prescribe minimum and maximum land holding acreages in respect of private land;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "to regulate the manner in which any land may be converted from one category to another;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "to regulate the recognition and protection of matrimonial property and in particular the matrimonial home during and on the termination of marriage;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "to protect, conserve and provide access to all public land;"
+                    },
+                    {
+                      "nested_sub_clause_number": "v",
+                      "content": "to enable the review of all grants or dispositions of public land to establish their propriety or legality;"
+                    },
+                    {
+                      "nested_sub_clause_number": "vi",
+                      "content": "to protect the dependants of deceased persons holding interests in any land, including the interests of spouses in actual occupation of land;"
+                    },
+                    {
+                      "nested_sub_clause_number": "vii",
+                      "content": "to provide for any other matter necessary to give effect to the provisions of this Chapter."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        ,
         {
           "article_number": 69,
           "article_title": "Obligations in respect of the environment",
@@ -3007,8 +3346,15 @@
         {
           "article_number": 72,
           "article_title": "Legislation relating to the environment",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation to give full effect to the provisions of this Part.",
+              "sub_clauses": []
+            }
+          ]
         }
+        
       ],
       "parts": []
     },
@@ -3065,7 +3411,13 @@
         {
           "article_number": 74,
           "article_title": "Oath of office of State officers",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Before assuming a State office, acting in a State office, or performing any functions of a State office, a person shall take and subscribe to the oath or affirmation of office, in the manner and form prescribed by the Third Schedule or under an Act of Parliament.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 75,
@@ -3203,12 +3555,41 @@
         {
           "article_number": 79,
           "article_title": "Legislation to establish the ethics and anti-corruption commission",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation to establish an independent ethics and anti-corruption commission, which shall be and have the status and powers of a commission under Chapter Fifteen, for purposes of ensuring compliance with, and enforcement of, the provisions of this Chapter.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 80,
           "article_title": "Legislation on leadership",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "establishing procedures and mechanisms for the effective administration of this Chapter;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "prescribing the penalties, in addition to the penalties referred to in Article 75, that may be imposed for a contravention of this Chapter;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "providing for the application of this Chapter, with the necessary modifications, to public officers; and"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "making any other provision necessary for ensuring the promotion of the principles of leadership and integrity referred to in this Chapter, and the enforcement of this Chapter."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 255,
@@ -3427,7 +3808,56 @@
         {
           "article_number": 81,
           "article_title": "General principles for the electoral system",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The electoral system shall comply with the following principles—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "freedom of citizens to exercise their political rights under Article 38;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "not more than two-thirds of the members of elective public bodies shall be of the same gender;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "fair representation of persons with disabilities;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "universal suffrage based on the aspiration for fair representation and equality of vote;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "free and fair elections, which are—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "by secret ballot;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "free from violence, intimidation, improper influence or corruption;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "conducted by an independent body;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "transparent;"
+                    },
+                    {
+                      "nested_sub_clause_number": "v",
+                      "content": "administered in an impartial, neutral, efficient, accurate and accountable manner."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 82,
@@ -3516,17 +3946,71 @@
         {
           "article_number": 84,
           "article_title": "Candidates for election and political parties to comply with code of conduct",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "In every election, all candidates and all political parties shall comply with the code of conduct prescribed by the Independent Electoral and Boundaries Commission.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 85,
           "article_title": "Eligibility to stand as an independent candidate",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Any person is eligible to stand as an independent candidate for election if the person—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "is not a member of a registered political party and has not been a member for at least three months immediately before the date of the election; and"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "satisfies the requirements of—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "Article 99(1)(c)(i) or (ii), in the case of a candidate for election to the National Assembly or the Senate, respectively; or"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "Article 193(1)(c)(ii), in the case of a candidate for election to a county assembly."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 86,
           "article_title": "Voting",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "At every election, the Independent Electoral and Boundaries Commission shall ensure that—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "whatever voting method is used, the system is simple, accurate, verifiable, secure, accountable and transparent;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "the votes cast are counted, tabulated and the results announced promptly by the presiding officer at each polling station;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "the results from the polling stations are openly and accurately collated and promptly announced by the returning officer; and"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "appropriate structures and mechanisms to eliminate electoral malpractice are put in place, including the safekeeping of election materials."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 87,
@@ -3838,7 +4322,50 @@
         {
           "article_number": 92,
           "article_title": "Legislation on political parties",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation to provide for—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "the reasonable and equitable allocation of airtime, by State-owned and other specified categories of broadcasting media, to political parties either generally or during election campaigns;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "the regulation of freedom to broadcast in order to ensure fair election campaigning;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "the regulation of political parties;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "the roles and functions of political parties;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "the registration and supervision of political parties;"
+                },
+                {
+                  "sub_clause_id": "f",
+                  "content": "the establishment and management of a political parties fund;"
+                },
+                {
+                  "sub_clause_id": "g",
+                  "content": "the accounts and audit of political parties;"
+                },
+                {
+                  "sub_clause_id": "h",
+                  "content": "restrictions on the use of public resources to promote the interests of political parties; and"
+                },
+                {
+                  "sub_clause_id": "i",
+                  "content": "any other matters necessary for the management of political parties."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 258,
@@ -4283,7 +4810,34 @@
         {
           "article_number": 100,
           "article_title": "Promotion of representation of marginalised groups",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Parliament shall enact legislation to promote the representation in Parliament of—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "women;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "persons with disabilities;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "youth;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "ethnic and other minorities;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "marginalised communities."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 101,
@@ -4942,7 +5496,22 @@
         {
           "article_number": 121,
           "article_title": "Quorum",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The quorum of Parliament shall be–",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "fifty members, in the case of the National Assembly; or"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "fifteen members, in the case of the Senate."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 122,
@@ -5264,13 +5833,27 @@
         {
           "article_number": 262,
           "article_title": "Transitional and consequential provisions",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The transitional and consequential provisions set out in the Sixth Schedule shall take effect on the effective date.",
+              "sub_clauses": []
+            }
+          ]
         },
+
         {
           "article_number": 263,
           "article_title": "Effective Date",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "This Constitution shall come into force on its promulgation by the President or on the expiry of a period of fourteen days from the date of the publication in the Gazette of the final result of the referendum ratifying this Constitution, whichever is the earlier.",
+              "sub_clauses": []
+            }
+          ]
         },
+
         {
           "article_number": 264,
           "article_title": "Repeal of previous Constitution",
@@ -5603,7 +6186,13 @@
         {
           "article_number": 135,
           "article_title": "Decisions of the President",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "A decision of the President in the performance of any function of the President under this Constitution shall be in writing and shall bear the seal and signature of the President.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 136,
@@ -7624,12 +8213,74 @@
         {
           "article_number": 174,
           "article_title": "Objects of devolution",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The objects of the devolution of government are—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "to promote democratic and accountable exercise of power;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "to foster national unity by recognising diversity;"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "to give powers of self-governance to the people and enhance the participation of the people in the exercise of the powers of the State and in making decisions affecting them;"
+                },
+                {
+                  "sub_clause_id": "d",
+                  "content": "to recognise the right of communities to manage their own affairs and to further their development;"
+                },
+                {
+                  "sub_clause_id": "e",
+                  "content": "to protect and promote the interests and rights of minorities and marginalised communities;"
+                },
+                {
+                  "sub_clause_id": "f",
+                  "content": "to promote social and economic development and the provision of proximate, easily accessible services throughout Kenya;"
+                },
+                {
+                  "sub_clause_id": "g",
+                  "content": "to ensure equitable sharing of national and local resources throughout Kenya;"
+                },
+                {
+                  "sub_clause_id": "h",
+                  "content": "to facilitate the decentralisation of State organs, their functions and services, from the capital of Kenya;"
+                },
+                {
+                  "sub_clause_id": "i",
+                  "content": "to enhance checks and balances and the separation of powers."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 175,
           "article_title": "Principles of devolved government",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "County governments established under this Constitution shall reflect the following principles—",
+              "sub_clauses": [
+                {
+                  "sub_clause_id": "a",
+                  "content": "county governments shall be based on democratic principles and the separation of powers;"
+                },
+                {
+                  "sub_clause_id": "b",
+                  "content": "county governments shall have reliable sources of revenue to enable them to govern and deliver services effectively; and"
+                },
+                {
+                  "sub_clause_id": "c",
+                  "content": "no more than two-thirds of the members of representative bodies in each county government shall be of the same gender."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 176,
@@ -8552,8 +9203,15 @@
         {
           "article_number": 198,
           "article_title": "County government during transition",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "While an election is being held to constitute a county assembly under this Chapter, the executive committee of the county, as last constituted, remains competent to perform administrative functions until a new executive committee is constituted after the election.",
+              "sub_clauses": []
+            }
+          ]
         },
+
         {
           "article_number": 199,
           "article_title": "Publication of county legislation",
@@ -8617,7 +9275,48 @@
         {
           "article_number": 201,
           "article_title": "Principles of public finance",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "The following principles shall guide all aspects of public finance in the Republic—",
+              "sub_clauses": [
+                {
+                  "sub_clause_letter": "a",
+                  "content": "there shall be openness and accountability, including public participation in financial matters;"
+                },
+                {
+                  "sub_clause_letter": "b",
+                  "content": "the public finance system shall promote an equitable society, and in particular—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "the burden of taxation shall be shared fairly;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "revenue raised nationally shall be shared equitably among national and county governments; and"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "expenditure shall promote the equitable development of the country, including by making special provision for marginalised groups and areas;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "c",
+                  "content": "the burden and benefits of the use of resources and public borrowing shall be shared equitably between present and future generations;"
+                },
+                {
+                  "sub_clause_letter": "d",
+                  "content": "public money shall be used in a prudent and responsible way;"
+                },
+                {
+                  "sub_clause_letter": "e",
+                  "content": "financial management shall be responsible, and fiscal reporting shall be clear."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 202,
@@ -9030,7 +9729,22 @@
         {
           "article_number": 212,
           "article_title": "Borrowing by counties",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "A county government may borrow only—",
+              "sub_clauses": [
+                {
+                  "sub_clause_letter": "a",
+                  "content": "if the national government guarantees the loan; and"
+                },
+                {
+                  "sub_clause_letter": "b",
+                  "content": "with the approval of the county government’s assembly."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 213,
@@ -9287,7 +10001,13 @@
         {
           "article_number": 219,
           "article_title": "Transfer of equitable share",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "A county’s share of revenue raised by the national government shall be transferred to the county without undue delay and without deduction, except when the transfer has been stopped under Article 225.",
+              "sub_clauses": []
+            }
+          ]
         },
         {
           "article_number": 220,
@@ -10077,7 +10797,22 @@
         {
           "article_number": 236,
           "article_title": "Protection of public officers",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "A public officer shall not be—",
+              "sub_clauses": [
+                {
+                  "sub_clause_letter": "a",
+                  "content": "victimised or discriminated against for having performed the functions of office in accordance with this Constitution or any other law; or"
+                },
+                {
+                  "sub_clause_letter": "b",
+                  "content": "dismissed, removed from office, demoted in rank or otherwise subjected to disciplinary action without due process of law."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 237,
@@ -11078,7 +11813,22 @@
         {
           "article_number": 253,
           "article_title": "Incorporation of commissions and independent offices",
-          "clauses": []
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Each commission and each independent office—",
+              "sub_clauses": [
+                {
+                  "sub_clause_letter": "a",
+                  "content": "is a body corporate with perpetual succession and a seal; and"
+                },
+                {
+                  "sub_clause_letter": "b",
+                  "content": "is capable of suing and being sued in its corporate name."
+                }
+              ]
+            }
+          ]
         },
         {
           "article_number": 254,
@@ -11487,9 +12237,342 @@
           "article_title": "Interpretation",
           "clauses": [
             {
-              "clause_number": 1,
-              "content": "any publication, or any matter written, expressed, or inscribed on any substance by means of letters, figures or marks, or by more than one of those means, that is intended to be used or may be used for the purpose of recording that matter; and",
-              "sub_clauses": []
+              "clause_number": "1",
+              "content": "In this Constitution, unless the context requires otherwise—",
+              "sub_clauses": [
+                {
+                  "sub_clause_letter": "a",
+                  "content": "\"adult\" means an individual who has attained the age of eighteen years;"
+                },
+                {
+                  "sub_clause_letter": "b",
+                  "content": "\"affirmative action\" includes any measure designed to overcome or ameliorate an inequity or the systemic denial or infringement of a right or fundamental freedom;"
+                },
+                {
+                  "sub_clause_letter": "c",
+                  "content": "\"child\" means an individual who has not attained the age of eighteen years;"
+                },
+                {
+                  "sub_clause_letter": "d",
+                  "content": "\"contravene\" includes fail to comply with;"
+                },
+                {
+                  "sub_clause_letter": "e",
+                  "content": "\"county legislation\" means a law made by a county government or under authority conferred by a county Assembly;"
+                },
+                {
+                  "sub_clause_letter": "f",
+                  "content": "\"disability\" includes any physical, sensory, mental, psychological or other impairment, condition or illness that has, or is perceived by significant sectors of the community to have, a substantial or long-term effect on an individual’s ability to carry out ordinary day-to-day activities;"
+                },
+                {
+                  "sub_clause_letter": "g",
+                  "content": "\"document\" includes—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "any publication, or any matter written, expressed, or inscribed on any substance by means of letters, figures or marks, or by more than one of those means, that is intended to be used or may be used for the purpose of recording that matter;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "electronic files;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "h",
+                  "content": "\"effective date\" means the date that this Constitution came into force;"
+                },
+                {
+                  "sub_clause_letter": "i",
+                  "content": "\"fail\" includes refuse;"
+                },
+                {
+                  "sub_clause_letter": "j",
+                  "content": "\"financial year\" means the period of twelve months ending on the thirtieth day of June or other day prescribed by national legislation, but the initial financial year of any entity is the period of time from its coming into existence until the immediately following thirtieth day of June, or other day prescribed by national legislation;"
+                },
+                {
+                  "sub_clause_letter": "k",
+                  "content": "\"Gazette\" means the Kenya Gazette published by authority of the national government, or a supplement to the Kenya Gazette;"
+                },
+                {
+                  "sub_clause_letter": "l",
+                  "content": "\"guarantee\" means any absolute or conditional promise, commitment or undertaking by the national government to partially or completely re-pay any loan to a county government or any person;"
+                },
+                {
+                  "sub_clause_letter": "m",
+                  "content": "\"judicial officer\" means a registrar, deputy registrar, magistrate, Kadhi or the presiding officer of a court established under Article 169(1)(d);"
+                },
+                {
+                  "sub_clause_letter": "n",
+                  "content": "\"land\" includes—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "the surface of the earth and the subsurface rock;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "any body of water on or under the surface;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "marine waters in the territorial sea and exclusive economic zone;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "natural resources completely contained on or under the surface;"
+                    },
+                    {
+                      "nested_sub_clause_number": "v",
+                      "content": "the air space above the surface;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "o",
+                  "content": "\"legislation\" includes—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "an Act of Parliament, or a law made under authority conferred by an Act of Parliament;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "a law made by an assembly of a county government, or under authority conferred by such a law;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "p",
+                  "content": "\"loan\" includes any form of borrowing, lending or deferred payment in respect of which money from a public fund may be used, or is required to be used, for payment or repayment;"
+                },
+                {
+                  "sub_clause_letter": "q",
+                  "content": "\"marginalised community\" means—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "a community that, because of its relatively small population or for any other reason, has been unable to fully participate in the integrated social and economic life of Kenya as a whole;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "a traditional community that, out of a need or desire to preserve its unique culture and identity from assimilation, has remained outside the integrated social and economic life of Kenya as a whole;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "an indigenous community that has retained and maintained a traditional lifestyle and livelihood based on a hunter or gatherer economy;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "pastoral persons and communities, whether they are—",
+                      "nested_sub_clauses": [
+                        {
+                          "nested_sub_clause_number": "i",
+                          "content": "nomadic;"
+                        },
+                        {
+                          "nested_sub_clause_number": "ii",
+                          "content": "a settled community that, because of its relative geographic isolation, has experienced only marginal participation in the integrated social and economic life of Kenya as a whole;"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "r",
+                  "content": "\"marginalised group\" means a group of people who, because of laws or practices before, on, or after the effective date, were or are disadvantaged by discrimination on one or more of the grounds in Article 27(4);"
+                },
+                {
+                  "sub_clause_letter": "s",
+                  "content": "\"national legislation\" means an Act of Parliament, or a law made under authority conferred by an Act of Parliament;"
+                },
+                {
+                  "sub_clause_letter": "t",
+                  "content": "\"natural resources\" means the physical non-human factors and components, whether renewable or non-renewable, including—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "sunlight;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "surface and groundwater;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "forests, biodiversity and genetic resources;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "rocks, minerals, fossil fuels and other sources of energy;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "u",
+                  "content": "\"older member of society\" means a person who has attained the age of sixty years;"
+                },
+                {
+                  "sub_clause_letter": "v",
+                  "content": "\"person\" includes a company, association or other body of persons whether incorporated or unincorporated;"
+                },
+                {
+                  "sub_clause_letter": "w",
+                  "content": "\"political party\" means an association contemplated in Part 3 of Chapter Seven;"
+                },
+                {
+                  "sub_clause_letter": "x",
+                  "content": "\"property\" includes any vested or contingent right to, or interest in or arising from—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "land, or permanent fixtures on, or improvements to, land;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "goods or personal property;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "intellectual property;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "money, choses in action or negotiable instruments;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "y",
+                  "content": "\"public officer\" means—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "any State officer;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "any person, other than a State Officer, who holds a public office;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "z",
+                  "content": "\"public office\" means an office in the national government, a county government or the public service, if the remuneration and benefits of the office are payable directly from the Consolidated Fund or directly out of money provided by Parliament;"
+                },
+                {
+                  "sub_clause_letter": "aa",
+                  "content": "\"public service\" means the collectivity of all individuals, other than State officers, performing a function within a State organ;"
+                },
+                {
+                  "sub_clause_letter": "ab",
+                  "content": "\"Republic\" means the Republic of Kenya;"
+                },
+                {
+                  "sub_clause_letter": "ac",
+                  "content": "\"State\", when used as a noun, means the collectivity of offices, organs and other entities comprising the government of the Republic under this Constitution;"
+                },
+                {
+                  "sub_clause_letter": "ad",
+                  "content": "\"State office\" means any of the following offices—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "President;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "Deputy President;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iii",
+                      "content": "Cabinet Secretary;"
+                    },
+                    {
+                      "nested_sub_clause_number": "iv",
+                      "content": "Member of Parliament;"
+                    },
+                    {
+                      "nested_sub_clause_number": "v",
+                      "content": "Judges and Magistrates;"
+                    },
+                    {
+                      "nested_sub_clause_number": "vi",
+                      "content": "member of a commission to which Chapter Fifteen applies;"
+                    },
+                    {
+                      "nested_sub_clause_number": "vii",
+                      "content": "holder of an independent office to which Chapter Fifteen applies;"
+                    },
+                    {
+                      "nested_sub_clause_number": "viii",
+                      "content": "member of a county assembly, governor or deputy governor of a county, or other member of the executive committee of a county government;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ix",
+                      "content": "Attorney-General;"
+                    },
+                    {
+                      "nested_sub_clause_number": "x",
+                      "content": "Director of Public Prosecutions;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xi",
+                      "content": "Secretary to the Cabinet;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xii",
+                      "content": "Principal Secretary;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xiii",
+                      "content": "Chief of the Kenya Defence Forces;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xiv",
+                      "content": "commander of a service of the Kenya Defence Forces;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xv",
+                      "content": "Director-General of the National Intelligence Service;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xvi",
+                      "content": "Inspector-General, and the Deputy Inspectors-General, of the National Police Service;"
+                    },
+                    {
+                      "nested_sub_clause_number": "xvii",
+                      "content": "an office established and designated as a State office by national legislation;"
+                    }
+                  ]
+                },
+                {
+                  "sub_clause_letter": "ae",
+                  "content": "\"State officer\" means a person holding a State office;"
+                },
+                {
+                  "sub_clause_letter": "af",
+                  "content": "\"State organ\" means a commission, office, agency or other body established under this Constitution;"
+                },
+                {
+                  "sub_clause_letter": "ag",
+                  "content": "\"writing\" includes printing, photography, lithography, typewriting, Braille, and any other means of representing or reproducing words in a visible form;"
+                },
+                {
+                  "sub_clause_letter": "ah",
+                  "content": "\"youth\" means the collectivity of all individuals in the Republic who—",
+                  "nested_sub_clauses": [
+                    {
+                      "nested_sub_clause_number": "i",
+                      "content": "have attained the age of eighteen years;"
+                    },
+                    {
+                      "nested_sub_clause_number": "ii",
+                      "content": "have not attained the age of thirty-five years."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

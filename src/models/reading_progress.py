@@ -3,7 +3,7 @@ import uuid
 from datetime import datetime
 
 # SQLAlchemy imports
-from sqlalchemy import String, Integer, Float, ForeignKey, DateTime, Text, JSON
+from sqlalchemy import String, Integer, Float, Boolean, ForeignKey, DateTime, Text, JSON
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 
@@ -33,7 +33,7 @@ class UserReadingProgress(Base):
     total_views: Mapped[int] = mapped_column(Integer, default=1)
     
     # Status
-    is_completed: Mapped[bool] = mapped_column(Integer, default=False)
+    is_completed: Mapped[bool] = mapped_column(Boolean, default=False)
     
     # Timestamps
     first_read_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())

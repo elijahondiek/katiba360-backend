@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from src.database import get_db
 from src.services.reading_progress_service import ReadingProgressService, get_reading_progress_service
 
-from ..services.constitution_service import ConstitutionService
+from ..services.constitution import ConstitutionOrchestrator
 from ..utils.custom_utils import generate_response
 from ..utils.cache import CacheManager, HOUR, DAY
 
@@ -34,8 +34,13 @@ async def get_cache_manager():
         await redis_client.close()
 
 # Dependency to get constitution service
-async def get_constitution_service(cache: CacheManager = Depends(get_cache_manager)):
-    return ConstitutionService(cache)
+def get_constitution_service(
+    cache: CacheManager = Depends(get_cache_manager),
+    db: AsyncSession = Depends(get_db)
+):
+    # Extract Redis client from cache manager
+    redis_client = cache.redis
+    return ConstitutionOrchestrator(redis_client, db)
 
 # Pydantic models for request validation
 
@@ -55,7 +60,7 @@ class ReadingProgressRequest(BaseModel):
 async def get_constitution_overview(
     background_tasks: BackgroundTasks,
     request: Request,
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get an overview of the constitution including metadata and structure.
@@ -98,7 +103,7 @@ async def get_all_chapters(
     limit: Optional[int] = Query(None, description="Maximum number of chapters to return"),
     offset: Optional[int] = Query(0, description="Number of chapters to skip"),
     fields: Optional[str] = Query(None, description="Comma-separated list of fields to include"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get all chapters with pagination support.
@@ -147,7 +152,7 @@ async def get_chapter_by_number(
     background_tasks: BackgroundTasks,
     request: Request,
     chapter_num: int = Path(..., description="Chapter number to retrieve"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get a specific chapter by its number.
@@ -197,7 +202,7 @@ async def get_article_by_number(
     request: Request,
     chapter_number: int = Path(..., description="The chapter number", ge=1),
     article_number: int = Path(..., description="The article number", ge=1),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get a specific article by its chapter and article number.
@@ -252,7 +257,7 @@ async def search_constitution(
     offset: Optional[int] = Query(0, description="Number of results to skip"),
     highlight: bool = Query(True, description="Whether to highlight matches in the results"),
     no_cache: bool = Query(False, description="Bypass cache for testing"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Search the constitution for a specific query with optional filters.
@@ -321,7 +326,7 @@ async def get_related_articles(
     background_tasks: BackgroundTasks,
     request: Request,
     reference: str = Path(..., description="The article reference (e.g., '1.2' for Chapter 1, Article 2)"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     # TODO: Enhance related articles functionality to use semantic similarity or explicit cross-references
     #       instead of just finding articles in the same chapter. Implement a more sophisticated relevance
@@ -366,7 +371,7 @@ async def get_popular_sections(
     background_tasks: BackgroundTasks,
     request: Request,
     timeframe: str = Query("week", description="Timeframe for popularity (day, week, month, all)"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get popular/trending sections of the constitution.
@@ -409,7 +414,7 @@ async def get_popular_sections(
 async def reload_constitution_data(
     background_tasks: BackgroundTasks,
     request: Request,
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Force reload of the constitution data and clear cache.
@@ -419,7 +424,7 @@ async def reload_constitution_data(
         start_time = time.time()
         
         # Force reload of the constitution data and clear cache
-        await service.constitution_data.reload_data(background_tasks)
+        await service.reload_constitution_data(background_tasks)
         
         response_time = time.time() - start_time
         
@@ -450,7 +455,7 @@ async def get_user_bookmarks(
     background_tasks: BackgroundTasks,
     request: Request,
     user_id: UUID4 = Path(..., description="User ID"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Get a user's bookmarks.
@@ -493,7 +498,7 @@ async def add_user_bookmark(
     request: Request,
     user_id: UUID4 = Path(..., description="User ID"),
     bookmark: BookmarkRequest = Body(...),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Add a bookmark for a user.
@@ -556,7 +561,7 @@ async def remove_user_bookmark(
     request: Request,
     user_id: UUID4 = Path(..., description="User ID"),
     bookmark_id: str = Path(..., description="Bookmark ID"),
-    service: ConstitutionService = Depends(get_constitution_service)
+    service: ConstitutionOrchestrator = Depends(get_constitution_service)
 ):
     """
     Remove a bookmark for a user.

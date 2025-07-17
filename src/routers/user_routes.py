@@ -1,10 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, status, Request
+from fastapi import APIRouter, Depends, HTTPException, status, Request, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Dict, Any, List, Optional
 import uuid
 
 from src.database import get_db
 from src.services.user_service import UserService, get_user_service
+from src.services.cached_user_service import CachedUserService
+from src.utils.cache import CacheManager
 from src.schemas.user_schemas import (
     UserUpdateRequest, 
     UserResponse, 
@@ -21,25 +23,66 @@ from src.utils.custom_utils import generate_response
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
+# Cache manager dependency
+async def get_cache_manager():
+    from redis.asyncio import Redis
+    from src.core.config import settings
+    
+    redis_client = Redis.from_url(settings.redis_url)
+    cache_manager = CacheManager(redis_client, prefix="katiba360")
+    
+    try:
+        yield cache_manager
+    finally:
+        await redis_client.close()
+
+# Cached user service dependency
+async def get_cached_user_service(
+    db: AsyncSession = Depends(get_db),
+    cache_manager: CacheManager = Depends(get_cache_manager)
+) -> CachedUserService:
+    return CachedUserService(db, cache_manager)
+
 @router.get("/profile", response_model=Dict[str, Any])
 async def get_user_profile(
     request: Request,
-    user_service: UserService = Depends(get_user_service)
+    background_tasks: BackgroundTasks,
+    user_service: CachedUserService = Depends(get_cached_user_service)
 ):
     """
-    Get the current user's profile
+    Get the current user's profile with caching
     
     This endpoint returns the profile of the currently authenticated user.
+    Results are cached for 1 hour and automatically invalidated on profile updates.
     """
     try:
         user = request.state.user
-        user_with_preferences = await user_service.get_user_with_preferences(user.id)
+        user_profile = await user_service.get_user_with_preferences_cached(user.id, background_tasks)
+        
+        if not user_profile:
+            return generate_response(
+                status_code=status.HTTP_404_NOT_FOUND,
+                response_message="User not found",
+                customer_message="User profile not found",
+                body=None
+            )
         
         return generate_response(
             status_code=status.HTTP_200_OK,
             response_message="User profile retrieved successfully",
             customer_message="Your profile has been retrieved",
-            body=UserResponse.from_orm(user_with_preferences).dict()
+            body={
+                "id": str(user_profile.id),
+                "email": user_profile.email,
+                "name": user_profile.name,
+                "profile_picture": user_profile.profile_picture,
+                "created_at": user_profile.created_at.isoformat() if user_profile.created_at else None,
+                "updated_at": user_profile.updated_at.isoformat() if user_profile.updated_at else None,
+                "last_login": user_profile.last_login.isoformat() if user_profile.last_login else None,
+                "is_active": user_profile.is_active,
+                "privacy_settings": user_profile.privacy_settings,
+                "notification_settings": user_profile.notification_settings,
+            }
         )
     except HTTPException as e:
         return generate_response(

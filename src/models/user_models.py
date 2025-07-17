@@ -75,6 +75,8 @@ class User(Base):
     oauth_sessions = relationship("OAuthSession", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
     account_links = relationship("AccountLink", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
     sharing_events = relationship("SharingEvent", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
+    bookmarks = relationship("Bookmark", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
+    content_views = relationship("ContentView", back_populates="user", cascade=CASCADE_ALL_DELETE_ORPHAN)
 
 
 class UserPreference(Base):
@@ -273,6 +275,7 @@ class ReadingHistory(Base):
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
     completed_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
     time_spent_seconds: Mapped[int] = mapped_column(Integer, default=0)
+    reading_time_minutes: Mapped[float] = mapped_column(Float, default=0.0)
     position: Mapped[float] = mapped_column(Float, default=0.0)
     total_length: Mapped[float] = mapped_column(Float, default=1.0)
     progress_percentage: Mapped[float] = mapped_column(Float, default=0.0)
@@ -386,6 +389,48 @@ class SharingEvent(Base):
     
     # Relationship
     user = relationship("User", back_populates="sharing_events")
+
+
+class Bookmark(Base):
+    """
+    SQLAlchemy model representing user bookmarks for constitution content.
+    """
+    __tablename__ = "tbl_bookmarks"
+    
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey(USERS_ID_FK, ondelete="CASCADE"))
+    bookmark_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    reference: Mapped[str] = mapped_column(String(255), nullable=False)
+    title: Mapped[str] = mapped_column(String(500), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow(), onupdate=utcnow())
+    
+    # Relationship
+    user = relationship("User", back_populates="bookmarks")
+    
+    # Table constraints are defined in the migration script
+
+
+class ContentView(Base):
+    """
+    SQLAlchemy model representing content views for analytics and tracking.
+    """
+    __tablename__ = "tbl_content_views"
+    
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    content_type: Mapped[str] = mapped_column(String(50), nullable=False)  # chapter, article, search, etc.
+    content_reference: Mapped[str] = mapped_column(String(255), nullable=False)  # "1", "1.2", "search_term", etc.
+    user_id: Mapped[Optional[uuid.UUID]] = mapped_column(UUID(as_uuid=True), ForeignKey(USERS_ID_FK, ondelete="CASCADE"), nullable=True)
+    view_count: Mapped[int] = mapped_column(Integer, default=1)
+    first_viewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
+    last_viewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow())
+    device_type: Mapped[Optional[str]] = mapped_column(String(50), nullable=True)  # mobile, desktop, tablet
+    ip_address: Mapped[Optional[str]] = mapped_column(String(45), nullable=True)  # Store IP for anonymous analytics
+    
+    # Relationship
+    user = relationship("User", back_populates="content_views")
+    
+    # Table constraints and indexes will be defined in the migration script
 
 
 # Password reset functionality removed as we're using Google OAuth exclusively
