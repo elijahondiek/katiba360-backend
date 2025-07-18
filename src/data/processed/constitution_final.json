@@ -132,8 +132,15 @@
         {
           "article_number": 5,
           "article_title": "Territory of Kenya",
-          "clauses": []
-        },
+          "clauses": [
+            {
+              "clause_number": "1",
+              "content": "Kenya consists of the territory and territorial waters comprising Kenya on the effective date, and any additional territory and territorial waters as defined by an Act of Parliament.",
+              "sub_clauses": []
+            }
+          ]
+        }
+        ,
         {
           "article_number": 6,
           "article_title": "Devolution and access to services",
