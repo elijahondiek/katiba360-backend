@@ -1,4 +1,5 @@
 # Import necessary FastAPI components
+# Database migration sync required for production OAuth fix
 from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import ORJSONResponse, JSONResponse
