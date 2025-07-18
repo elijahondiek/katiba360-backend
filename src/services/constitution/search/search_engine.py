@@ -188,6 +188,10 @@ class SearchEngine(BaseService):
             chapter_results = await self._search_in_chapters(data, query, filters, original_query)
             results.extend(chapter_results)
             
+            # Search in parts
+            part_results = await self._search_in_parts(data, query, filters, original_query)
+            results.extend(part_results)
+            
             # Search in articles
             article_results = await self._search_in_articles(data, query, filters, original_query)
             results.extend(article_results)
@@ -269,6 +273,50 @@ class SearchEngine(BaseService):
             self.logger.error(f"Error searching in chapters: {str(e)}")
             return []
     
+    async def _search_in_parts(self, data: Dict, query: str, filters: Optional[Dict], 
+                              original_query: str) -> List[Dict]:
+        """
+        Search in part titles within chapters.
+        
+        Args:
+            data: Constitution data
+            query: Search query
+            filters: Search filters
+            original_query: Original query
+            
+        Returns:
+            List[Dict]: Part search results
+        """
+        try:
+            results = []
+            
+            for chapter in data.get("chapters", []):
+                # Apply chapter filter
+                if filters and "chapter" in filters and filters["chapter"] != chapter["chapter_number"]:
+                    continue
+                
+                # Search in parts if they exist
+                for part in chapter.get("parts", []):
+                    part_title = part.get("part_title", "")
+                    if query.lower() in part_title.lower():
+                        result = {
+                            "type": "part",
+                            "chapter_number": chapter["chapter_number"],
+                            "chapter_title": chapter["chapter_title"],
+                            "part_number": part["part_number"],
+                            "part_title": part_title,
+                            "content": part_title,
+                            "match_context": self.result_highlighter.highlight_text(part_title, original_query),
+                            "relevance_score": self._calculate_relevance_score(part_title, query, "part")
+                        }
+                        results.append(result)
+            
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"Error searching in parts: {str(e)}")
+            return []
+    
     async def _search_in_articles(self, data: Dict, query: str, filters: Optional[Dict], 
                                 original_query: str) -> List[Dict]:
         """
@@ -291,6 +339,7 @@ class SearchEngine(BaseService):
                 if filters and "chapter" in filters and filters["chapter"] != chapter["chapter_number"]:
                     continue
                 
+                # Search in direct articles (chapters without parts)
                 for article in chapter.get("articles", []):
                     # Apply article filter
                     if filters and "article" in filters and filters["article"] != article["article_number"]:
@@ -316,6 +365,36 @@ class SearchEngine(BaseService):
                         chapter, article, query, original_query
                     )
                     results.extend(clause_results)
+                
+                # Search in articles within parts (chapters with parts structure)
+                for part in chapter.get("parts", []):
+                    for article in part.get("articles", []):
+                        # Apply article filter
+                        if filters and "article" in filters and filters["article"] != article["article_number"]:
+                            continue
+                        
+                        # Search in article title
+                        article_title = article.get("article_title", "")
+                        if query.lower() in article_title.lower():
+                            result = {
+                                "type": "article_title",
+                                "chapter_number": chapter["chapter_number"],
+                                "chapter_title": chapter["chapter_title"],
+                                "part_number": part["part_number"],
+                                "part_title": part["part_title"],
+                                "article_number": article["article_number"],
+                                "article_title": article_title,
+                                "content": article_title,
+                                "match_context": self.result_highlighter.highlight_text(article_title, original_query),
+                                "relevance_score": self._calculate_relevance_score(article_title, query, "article_title")
+                            }
+                            results.append(result)
+                        
+                        # Search in clauses
+                        clause_results = await self._search_in_clauses(
+                            chapter, article, query, original_query, part
+                        )
+                        results.extend(clause_results)
             
             return results
             
@@ -324,7 +403,7 @@ class SearchEngine(BaseService):
             return []
     
     async def _search_in_clauses(self, chapter: Dict, article: Dict, query: str, 
-                               original_query: str) -> List[Dict]:
+                               original_query: str, part: Optional[Dict] = None) -> List[Dict]:
         """
         Search in clauses and sub-clauses.
         
@@ -333,6 +412,7 @@ class SearchEngine(BaseService):
             article: Article data
             query: Search query
             original_query: Original query
+            part: Optional part data
             
         Returns:
             List[Dict]: Clause search results
@@ -356,6 +436,12 @@ class SearchEngine(BaseService):
                         "match_context": self.result_highlighter.extract_context(clause_content, original_query),
                         "relevance_score": self._calculate_relevance_score(clause_content, query, "clause")
                     }
+                    
+                    # Add part information if available
+                    if part:
+                        result["part_number"] = part["part_number"]
+                        result["part_title"] = part["part_title"]
+                    
                     results.append(result)
                 
                 # Search in sub-clauses
@@ -377,6 +463,12 @@ class SearchEngine(BaseService):
                             "match_context": self.result_highlighter.extract_context(sub_clause_content, original_query),
                             "relevance_score": self._calculate_relevance_score(sub_clause_content, query, "sub_clause")
                         }
+                        
+                        # Add part information if available
+                        if part:
+                            result["part_number"] = part["part_number"]
+                            result["part_title"] = part["part_title"]
+                        
                         results.append(result)
             
             return results
@@ -425,6 +517,7 @@ class SearchEngine(BaseService):
             type_weights = {
                 "preamble": 0.8,
                 "chapter": 0.9,
+                "part": 0.85,
                 "article_title": 0.95,
                 "clause": 0.7,
                 "sub_clause": 0.6
@@ -458,9 +551,10 @@ class SearchEngine(BaseService):
             type_priority = {
                 "article_title": 1,
                 "chapter": 2,
-                "preamble": 3,
-                "clause": 4,
-                "sub_clause": 5
+                "part": 3,
+                "preamble": 4,
+                "clause": 5,
+                "sub_clause": 6
             }
             
             def sort_key(result):
